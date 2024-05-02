@@ -6,28 +6,25 @@ import axios from 'axios';
 export default function OngsDoando() {
 
     const { infoId } = useParams()
-    const [infoDetails, setInfoDetails] = useState(null)
-    let details = ''
-
+    const [infoDetails, setInfoDetails] = useState({})
     useEffect(() => {
-        const infoDetails = async () => {
-            axios.get(`http://localhost:5000/TodosDados/${infoId}`)
-                .then(async (resp) => {
-                    details = await resp.json()
-                })
-            setInfoDetails(details)
-        };
-        infoDetails()
-    }, [infoId]);
+        axios.get(`http://localhost:5000/TodosDados/${infoId}`)
+            .then((resp) => {
+                setInfoDetails(resp.data)
+            })
 
-    if (!infoDetails) {
-        <p>carregando...</p>
-    }
+        //};
+        //infoDetails()
+    }, []);
+
+    // if (!infoDetails) {
+    //     <p>carregando...</p>
+    // }
 
     // const { obj } = props.location.state;
 
     // const {inf} = props.location.state
-    
+
     // const pegarParams = new URLSearchParams(props.location.search);
     // const obj = pegarParams.get('obj')
     // console.log(obj)
@@ -47,7 +44,7 @@ export default function OngsDoando() {
 
     return (
         <div>
-            <h1>{infoDetails._id}</h1>
+            <h1>{infoDetails.Nome}</h1>
         </div>
 
     )
