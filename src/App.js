@@ -28,7 +28,7 @@ function RoutesWithAnimation() {
       </Route>
       <Route path='Ongs' element={<Ongs />} />
       {/* <Route path='OngsDoando' element={<OngsDoando />} /> */}
-      <Route path='OngsDoando' element={<OngsDoando />} />
+      <Route path='OngsDoando/:infoId' element={<OngsDoando />} />
       <Route path='SobreMim' element={<SobreMim />} />
       <Route path='PagamentoTela' element={<PagamentoTela />} />
 

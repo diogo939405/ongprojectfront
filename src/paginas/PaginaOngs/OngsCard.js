@@ -35,20 +35,22 @@ export default function OngsCard() {
             <Container>
                 <Row id='linha'>
                     {data.map((info) => {
+
                         return (
                             < Col id='coluna' >
-                                <card className='card' key={info._id}>
+                                <card className='card' key={info._id}  >
                                     <img src={logo} alt='descrição' className='imagem-descricao'></img>
                                     <h3 className='titulo-card'>{info.Nome}</h3>
                                     <div className='botoes'>
                                         <button className='btnm' onClick={() => datPass(info._id)}>
-                                            <Link to=
+                                            <Link to={`/OngsDoando/${info._id}`}> detalhes</Link>
+                                            {/* <Link to=
                                                 {`/OngsDoando?/${info}`}
-                                                state={ info }
-                                                
-                                                >
-                                                    oioioijuj
-                                                </Link>
+                                                state={info}
+
+                                            >
+                                                oioioijuj
+                                            </Link> */}
 
 
                                         </button>
