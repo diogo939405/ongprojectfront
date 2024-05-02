@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:wght@100;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Roboto:wght@100;300;400&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.cabeca{
+    width: 100%;
+    height: 55vh;
+    background-image:linear-gradient(rgba(0,0,0,0.7),
+    rgba(0,0,0,0.7)) ,url('../../Imagens/background.png');
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+#teste{}
+
+.div-texto{
+    margin-top: 50px;
+    padding: 15px;
+    line-height: 50px;
+}
+
+.div-titulo{
+    font-size: 3rem;
+    letter-spacing: 3px;
+    color: whitesmoke;
+    font-family: 'Roboto';
+}
+
+.link-home{
+    text-decoration: none;
+    outline: none;
+    color:#0dff0d;
+    font-size: 1.3rem;
+    font-family: 'Roboto';
+    margin-right: 5px;
+}
+
+.pagina-atual{
+    text-decoration: none;
+    outline: none;
+    color:whitesmoke;
+    font-size: 1.3rem;
+    font-family: 'Roboto';
+    margin-left: 5px;
+}
+.corpo{
+    margin-top: 500px;
+    overflow-x: hidden;
+     background-color:  rgba(240, 251, 240, 0.521);
+}
+
+.secao1{
+    
+    padding: 10px;
+}
+
+#titulo{
+    color:  #808000;;
+    font-family: "Montserrat";
+    font-weight: 400;
+    font-size: 4rem;
+    margin-top: -15px;
+    margin-bottom: 20px;
+    justify-content: left;
+    /* line-height: 100px; */
+    text-align: left;
+}
+#subtitulo{
+    color: #0c65be;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+#conteudo{
+    color: rgb(97, 96, 96);
+    font-size: 1.15rem;
+    text-align: left;
+    letter-spacing: 1px;
+    font-family: "Roboto";
+    font-weight: 400;
+    line-height: 32px;
+}
+#foto-texto{
+    margin-bottom:20px ;
+    margin-top: -20px;
+}
+#mensagem-imagem{
+    margin-right: 60px;
+    margin-left: -85px;
+}
+
+.seta{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin-top: 20px;
+}
+#botao-seta{
+    background:#808000;
+    border: none;
+    border-radius: 20px;
+    color: rgb(238, 238, 238);
+    font-weight: 300;
+    letter-spacing: 1.5px;
+    font-family: 'Roboto';
+    transition: 0.2s ease-in;
+    width: 12%;
+}
+
+#botao-seta:hover{
+    background-color: rgb(97, 96, 96);
+    color: #0dff0d;
+    transition: 0.2s ease-out;
+}
+
+
+.secao2{
+    margin-top: 100px;
+    /* background-color:  rgba(197, 248, 197, 0.521); */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#container-icons{
+    padding: 55px 10px;
+    margin-bottom: 250px;
+}
+
+#corpo-icons{
+    margin-bottom: 150px;
+}
+
+#icons{
+    
+}
+
+.imagem-icons{
+    margin-bottom: 30px;
+}
+.texto-icon{
+    color: rgb(97, 96, 96);
+    text-align: left;
+    letter-spacing: 2px;
+    font-family: "Roboto";
+    font-weight: 400;
+}
+.rodape-doacao{
+    margin-top: -140px;
+}
+

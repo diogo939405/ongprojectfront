@@ -1,0 +1,95 @@
+
+
+.cabeca{
+    width: 100%;
+    height: 55vh;
+    background-image:linear-gradient(rgba(0,0,0,0.7),
+    rgba(0,0,0,0.7)) ,url('../../Imagens/background.png');
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+#teste{}
+
+.div-texto{
+    margin-top: 50px;
+    padding: 15px;
+    line-height: 50px;
+}
+
+.div-titulo{
+    font-size: 3rem;
+    letter-spacing: 3px;
+    color: whitesmoke;
+    font-family: 'Roboto';
+}
+
+.link-home{
+    text-decoration: none;
+    outline: none;
+    color:#0dff0d;
+    font-size: 1.3rem;
+    font-family: 'Roboto';
+    margin-right: 5px;
+}
+
+.pagina-atual{
+    text-decoration: none;
+    outline: none;
+    color:whitesmoke;
+    font-size: 1.3rem;
+    font-family: 'Roboto';
+    margin-left: 5px;
+}
+
+.introducao {
+    margin-top: 100px;
+}
+
+.titulo-about {
+    font-weight: 500;
+    font-size: 3rem;
+    text-align: left;
+    justify-content: center;
+    margin-bottom: 35px;
+    letter-spacing: 4px;
+}
+
+.texto-about {
+    font-weight: 400;
+    font-size: 1rem;
+    text-align: left;
+    justify-content: center;
+    letter-spacing: 1px;
+    line-height: 30px;
+}
+
+.botoes-about{
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.botao-about{
+    font-weight: 600;
+    font-size: 1.4rem;
+    padding: 10px 15px;
+    width: 250px;
+    border: none;
+    background: gray;
+    border-radius: 8px;
+    cursor: pointer;
+    color: whitesmoke;
+    transition: 0.5s ease;
+}
+.botao-about:hover{
+    background: whitesmoke;
+    color: black;
+    transition: 0.5s ease;
+}
+
+.descricao{
+    margin-top: 300px;
+}

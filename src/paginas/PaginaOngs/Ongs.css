@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+.cabeca {
+    width: 100%;
+    height: 55vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.7)), url('../../Imagens/background.png');
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#teste {}
+
+.div-texto {
+    margin-top: 50px;
+    padding: 15px;
+    line-height: 50px;
+}
+
+.div-titulo {
+    font-size: 3rem;
+    letter-spacing: 3px;
+    color: whitesmoke;
+    font-family: 'Roboto';
+}
+
+.link-home {
+    text-decoration: none;
+    outline: none;
+    color: #0dff0d;
+    font-size: 1.3rem;
+    font-family: 'Roboto';
+    margin-right: 5px;
+}
+
+.pagina-atual {
+    text-decoration: none;
+    outline: none;
+    color: whitesmoke;
+    font-size: 1.3rem;
+    font-family: 'Roboto';
+    margin-left: 5px;
+}
+
+.secao-body{
+    
+}
+
+.secao-cards {
+    background-color: rgba(240, 251, 240, 0.521);
+}

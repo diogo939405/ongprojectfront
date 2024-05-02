@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:wght@100;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Roboto:wght@100;300;400&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+footer {
+    background-color: #012101;
+}
+
+.footerContainer {
+    height: 19vh;
+    width: 100%;
+    /* padding: 50px 30px 0px; */
+}
+
+.brand-body {
+    padding: 20px 0px 15px 0px;
+    /* margin-top: -50px; */
+    
+}
+
+.socialIcons {
+    display: flex;
+    justify-content: center;
+    margin-top: -10px;
+}
+
+.socialIcons a {
+    text-decoration: none;
+    padding: 10px;
+    margin: 10px;
+    
+}
+
+.socialIcons a i {
+    font-size: 2rem;
+    color: white;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+
+/* Hover affect on social media icon */
+
+.socialIcons a i:hover {
+    /* background-color: aliceblue;
+    color: black; */
+    transition: 0.5s;
+    opacity: 1;
+}
+
+.footerNav {
+    margin: 30px 0;
+}
+
+.footerNav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.logo-image{
+    font-size: 1.5rem;
+    margin-top: 15px;
+    opacity: 0.7;
+}
+
+
+.footerNav ul li a { 
+    font-family: "Roboto";
+    color: white;
+    margin: 25px;
+    text-decoration: none;
+    font-size: 1rem;
+    /* font-weight: bold; */
+    opacity: 0.7;
+    transition: 0.5s;
+
+}
+
+.footerNav ul li a:hover {
+    opacity: 1;
+}
+
+.footerBottom {
+    background-color: rgba(47, 234, 47, 0.505);
+    padding: 20px;
+    text-align: center;
+}
+
+.footerBottom p {
+    color: white;
+}
+
+.designer {
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
