@@ -11,103 +11,6 @@ import './SobreMim.css'
 import gerarToken from '../../pagamento/Paypal'
 import PagamentoTela from '../../pagamento/PagamentoTela';
 
-// const dado = document.querySelector("#doar")
-// const productId = "65e5d92e4860a9271007c2d265e5d92e4860a9271007c2d2"
-// let dadospgto;
-// var token = '';
-// let param = ''
-// let _data = {
-//   id: '',
-//   cardId: `${productId}`,
-//   valor: `${dado}`
-// }
-
-//validar action submit do form
-
-// fetch("http://localhost:5000/compra", {
-//   method: "POST",
-//   body: JSON.stringify(_data)
-// })
-//   .then(response => response.json())
-//   .then(data => console.log(data))
-//   .catch(error => console.log(error))
-
-// async function efetuarPagamento(token) {
-//   console.log('efetuando pagamento')
-//   const tokenAcess = await token
-//   const response = await axios({
-//     url: process.env.REACT_APP_PAYPAL_BASE_URL + '/v2/checkout/orders',
-//     method: 'post',
-//     headers: {
-//       'Content-Type': 'application/json',
-//       'Authorization': 'Bearer ' + tokenAcess
-//     },
-//     data: JSON.stringify({
-//       intent: 'CAPTURE',
-//       purchase_units: [
-//         {
-//           items: [
-//             {
-//               name: 'diogo teste',
-//               description: ' 1 teste de compra',
-//               quantity: '1',
-//               unit_amount: {
-//                 currency_code: "BRL",
-//                 value: '100'
-//               }
-//             }
-//           ],
-
-//           amount: {
-//             currency_code: "BRL",
-//             value: '100',
-//             breakdown: {
-//               item_total: {
-//                 currency_code: 'BRL',
-//                 value: '100'
-//               }
-//             }
-//           }
-//         }
-//       ],
-
-//       application_context: {
-//         return_url: 'http://g1.com.br', //`http://localhost:3000/PagamentoTela?token=${token}&orderId=${response.data.id}`,
-//         cancel_url: 'https://ge.globo.com/futebol/times/sao-paulo/',
-//         shipping_preference: "NO_SHIPPING",
-//         brand_name: 'nome da ong'
-//       }
-
-//     })
-//   })
-//   console.log('dados da comora', response.data)
-//   if (response.data.status == 'CREATED')
-//     dadospgto = response.data;
-//   // pegardados(response.data)
-//   return response.data.links.find(link => link.rel === 'approve').href
-
-// }
-
-
-
-
-// async function tratarPagamento() {
-//   token = await gerarToken();
-//   await efetuarPagamento(token)
-//     .then(async result => {
-//       try {
-//         const url = result
-//         window.open(`${url}`)
-//       } catch (error) {
-//         console.log('erro no redirect', error)
-//       }
-
-//     });
-//   console.log('exibir pagamento')
-// }
-
-
-
 export default function SobreMim() {
   return (
     <AnimatedPage>
@@ -126,10 +29,7 @@ export default function SobreMim() {
             <span></span>
           </div>
         </div>
-
-
       </header>
-
 
       <section className='introducao'>
         <Container id='corpo'>
@@ -161,19 +61,11 @@ export default function SobreMim() {
         </Container>
       </section>
       <section className='descricao'>
-        {/* <form action='/compra' method='POST'> */}
-        {/* <input type='number' id='doar' name='doar'></input>
-        <button onClick={tratarPagamento}>aqui</button> */}
-
-        {/* </form> */}
-
       </section>
       <footer>
         <Footer />
       </footer>
       <Outlet />
     </AnimatedPage>
-
-
   )
 }

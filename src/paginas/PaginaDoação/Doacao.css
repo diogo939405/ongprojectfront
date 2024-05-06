@@ -108,16 +108,19 @@
     border: none;
     border-radius: 20px;
     color: rgb(238, 238, 238);
-    font-weight: 300;
+    font-weight: 500;
+    font-size: 1.4rem;
     letter-spacing: 1.5px;
     font-family: 'Roboto';
     transition: 0.2s ease-in;
-    width: 12%;
+    width: 32vh;
+    height:6vh;
+    line-height: 1px;
 }
 
 #botao-seta:hover{
-    background-color: rgb(97, 96, 96);
-    color: #0dff0d;
+    background-color: #024502e3;
+    color: #fff;
     transition: 0.2s ease-out;
 }
 

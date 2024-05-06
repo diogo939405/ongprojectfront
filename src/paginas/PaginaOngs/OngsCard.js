@@ -17,9 +17,6 @@ export default function OngsCard() {
         axios.get('http://localhost:5000/TodosDados')
             .then((resp) => {
                 setData(resp.data)
-                // resp.data.map((k) => {
-                //     console.log(k)
-                // })
             })
             .catch((err) => console.log(err))
     }, []);
@@ -43,16 +40,7 @@ export default function OngsCard() {
                                     <h3 className='titulo-card'>{info.Nome}</h3>
                                     <div className='botoes'>
                                         <button className='btnm' onClick={() => datPass(info._id)}>
-                                            <Link to={`/OngsDoando/${info._id}`}> detalhes</Link>
-                                            {/* <Link to=
-                                                {`/OngsDoando?/${info}`}
-                                                state={info}
-
-                                            >
-                                                oioioijuj
-                                            </Link> */}
-
-
+                                            <Link className='linkBotao' to={`/OngsDoando/${info._id}`}> Saiba mais</Link>
                                         </button>
                                         <button className='btnm'>Doe</button>
                                     </div>

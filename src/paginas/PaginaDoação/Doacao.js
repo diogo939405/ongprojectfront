@@ -28,7 +28,7 @@ export default function Doacao() {
   return (
     <AnimatedPage>
       <header className='cabeca'>
-        <Menu/>
+        <Menu />
         <div className='div-texto'>
           <div >
             <h4 className='div-titulo'>titulo pagina</h4>
@@ -67,9 +67,9 @@ export default function Doacao() {
                 </p>
               </Col>
             </Row>
-            <div className='seta'>
+            {/* <div className='seta'>
               <Button id='botao-seta' onClick={() => scrollToDados(dados)} behavior="smooth"> AQUI</Button>
-            </div>
+            </div> */}
 
 
           </Container>
@@ -136,15 +136,22 @@ export default function Doacao() {
                 </div>
               </Col>
             </Row>
+            <Row>
+              <Col>
+                <div className='seta'>
+                  <Button id='botao-seta' behavior="smooth"> Doe Agora</Button>
+                </div>
+              </Col>
+            </Row>
           </Container>
         </section>
       </body>
       <footer className='rodape-doacao'>
-        <Footer/>
+        <Footer />
       </footer>
 
 
-      
+
 
     </AnimatedPage>
   )
