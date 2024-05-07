@@ -10,7 +10,6 @@ import Image from 'react-bootstrap/Image';
 import foto from '../../Imagens/Gift Catalog.jpg'
 import Button from 'react-bootstrap/Button';
 import logo1 from './Icons/information.png'
-import logo from '../../Imagens/logo_diogo-removebg-preview.png';
 import Footer from '../../footer/Footer'
 
 
@@ -76,7 +75,7 @@ export default function Doacao() {
         </section>
 
 
-        <section ref={dados} className='secao2'>
+        <section className='secao2'>
           <Container id='container-icons'>
             <Row id='corpo-icons' className='gx-5'>
               <Col id='icons'>

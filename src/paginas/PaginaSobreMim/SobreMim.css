@@ -1,10 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:wght@100;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Roboto:wght@100;300;400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap");
 
 
-.cabeca{
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.cabeca {
     width: 100%;
     height: 55vh;
-    background-image:linear-gradient(rgba(0,0,0,0.7),
-    rgba(0,0,0,0.7)) ,url('../../Imagens/background.png');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.7)), url('../../Imagens/background.png');
     background-position: center;
     background-size: cover;
     position: absolute;
@@ -12,34 +22,35 @@
     left: 0;
     z-index: -1;
 }
-#teste{}
 
-.div-texto{
+#teste {}
+
+.div-texto {
     margin-top: 50px;
     padding: 15px;
     line-height: 50px;
 }
 
-.div-titulo{
+.div-titulo {
     font-size: 3rem;
     letter-spacing: 3px;
     color: whitesmoke;
     font-family: 'Roboto';
 }
 
-.link-home{
+.link-home {
     text-decoration: none;
     outline: none;
-    color:#0dff0d;
+    color: #0dff0d;
     font-size: 1.3rem;
     font-family: 'Roboto';
     margin-right: 5px;
 }
 
-.pagina-atual{
+.pagina-atual {
     text-decoration: none;
     outline: none;
-    color:whitesmoke;
+    color: whitesmoke;
     font-size: 1.3rem;
     font-family: 'Roboto';
     margin-left: 5px;
@@ -49,47 +60,75 @@
     margin-top: 100px;
 }
 
-.titulo-about {
+#container-icons {
+    padding: 55px 10px;
+    margin-bottom: 250px;
+}
+
+#corpo-icons {
+    margin-bottom: 150px;
+}
+
+#icons {}
+
+.imagem-icons {
+    margin-bottom: 30px;
+}
+
+.texto-icon-sobre {
+    color: rgb(97, 96, 96);
+    text-align: left;
+    letter-spacing: 2px;
+    font-family: "Montserrat";
     font-weight: 500;
-    font-size: 3rem;
-    text-align: left;
-    justify-content: center;
-    margin-bottom: 35px;
-    letter-spacing: 4px;
+    font-size: 1.2rem;
 }
 
-.texto-about {
-    font-weight: 400;
-    font-size: 1rem;
-    text-align: left;
-    justify-content: center;
-    letter-spacing: 1px;
-    line-height: 30px;
-}
-
-.botoes-about{
-    margin-top: 20px;
-    margin-bottom: 15px;
-}
-
-.botao-about{
+.icon-descrição {
+    font-family: "Montserrat";
     font-weight: 600;
-    font-size: 1.4rem;
-    padding: 10px 15px;
-    width: 250px;
-    border: none;
-    background: gray;
-    border-radius: 8px;
-    cursor: pointer;
-    color: whitesmoke;
-    transition: 0.5s ease;
-}
-.botao-about:hover{
-    background: whitesmoke;
-    color: black;
-    transition: 0.5s ease;
+    font-size: 2.2rem;
+    color: #808000;
+    padding: 25px 0px 10px 0px;
 }
 
-.descricao{
-    margin-top: 300px;
+
+.descricao {
+    /* margin-top: 50px; */
+    margin-top: 400px;
+    margin-bottom: 200px;
+    background-color: rgba(240, 251, 240, 0.521);
+    padding: 120px;
 }
+
+.descrição-imagem {
+    padding: 30px 0px 0px 30px;
+}
+
+.imagem-minha {
+    border-radius: 50%;
+    margin-left: -200px;
+}
+
+.colTexto {
+    padding: 30px;
+    line-height: 32px;
+    margin-top: 45px;
+    margin-right: 15px;
+}
+
+.textoLinha {
+    text-align: left;
+    font-size: 1rem;
+    font-family: 'Roboto';
+    letter-spacing: 1.8px;
+}
+
+.final {
+    margin-top: 200px;
+}
+
+
+
+
+/* //linha do tempo */
