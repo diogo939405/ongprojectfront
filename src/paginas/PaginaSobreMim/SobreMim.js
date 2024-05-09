@@ -13,6 +13,7 @@ import PagamentoTela from '../../pagamento/PagamentoTela';
 import logo1 from '../PaginaDoação/Icons/information.png';
 import eu from '../../Imagens/diogo.jpg'
 
+
 export default function SobreMim() {
   return (
     <AnimatedPage>
@@ -59,6 +60,72 @@ export default function SobreMim() {
 
         </div>
 
+      </section>
+
+      <section className='final'>
+        <Container>
+          <Row>
+            <Col>
+              <div className='linha-historia'>
+                <div className='linha-titulo'>
+                  <h1 className='titulo-linha'>historia</h1>
+                  <p> um pouco mais sobre minha trajetória</p>
+                </div>
+                <div className='linha-tempo'>
+                  <div className='linha-etapas'>
+                    <div>
+                      <h2 className='titulo-etapa'> parte 1</h2>
+                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                    </div>
+                  </div>
+                  <div className='linha-etapas'>
+                    <div>
+                      <h2 className='titulo-etapa'> parte 2</h2>
+                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                    </div>
+                  </div>
+                  <div className='linha-etapas'>
+                    <div>
+                      <h2 className='titulo-etapa'> parte 3</h2>
+                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                    </div>
+                  </div>
+                  <div className='linha-etapas'>
+                    <div>
+                      <h2 className='titulo-etapa'> parte 4</h2>
+                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                    </div>
+                  </div>
+                  <div className='linha-etapas'>
+                    <div>
+                      <h2 className='titulo-etapa'> parte 5</h2>
+                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                    </div>
+                  </div>
+                  <div className='linha-etapas'>
+                    <div>
+                      <h2 className='titulo-etapa'> parte 6</h2>
+                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                    </div>
+                  </div>
+                  <div className='linha-etapas'>
+                    <div>
+                      <h2 className='titulo-etapa'> parte 7</h2>
+                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Col>
+          </Row>
+        </Container>
       </section>
 
       <section className='introducao'>
@@ -137,24 +204,7 @@ export default function SobreMim() {
           </Row>
         </Container> */}
       </section>
-      <section className='final'>
-        <Container>
-          <Row>
-            <Col>
-              <div className='linha-historia'>
-               </div>
-            </Col>
-            <Col>
-              <div className='formulario'>
 
-
-
-
-              </div>
-            </Col>
-          </Row>
-        </Container>
-      </section>
 
       <footer>
         <Footer />

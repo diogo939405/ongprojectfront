@@ -24,11 +24,6 @@ export default function OngsDoando() {
     let dado = document.getElementById("doar")
     let botaoDoar = document.getElementById('botao-doar')
 
-
-
-    // let valorDoado = dado.value
-
-
     useEffect(() => {
         axios.get(`http://localhost:5000/TodosDados/${infoId}`)
             .then((resp) => {
@@ -132,9 +127,9 @@ export default function OngsDoando() {
 
     function onlyNumbers(t) {
         var nu = t.which || t.keycode;
-        if ((nu >= 48 && nu < 57)){
+        if ((nu >= 48 && nu < 57)) {
             return true
-        }else{
+        } else {
             return false
         }
     }
@@ -160,13 +155,70 @@ export default function OngsDoando() {
                     </div>
                 </div>
             </header>
-            <body className='corpo-ong'>
-                <h4>{infoDetails.Nome}</h4>
-                <input type='text' className='input-doar' id='doar'placeholder='Faça sua doação' value={inputValue} onChange={inputChange} onKeyDown={(y) => onlyNumbers(y)}></input>
-                <button onClick={(x) => tratarPagamento(x)} id='botao-doar'> AQUI </button>
 
-            </body>
-            {loadingSpinner ? <Loading /> : null}
+            <section className='corpo-ong'>
+                <Container>
+                    <Row>
+                        <Col>
+                            <div className='ongs-texto'>
+                                <div className='ongs-texto-conjunto'>
+                                    <h2 className='ongs-texto-titulo'>
+                                        {infoDetails.Nome}
+                                    </h2>
+                                    {/* <hr className='barra'/> */}
+                                </div>
+                                <p className='ongs-texto-textos'>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                    when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                    It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                                    It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                                    and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                            </div>
+                        </Col>
+                        <Col>
+                            <div className='ongs-imagens'>
+
+                            </div>
+                        </Col>
+                    </Row>
+                </Container>
+            </section>
+            <section className='ongs-form '>
+                <Container>
+                    <Row id='linha-form'>
+                        <form >
+                            <fieldset>
+                                <legend><b>formulario Doação</b></legend>
+                                <br />
+                                <div className='wrapper d-flex align-items-center justify-content-center'>
+                                    <label>Nome</label>
+                                    <input type='text' placeholder='digite seu Nome' required />
+                                </div>
+
+                                <div className='wrapper d-flex align-items-center justify-content-center'>
+                                    <label>Email</label>
+                                    <input type='text' placeholder='digite sua email' required />
+                                </div>
+
+                                <div className='wrapper d-flex align-items-center justify-content-center'>
+                                    <input type='text' className='input-doar' id='doar' placeholder='Faça sua doação' value={inputValue} onChange={inputChange} onKeyDown={(y) => onlyNumbers(y)}></input>
+                                </div>
+                                <button onClick={(x) => tratarPagamento(x)} id='botao-doar'> AQUI </button>
+                            </fieldset>
+                        </form>
+
+
+                    </Row>
+                </Container>
+            </section>
+
+            {/* <h4>{infoDetails.Nome}</h4>
+                <input type='text' className='input-doar' id='doar'placeholder='Faça sua doação' value={inputValue} onChange={inputChange} onKeyDown={(y) => onlyNumbers(y)}></input>
+                <button onClick={(x) => tratarPagamento(x)} id='botao-doar'> AQUI </button> */}
+
+
+            {loadingSpinner ? <Loading /> : null
+            }
             <footer className='rodape-doando' >
                 <Footer />
             </footer>
