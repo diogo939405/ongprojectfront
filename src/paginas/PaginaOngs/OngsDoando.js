@@ -209,7 +209,7 @@ export default function OngsDoando() {
             </section>
             <section className='ongs-form '>
 
-                <div className='ong-wrapper'>
+                {/* <div className='ong-wrapper'>
                     <form >
                         <div className='form-titu'>
                             <h2> Titulo</h2>
@@ -229,7 +229,7 @@ export default function OngsDoando() {
                         <button onClick={(x) => tratarPagamento(x)} id='botao-doar'> AQUI </button>
 
                     </form>
-                </div>
+                </div> */}
 
                 {/* className='wrapper d-flex align-items-center justify-content-center' */}
 

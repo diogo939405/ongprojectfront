@@ -185,7 +185,8 @@
     margin-top: 30px;
     height: 80vh;
     width: 35em;
-    background-color: rgba(0, 86, 67, 1);
+    /* rgba(0, 86, 67, 0.818) */
+    background-color: #8a8a02;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
     border-radius: 30px;
     border: 3px solid white
@@ -252,7 +253,8 @@ form input {
 
 form button {
     background: #fffefeef;
-    color: #076f57;
+    /* 076f57 */
+    color: #808000;
     letter-spacing: 2px;
     border: none;
     border-radius: 10px;
@@ -264,12 +266,14 @@ form button {
     cursor: pointer;
     transition: 800ms ease all;
     outline: none;
+    
 
 }
 
 form button:hover {
-    background: #fff;
-    color: #1AAB8A;
+    transform: scale(1.1);
+    background: #808000;
+    color: white;
 }
 
 form button:before,
@@ -280,7 +284,7 @@ button:after {
     right: 0;
     height: 2px;
     width: 0;
-    background: #1AAB8A;
+    background: white;
     transition: 400ms ease all;
 }
 
