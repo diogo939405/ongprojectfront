@@ -174,42 +174,65 @@ export default function OngsDoando() {
                                     It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
                                     and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
                             </div>
+                            {/* <div>
+                                <button className="btn btn-three">oie</button>
+                            </div> */}
                         </Col>
                         <Col>
                             <div className='ongs-imagens'>
 
+                                <div className='ong-wrapper'>
+                                    <form >
+                                        <div className='form-titu'>
+                                            <h2> Formulário de doação</h2>
+                                        </div>
+                                        <br />
+                                        <div className='input-box' >
+                                            <input type='text' placeholder='digite seu Nome' required />
+                                        </div>
+
+                                        <div className='input-box'>
+                                            <input type='text' placeholder='digite sua email' required />
+                                        </div>
+
+                                        <div className='input-box'>
+                                            <input type='text' id='doar' placeholder='Faça sua doação' value={inputValue} onChange={inputChange} onKeyDown={(y) => onlyNumbers(y)}></input>
+                                        </div>
+                                        <button onClick={(x) => tratarPagamento(x)} id='botao-doar'> Doar </button>
+
+                                    </form>
+                                </div>
                             </div>
                         </Col>
                     </Row>
                 </Container>
             </section>
             <section className='ongs-form '>
-                <Container>
-                    <Row id='linha-form'>
-                        <form >
-                            <fieldset>
-                                <legend><b>formulario Doação</b></legend>
-                                <br />
-                                <div className='wrapper d-flex align-items-center justify-content-center'>
-                                    <label>Nome</label>
-                                    <input type='text' placeholder='digite seu Nome' required />
-                                </div>
 
-                                <div className='wrapper d-flex align-items-center justify-content-center'>
-                                    <label>Email</label>
-                                    <input type='text' placeholder='digite sua email' required />
-                                </div>
+                <div className='ong-wrapper'>
+                    <form >
+                        <div className='form-titu'>
+                            <h2> Titulo</h2>
+                        </div>
+                        <br />
+                        <div className='input-box' >
+                            <input type='text' placeholder='digite seu Nome' required />
+                        </div>
 
-                                <div className='wrapper d-flex align-items-center justify-content-center'>
-                                    <input type='text' className='input-doar' id='doar' placeholder='Faça sua doação' value={inputValue} onChange={inputChange} onKeyDown={(y) => onlyNumbers(y)}></input>
-                                </div>
-                                <button onClick={(x) => tratarPagamento(x)} id='botao-doar'> AQUI </button>
-                            </fieldset>
-                        </form>
+                        <div className='input-box'>
+                            <input type='text' placeholder='digite sua email' required />
+                        </div>
 
+                        <div className='input-box'>
+                            <input type='text' id='doar' placeholder='Digite o valor da sua Doação' value={inputValue} onChange={inputChange} onKeyDown={(y) => onlyNumbers(y)}></input>
+                        </div>
+                        <button onClick={(x) => tratarPagamento(x)} id='botao-doar'> AQUI </button>
 
-                    </Row>
-                </Container>
+                    </form>
+                </div>
+
+                {/* className='wrapper d-flex align-items-center justify-content-center' */}
+
             </section>
 
             {/* <h4>{infoDetails.Nome}</h4>

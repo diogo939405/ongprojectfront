@@ -141,27 +141,11 @@ export default function SobreMim() {
                   Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
               </div>
             </Col>
-            <Col id='icons'>
-              <div className='mensagem-icons'>
-                <div className='imagem-icons'>
-                  <img src={logo1} height='95px' width='100px' alt='oie' />
-                </div>
-                <h4 className='icon-descrição'>Titulo</h4>
-                <p className='texto-icon-sobre'>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-              </div>
-            </Col>
-            <Col id='icons'>
-              <div className='mensagem-icons'>
-                <div className='imagem-icons'>
-                  <img src={logo1} height='95px' width='100px' alt='oie' />
-                </div>
-                <h4 className='icon-descrição'>Titulo</h4>
-                <p className='texto-icon-sobre'>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-              </div>
+            <Col>
+            <h1> Formulário</h1>
             </Col>
           </Row>
+
         </Container>
 
 
