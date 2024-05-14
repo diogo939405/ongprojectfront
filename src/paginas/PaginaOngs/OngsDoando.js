@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { Outlet } from 'react-router';
 import axios from 'axios';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -36,9 +35,8 @@ export default function OngsDoando() {
         setInputValue(valorNovo)
     }
 
-    async function tratarPagamento(k) {
+    async function tratarPagamento() {
         console.log('valor recebido', inputValue)
-        // valorDado = dado.value
         setLoadingSpinner(true)
         token = await gerarToken();
         await efetuarPagamento(token)
@@ -52,6 +50,20 @@ export default function OngsDoando() {
                 setLoadingSpinner(false)
             });
         console.log('exibir pagamento')
+        await CapturarPagamento(token)
+            .then(async resu => {
+                console.log(resu, 'resua auqi')
+                try {
+                    let tokenId = await resu.data.id
+                    console.log('tokenid aqui', tokenId)
+                    return tokenId
+                } catch (error) {
+                    console.log(error, 'erro final auqi')
+
+                }
+            })
+
+
     }
 
     let _data = {
@@ -108,8 +120,10 @@ export default function OngsDoando() {
                     }
                 ],
 
+                // ?token=${tokenAcess}&orderId=${response.data}
+
                 application_context: {
-                    return_url: 'http://g1.com.br', //`http://localhost:3000/PagamentoTela?token=${token}&orderId=${response.data.id}`,
+                    return_url: `http://localhost:3000/PagamentoTela`,
                     cancel_url: 'https://ge.globo.com/futebol/times/sao-paulo/',
                     shipping_preference: "NO_SHIPPING",
                     brand_name: 'nome da ong'
@@ -117,13 +131,31 @@ export default function OngsDoando() {
 
             })
         })
-        console.log('dados da comora', response.data)
+        console.log('dados da comora', response.data.id)
         if (response.data.status == 'CREATED')
             dadospgto = response.data;
         // pegardados(response.data)
-        return response.data.links.find(link => link.rel === 'approve').href
-
+        console.log(dadospgto)
+        return dadospgto.links.find(link => link.rel === 'approve').href
     }
+
+    async function CapturarPagamento(token) {
+        const tokeAcess = await token
+        let kid = dadospgto.id
+        console.log(kid, 'kid aqui')
+        console.log('token capt', tokeAcess)
+        const resp = await axios({
+            url: process.env.REACT_APP_PAYPAL_BASE_URL + `/v2/checkout/orders/${kid}/capture`,
+            method: 'post',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer ' + tokeAcess
+            },
+        })
+        console.log(resp.data.id, 'aqui capturar pagamento')
+        return resp.data
+    }
+
 
     function onlyNumbers(t) {
         var nu = t.which || t.keycode;
