@@ -30,7 +30,7 @@ const BotaoPagamento = (props) => {
                     {
                         description: 'props.product.description',
                         amount: {
-                            currency_code: "BRL",
+                            currency_code: "USD",
                             value: props.doar?.value // parseFloat(Number(props.price)).toFixed(2),
                         }
                     }

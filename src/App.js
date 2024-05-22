@@ -21,7 +21,10 @@ function RoutesWithAnimation() {
   const location = useLocation();
 
   return (
-    <PayPalScriptProvider options={{ "client-id": process.env.REACT_APP_PAYPAL_CLIENT_ID }}>
+    <PayPalScriptProvider options={{ 
+      "client-id": process.env.REACT_APP_PAYPAL_CLIENT_ID 
+      
+    }}>
       <Routes key={location.pathname} location={location}>
         {/* <Route path='/' element={<Menu />}> */}
         <Route index element={<Principal />} />
