@@ -17,30 +17,40 @@ export default function OngsDoando() {
 
     const { infoId } = useParams()
     const [infoDetails, setInfoDetails] = useState({})
+    const [products, setProducts] = useState({})
     const [inputValue, setInputValue] = useState()
     const [loadingSpinner, setLoadingSpinner] = useState(false)
     let dadospgto;
     var token = '';
     let param = ''
-    let dado = document.getElementById("doar")
+    let doar = document.getElementById("doar");//.target.value
+    // let dado2 = document.getElementById("doar").target.value
     let botaoDoar = document.getElementById('botao-doar')
 
     useEffect(() => {
         axios.get(`http://localhost:5000/TodosDados/${infoId}`)
             .then((resp) => {
                 setInfoDetails(resp.data)
+                console.log('dados do card', resp.data, infoDetails)
+                setProducts({
+                    description: `${infoDetails.Nome}`,
+                    price: inputValue,
+                })
+                console.log('dados do card', resp.data, infoDetails)
             })
     }, [infoId]);
 
-    const inputChange = (valor) => {
+    const beforeSend = (valor) => {
         const valorNovo = Number(valor.target.value)
         setInputValue(valorNovo)
+        // setProducts({
+        //     description: `${infoDetails.Nome}`,
+        //     price: valorNovo
+        // })
+        console.log('objeto em input ', products)
     }
 
-    const products = {
-        description: `${infoDetails.Nome}`,
-        price: `${inputValue}`
-    }
+
 
     // async function tratarPagamento() {
     //     console.log('valor recebido', inputValue)
@@ -235,10 +245,10 @@ export default function OngsDoando() {
                                         </div>
 
                                         <div className='input-box'>
-                                            <input type='text' id='doar' placeholder='Faça sua doação' value={inputValue} onChange={inputChange} onKeyDown={(y) => onlyNumbers(y)}></input>
+                                            <input type='text' id='doar' placeholder='Faça sua doação' value={inputValue} onChange={beforeSend} onKeyDown={(y) => onlyNumbers(y)}></input>
                                         </div>
                                         <div className='paypal-button-container'>
-                                            <BotaoPagamento product={products} />
+                                            <BotaoPagamento product={infoDetails} price={inputValue} doar={doar} />
                                         </div>
 
                                         {/* <button id='botao-doar'> Doar </button> */}
