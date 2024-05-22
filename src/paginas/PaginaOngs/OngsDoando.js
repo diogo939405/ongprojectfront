@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+
 import axios from 'axios';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -9,6 +10,7 @@ import Footer from '../../footer/Footer'
 import gerarToken from '../../pagamento/Paypal';
 import Loading from '../../loading/Loading';
 import PagamentoTela from '../../pagamento/PagamentoTela';
+import BotaoPagamento from './BotãoPagamento';
 import './OngsDoando.css'
 
 export default function OngsDoando() {
@@ -35,126 +37,131 @@ export default function OngsDoando() {
         setInputValue(valorNovo)
     }
 
-    async function tratarPagamento() {
-        console.log('valor recebido', inputValue)
-        setLoadingSpinner(true)
-        token = await gerarToken();
-        await efetuarPagamento(token)
-            .then(async result => {
-                try {
-                    const url = result
-                    window.open(`${url}`)
-                } catch (error) {
-                    console.log('erro no redirect', error)
-                }
-                setLoadingSpinner(false)
-            });
-        console.log('exibir pagamento')
-        await CapturarPagamento(token)
-            .then(async resu => {
-                console.log(resu, 'resua auqi')
-                try {
-                    let tokenId = await resu.data.id
-                    console.log('tokenid aqui', tokenId)
-                    return tokenId
-                } catch (error) {
-                    console.log(error, 'erro final auqi')
-
-                }
-            })
-
-
+    const products = {
+        description: `${infoDetails.Nome}`,
+        price: `${inputValue}`
     }
 
-    let _data = {
-        id: ``,
-        cardId: `${infoDetails._id}`,
-        valor: `${inputValue}`,
-    }
+    // async function tratarPagamento() {
+    //     console.log('valor recebido', inputValue)
+    //     setLoadingSpinner(true)
+    //     token = await gerarToken();
+    //     await efetuarPagamento(token)
+    //         .then(async result => {
+    //             try {
+    //                 const url = result
+    //                 window.open(`${url}`)
+    //             } catch (error) {
+    //                 console.log('erro no redirect', error)
+    //             }
+    //             setLoadingSpinner(false)
+    //         });
+    //     console.log('exibir pagamento')
+    //     await CapturarPagamento(token)
+    //         .then(async resu => {
+    //             console.log(resu, 'resua auqi')
+    //             try {
+    //                 let tokenId = await resu.data.id
+    //                 console.log('tokenid aqui', tokenId)
+    //                 return tokenId
+    //             } catch (error) {
+    //                 console.log(error, 'erro final auqi')
+
+    //             }
+    //         })
 
 
-    fetch("http://localhost:5000/compra", {
-        method: "POST",
-        body: JSON.stringify(_data)
-    })
-        .then(response => response.json())
-        .then(data => console.log(data))
-        .catch(error => console.log(error))
+    // }
 
-    async function efetuarPagamento(token) {
-        console.log('efetuando pagamento')
-        const tokenAcess = await token
-        const response = await axios({
-            url: process.env.REACT_APP_PAYPAL_BASE_URL + '/v2/checkout/orders',
-            method: 'post',
-            headers: {
-                'Content-Type': 'application/json',
-                'Authorization': 'Bearer ' + tokenAcess
-            },
-            data: JSON.stringify({
-                intent: 'CAPTURE',
-                purchase_units: [
-                    {
-                        items: [
-                            {
-                                name: `${infoDetails.Nome}`,
-                                description: ' 1 teste de compra',
-                                quantity: '1',
-                                unit_amount: {
-                                    currency_code: "BRL",
-                                    value: `${inputValue}`
-                                }
-                            }
-                        ],
+    // let _data = {
+    //     id: ``,
+    //     cardId: `${infoDetails._id}`,
+    //     valor: `${inputValue}`,
+    // }
 
-                        amount: {
-                            currency_code: "BRL",
-                            value: `${inputValue}`,
-                            breakdown: {
-                                item_total: {
-                                    currency_code: 'BRL',
-                                    value: `${inputValue}`
-                                }
-                            }
-                        }
-                    }
-                ],
 
-                // ?token=${tokenAcess}&orderId=${response.data}
+    // fetch("http://localhost:5000/compra", {
+    //     method: "POST",
+    //     body: JSON.stringify(_data)
+    // })
+    //     .then(response => response.json())
+    //     .then(data => console.log(data))
+    //     .catch(error => console.log(error))
 
-                application_context: {
-                    return_url: `http://localhost:3000/PagamentoTela`,
-                    cancel_url: 'https://ge.globo.com/futebol/times/sao-paulo/',
-                    shipping_preference: "NO_SHIPPING",
-                    brand_name: 'nome da ong'
-                }
+    // async function efetuarPagamento(token) {
+    //     console.log('efetuando pagamento')
+    //     const tokenAcess = await token
+    //     const response = await axios({
+    //         url: process.env.REACT_APP_PAYPAL_BASE_URL + '/v2/checkout/orders',
+    //         method: 'post',
+    //         headers: {
+    //             'Content-Type': 'application/json',
+    //             'Authorization': 'Bearer ' + tokenAcess
+    //         },
+    //         data: JSON.stringify({
+    //             intent: 'CAPTURE',
+    //             purchase_units: [
+    //                 {
+    //                     items: [
+    //                         {
+    //                             name: `${infoDetails.Nome}`,
+    //                             description: ' 1 teste de compra',
+    //                             quantity: '1',
+    //                             unit_amount: {
+    //                                 currency_code: "BRL",
+    //                                 value: `${inputValue}`
+    //                             }
+    //                         }
+    //                     ],
 
-            })
-        })
-        console.log('dados da comora', response.data.id)
-        if (response.data.status == 'CREATED')
-            dadospgto = response.data;
-        // pegardados(response.data)
-        console.log(dadospgto)
-        return dadospgto.links.find(link => link.rel === 'approve').href
-    }
+    //                     amount: {
+    //                         currency_code: "BRL",
+    //                         value: `${inputValue}`,
+    //                         breakdown: {
+    //                             item_total: {
+    //                                 currency_code: 'BRL',
+    //                                 value: `${inputValue}`
+    //                             }
+    //                         }
+    //                     }
+    //                 }
+    //             ],
 
-    async function CapturarPagamento(token) {
-        const tokeAcess = await token
-        let kid = dadospgto.id
-        console.log(kid, 'kid aqui')
-        console.log('token capt', tokeAcess)
-        const resp = await axios({
-            url: process.env.REACT_APP_PAYPAL_BASE_URL + `/v2/checkout/orders/${kid}/capture`,
-            method: 'post',
-            headers: {
-                'Content-Type': 'application/json',
-                'Authorization': 'Bearer ' + tokeAcess
-            },
-        })
-        console.log(resp.data.id, 'aqui capturar pagamento')
-        return resp.data
-    }
+    //             // ?token=${tokenAcess}&orderId=${response.data}
+
+    //             application_context: {
+    //                 return_url: `http://localhost:3000/PagamentoTela`,
+    //                 cancel_url: 'https://ge.globo.com/futebol/times/sao-paulo/',
+    //                 shipping_preference: "NO_SHIPPING",
+    //                 brand_name: 'nome da ong'
+    //             }
+
+    //         })
+    //     })
+    //     console.log('dados da comora', response.data.id)
+    //     if (response.data.status == 'CREATED')
+    //         dadospgto = response.data;
+    //     // pegardados(response.data)
+    //     console.log(dadospgto)
+    //     return dadospgto.links.find(link => link.rel === 'approve').href
+    // }
+
+    // async function CapturarPagamento(token) {
+    //     const tokeAcess = await token
+    //     let kid = dadospgto.id
+    //     console.log(kid, 'kid aqui')
+    //     console.log('token capt', tokeAcess)
+    //     const resp = await axios({
+    //         url: process.env.REACT_APP_PAYPAL_BASE_URL + `/v2/checkout/orders/${kid}/capture`,
+    //         method: 'post',
+    //         headers: {
+    //             'Content-Type': 'application/json',
+    //             'Authorization': 'Bearer ' + tokeAcess
+    //         },
+    //     })
+    //     console.log(resp.data.id, 'aqui capturar pagamento')
+    //     return resp.data
+    // }
 
 
     function onlyNumbers(t) {
@@ -230,9 +237,14 @@ export default function OngsDoando() {
                                         <div className='input-box'>
                                             <input type='text' id='doar' placeholder='Faça sua doação' value={inputValue} onChange={inputChange} onKeyDown={(y) => onlyNumbers(y)}></input>
                                         </div>
-                                        <button onClick={(x) => tratarPagamento(x)} id='botao-doar'> Doar </button>
+                                        <div className='paypal-button-container'>
+                                            <BotaoPagamento product={products} />
+                                        </div>
 
+                                        {/* <button id='botao-doar'> Doar </button> */}
+                                        {/* onClick={(x) => tratarPagamento(x)} */}
                                     </form>
+
                                 </div>
                             </div>
                         </Col>
@@ -240,30 +252,7 @@ export default function OngsDoando() {
                 </Container>
             </section>
             <section className='ongs-form '>
-
-                {/* <div className='ong-wrapper'>
-                    <form >
-                        <div className='form-titu'>
-                            <h2> Titulo</h2>
-                        </div>
-                        <br />
-                        <div className='input-box' >
-                            <input type='text' placeholder='digite seu Nome' required />
-                        </div>
-
-                        <div className='input-box'>
-                            <input type='text' placeholder='digite sua email' required />
-                        </div>
-
-                        <div className='input-box'>
-                            <input type='text' id='doar' placeholder='Digite o valor da sua Doação' value={inputValue} onChange={inputChange} onKeyDown={(y) => onlyNumbers(y)}></input>
-                        </div>
-                        <button onClick={(x) => tratarPagamento(x)} id='botao-doar'> AQUI </button>
-
-                    </form>
-                </div> */}
-
-                {/* className='wrapper d-flex align-items-center justify-content-center' */}
+                <h1>oi</h1>
 
             </section>
 
