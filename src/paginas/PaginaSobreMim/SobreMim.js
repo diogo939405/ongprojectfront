@@ -10,6 +10,7 @@ import Footer from '../../footer/Footer';
 import './SobreMim.css'
 import gerarToken from '../../pagamento/Paypal'
 import PagamentoTela from '../../pagamento/PagamentoTela';
+import Form from './Form'
 import logo1 from '../PaginaDoação/Icons/information.png';
 import eu from '../../Imagens/diogo.jpg'
 
@@ -142,35 +143,36 @@ export default function SobreMim() {
               </div>
             </Col>
             <Col>
-            <div className='ongs-imagens'>
+              <div className='ongs-imagens'>
 
-<div className='ong-wrapper'>
-    <form >
-        <div className='form-titu'>
-            <h2> Contato </h2>
-        </div>
-        <br />
-        <div className='input-box' >
-            <input type='text' placeholder='digite seu Nome' required />
-        </div>
+                <Form/>
+{/* 
+                <div className='ong-wrapper'>
+                  <form >
+                    <div className='form-titu'>
+                      <h2> Contato </h2>
+                    </div>
+                    <br />
+                    <div className='input-box' >
+                      <input type='text' placeholder='digite seu Nome' required />
+                    </div>
 
-        <div className='input-box'>
-            <input type='text' placeholder='digite sua email' required />
-        </div>
+                    <div className='input-box'>
+                      <input type='text' placeholder='digite sua email' required />
+                    </div>
 
-        <div className='input-box'>
-            <input type='text' id='doar' placeholder='Faça sua doação' ></input>
-        </div>
-        <div className='paypal-button-container'>
-            {/* <BotaoPagamento product={infoDetails} price={inputValue} doar={doar} /> */}
-        </div>
+                    <div className='input-box'>
+                      <input type='text' id='doar' placeholder='Faça sua doação' ></input>
+                    </div>
+                    <div className='paypal-button-container'>
+                      
+                    </div>
 
-        {/* <button id='botao-doar'> Doar </button> */}
-        {/* onClick={(x) => tratarPagamento(x)} */}
-    </form>
+                 
+                  </form>
 
-</div>
-</div>
+                </div> */}
+              </div>
             </Col>
           </Row>
 
