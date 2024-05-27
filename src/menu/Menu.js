@@ -22,7 +22,8 @@ export default function Menu() {
                         <div class="collapse navbar-collapse" id="navbarNav">
                             <ul class="navbar-nav ms-auto">
                                 <li class="nav-item me-5">
-                                    <a class="nav-link active " aria-current="page" href="/">Home</a>
+                                    {/* active */}
+                                    <a class="nav-link  " aria-current="page" href="/">Home</a>
                                 </li>
                                 <li class="nav-item me-5">
                                     <a class="nav-link" href="/Doacao">Doacao</a>

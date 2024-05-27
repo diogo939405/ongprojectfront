@@ -138,7 +138,7 @@ export default function Doacao() {
             <Row>
               <Col>
                 <div className='seta'>
-                  <Button id='botao-seta' behavior="smooth"> Doe Agora</Button>
+                  <Button id='botao-seta' behavior="smooth" href='/Ongs'> Doe Agora</Button>
                 </div>
               </Col>
             </Row>

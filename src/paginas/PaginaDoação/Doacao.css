@@ -104,6 +104,7 @@
     margin-top: 20px;
 }
 #botao-seta{
+    padding: 20px;
     background:#808000;
     border: none;
     border-radius: 20px;

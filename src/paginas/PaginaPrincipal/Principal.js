@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Outlet } from 'react-router'
 import AnimatedPage from '../../AnimatedPage'
 import logo from '../../Imagens/logo_diogo-removebg-preview.png'
 import "./Principal.css"
 import Menu from '../../menu/Menu'
+import { Media } from './media'
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
@@ -12,12 +13,35 @@ import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Footer from '../../footer/Footer'
+import imagemCard from '../../Imagens/download (2).jpg'
 
 
 
 
 
 export default function Principal() {
+
+  let data = [
+    {
+      id: 1,
+      imgSrc: imagemCard
+    },
+    {
+      id: 2,
+      imgSrc: imagemCard
+    },
+    {
+      id: 3,
+      imgSrc: imagemCard
+    },
+    {
+      id: 4,
+      imgSrc: imagemCard
+    }
+  ]
+
+  const [file, setFile] = useState(null)
+
   return (
 
     <AnimatedPage>
@@ -40,32 +64,32 @@ export default function Principal() {
                   </p>
                 </div>
               </Col>
+
               <Col className='sm={6}'>
+
                 <div className='cards-col'>
-                  <div className='cardss'>
-                    <h5>titulo</h5>
-                    <p>pequena descricao</p>
-                  </div>
-                  <div className='cardss'>
-                    <h5>titulo</h5>
-                    <p>pequena descricao</p>
-                  </div>
-
-                  <div className='cardss'>
-                    <h5>titulo</h5>
-                    <p>pequena descricao</p>
-                  </div>
-
-                  <div className='cardss'>
-                    <h5>titulo</h5>
-                    <p>pequena descricao</p>
-                  </div>
-
-
+                  {
+                    data.map((x,index) => {
+                      return (
+                        <div className='cardss' key={index} onClick={() => setFile(file)}>
+                          <img src={x.imgSrc} className='imagemdoCard' />
+                        </div>
+                      )
+                    })
+                  }
+                  {/* <div className='popud-image'>
+                    <span>&times;</span>
+                    {
+                      data.map((x)=>{
+                        <img src={x.imgSrc}/>
+                      })
+                    }
+                  </div> */}
+                
                 </div>
               </Col>
-
             </Row>
+
           </Container>
         </main>
 

@@ -142,7 +142,35 @@ export default function SobreMim() {
               </div>
             </Col>
             <Col>
-            <h1> Formulário</h1>
+            <div className='ongs-imagens'>
+
+<div className='ong-wrapper'>
+    <form >
+        <div className='form-titu'>
+            <h2> Contato </h2>
+        </div>
+        <br />
+        <div className='input-box' >
+            <input type='text' placeholder='digite seu Nome' required />
+        </div>
+
+        <div className='input-box'>
+            <input type='text' placeholder='digite sua email' required />
+        </div>
+
+        <div className='input-box'>
+            <input type='text' id='doar' placeholder='Faça sua doação' ></input>
+        </div>
+        <div className='paypal-button-container'>
+            {/* <BotaoPagamento product={infoDetails} price={inputValue} doar={doar} /> */}
+        </div>
+
+        {/* <button id='botao-doar'> Doar </button> */}
+        {/* onClick={(x) => tratarPagamento(x)} */}
+    </form>
+
+</div>
+</div>
             </Col>
           </Row>
 
