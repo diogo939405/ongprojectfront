@@ -12,7 +12,8 @@ import gerarToken from '../../pagamento/Paypal'
 import PagamentoTela from '../../pagamento/PagamentoTela';
 import Form from './Form'
 import logo1 from '../PaginaDoação/Icons/information.png';
-import eu from '../../Imagens/diogo.jpg'
+import eu from '../../Imagens/diogo.jpg';
+import Float from '../../floatButton/Float';
 
 
 export default function SobreMim() {
@@ -144,34 +145,7 @@ export default function SobreMim() {
             </Col>
             <Col>
               <div className='ongs-imagens'>
-
                 <Form/>
-{/* 
-                <div className='ong-wrapper'>
-                  <form >
-                    <div className='form-titu'>
-                      <h2> Contato </h2>
-                    </div>
-                    <br />
-                    <div className='input-box' >
-                      <input type='text' placeholder='digite seu Nome' required />
-                    </div>
-
-                    <div className='input-box'>
-                      <input type='text' placeholder='digite sua email' required />
-                    </div>
-
-                    <div className='input-box'>
-                      <input type='text' id='doar' placeholder='Faça sua doação' ></input>
-                    </div>
-                    <div className='paypal-button-container'>
-                      
-                    </div>
-
-                 
-                  </form>
-
-                </div> */}
               </div>
             </Col>
           </Row>
@@ -223,6 +197,7 @@ export default function SobreMim() {
       <footer>
         <Footer />
       </footer>
+      <Float/>
       <Outlet />
     </AnimatedPage>
   )

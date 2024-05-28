@@ -22,30 +22,41 @@ export default function Form() {
             );
     };
 
+    const margin = (e) => {
+        // const textarea = document.querySelector("textarea")
+        // let x = document.body.scrollHeight
+        // let sHeigth = e.x;
+        // console.log(sHeigth)
+    }
+
     return (
 
-        <div className='ong-wrapper'>
+        <div className='ong-wrapperr'>
             <form ref={form} onSubmit={sendEmail} >
                 <div className='form-titu'>
                     <h2> Contato </h2>
                 </div>
                 <br />
-                <div className='input-box' >
+                <div className='input-boxx' >
+                    <label className='label-form'>Nome</label>
                     <input type='text' name="from_name" placeholder='digite seu Nome' required />
                 </div>
 
-                <div className='input-box'>
+                <div className='input-boxx'>
+                    <label className='label-form'> Gmail ou telefone para contato</label>
                     <input type='text' placeholder='digite sua email' name="from_email" required />
                 </div>
 
-                <div className='input-box'>
-                    <label>Message</label>
-                    <textarea name="message" />
+                <div className='input-text'>
+                    <label className='label-form'>Escreva sua mensagem</label>
+                    {/* <label>Message</label> */}
+                    <textarea name="message"
+                        className='mensagem-area'
+                        placeholder='Digite algo'
+                        onKeyUp={margin} />
+
                 </div>
-                <div className='paypal-button-container'>
-                    <button>doeee</button>
-                    {/* <BotaoPagamento product={infoDetails} price={inputValue} doar={doar} /> */}
-                </div>
+                <button className='bot-doarr'>Enviar</button>
 
                 {/* <button id='botao-doar'> Doar </button> */}
                 {/* onClick={(x) => tratarPagamento(x)} */}

@@ -11,6 +11,7 @@ import gerarToken from '../../pagamento/Paypal';
 import Loading from '../../loading/Loading';
 import PagamentoTela from '../../pagamento/PagamentoTela';
 import BotaoPagamento from './BotãoPagamento';
+import SlideGallery from './SlideGallery';
 import './OngsDoando.css'
 
 export default function OngsDoando() {
@@ -43,136 +44,8 @@ export default function OngsDoando() {
     const beforeSend = (valor) => {
         const valorNovo = Number(valor.target.value)
         setInputValue(valorNovo)
-        // setProducts({
-        //     description: `${infoDetails.Nome}`,
-        //     price: valorNovo
-        // })
         console.log('objeto em input ', products)
     }
-
-
-
-    // async function tratarPagamento() {
-    //     console.log('valor recebido', inputValue)
-    //     setLoadingSpinner(true)
-    //     token = await gerarToken();
-    //     await efetuarPagamento(token)
-    //         .then(async result => {
-    //             try {
-    //                 const url = result
-    //                 window.open(`${url}`)
-    //             } catch (error) {
-    //                 console.log('erro no redirect', error)
-    //             }
-    //             setLoadingSpinner(false)
-    //         });
-    //     console.log('exibir pagamento')
-    //     await CapturarPagamento(token)
-    //         .then(async resu => {
-    //             console.log(resu, 'resua auqi')
-    //             try {
-    //                 let tokenId = await resu.data.id
-    //                 console.log('tokenid aqui', tokenId)
-    //                 return tokenId
-    //             } catch (error) {
-    //                 console.log(error, 'erro final auqi')
-
-    //             }
-    //         })
-
-
-    // }
-
-    // let _data = {
-    //     id: ``,
-    //     cardId: `${infoDetails._id}`,
-    //     valor: `${inputValue}`,
-    // }
-
-
-    // fetch("http://localhost:5000/compra", {
-    //     method: "POST",
-    //     body: JSON.stringify(_data)
-    // })
-    //     .then(response => response.json())
-    //     .then(data => console.log(data))
-    //     .catch(error => console.log(error))
-
-    // async function efetuarPagamento(token) {
-    //     console.log('efetuando pagamento')
-    //     const tokenAcess = await token
-    //     const response = await axios({
-    //         url: process.env.REACT_APP_PAYPAL_BASE_URL + '/v2/checkout/orders',
-    //         method: 'post',
-    //         headers: {
-    //             'Content-Type': 'application/json',
-    //             'Authorization': 'Bearer ' + tokenAcess
-    //         },
-    //         data: JSON.stringify({
-    //             intent: 'CAPTURE',
-    //             purchase_units: [
-    //                 {
-    //                     items: [
-    //                         {
-    //                             name: `${infoDetails.Nome}`,
-    //                             description: ' 1 teste de compra',
-    //                             quantity: '1',
-    //                             unit_amount: {
-    //                                 currency_code: "BRL",
-    //                                 value: `${inputValue}`
-    //                             }
-    //                         }
-    //                     ],
-
-    //                     amount: {
-    //                         currency_code: "BRL",
-    //                         value: `${inputValue}`,
-    //                         breakdown: {
-    //                             item_total: {
-    //                                 currency_code: 'BRL',
-    //                                 value: `${inputValue}`
-    //                             }
-    //                         }
-    //                     }
-    //                 }
-    //             ],
-
-    //             // ?token=${tokenAcess}&orderId=${response.data}
-
-    //             application_context: {
-    //                 return_url: `http://localhost:3000/PagamentoTela`,
-    //                 cancel_url: 'https://ge.globo.com/futebol/times/sao-paulo/',
-    //                 shipping_preference: "NO_SHIPPING",
-    //                 brand_name: 'nome da ong'
-    //             }
-
-    //         })
-    //     })
-    //     console.log('dados da comora', response.data.id)
-    //     if (response.data.status == 'CREATED')
-    //         dadospgto = response.data;
-    //     // pegardados(response.data)
-    //     console.log(dadospgto)
-    //     return dadospgto.links.find(link => link.rel === 'approve').href
-    // }
-
-    // async function CapturarPagamento(token) {
-    //     const tokeAcess = await token
-    //     let kid = dadospgto.id
-    //     console.log(kid, 'kid aqui')
-    //     console.log('token capt', tokeAcess)
-    //     const resp = await axios({
-    //         url: process.env.REACT_APP_PAYPAL_BASE_URL + `/v2/checkout/orders/${kid}/capture`,
-    //         method: 'post',
-    //         headers: {
-    //             'Content-Type': 'application/json',
-    //             'Authorization': 'Bearer ' + tokeAcess
-    //         },
-    //     })
-    //     console.log(resp.data.id, 'aqui capturar pagamento')
-    //     return resp.data
-    // }
-
 
     function onlyNumbers(t) {
         var nu = t.which || t.keycode;
@@ -237,14 +110,17 @@ export default function OngsDoando() {
                                         </div>
                                         <br />
                                         <div className='input-box' >
-                                            <input type='text' placeholder='digite seu Nome' required />
+                                        <label className='label-for'>Nome</label>
+                                            <input type='text' placeholder='digite seu Nome(Opcional)'  />
                                         </div>
 
                                         <div className='input-box'>
-                                            <input type='text' placeholder='digite sua email' required />
+                                        <label className='label-for'>Gmail</label>
+                                            <input type='text' placeholder='digite sua email(Opcional)'  />
                                         </div>
 
                                         <div className='input-box'>
+                                        <label className='label-for'>Valor a ser Doado</label>
                                             <input type='text' id='doar' placeholder='Faça sua doação' value={inputValue} onChange={beforeSend} onKeyDown={(y) => onlyNumbers(y)}></input>
                                         </div>
                                         <div className='paypal-button-container'>
@@ -262,7 +138,7 @@ export default function OngsDoando() {
                 </Container>
             </section>
             <section className='ongs-form '>
-                <h1>oi</h1>
+                <SlideGallery/>
 
             </section>
 

@@ -11,6 +11,7 @@ import foto from '../../Imagens/Gift Catalog.jpg'
 import Button from 'react-bootstrap/Button';
 import logo1 from './Icons/information.png'
 import Footer from '../../footer/Footer'
+import Float from '../../floatButton/Float'
 
 
 
@@ -148,7 +149,7 @@ export default function Doacao() {
       <footer className='rodape-doacao'>
         <Footer />
       </footer>
-
+      <Float />
 
 
 

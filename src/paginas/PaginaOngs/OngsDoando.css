@@ -183,7 +183,7 @@
 .ong-wrapper {
     margin-right: -200px;
     margin-top: 30px;
-    height: 80vh;
+    height: 94vh;
     width: 35em;
     /* rgba(0, 86, 67, 0.818) */
     background-color: #8a8a02;
@@ -299,4 +299,15 @@ form button:hover:before,
 button:hover:after {
     width: 100%;
     transition: 800ms ease all;
+}
+
+.label-for{
+    letter-spacing: 2px;
+    padding: 5px 5px;
+    margin-bottom: 5px;
+    color: rgba(250, 250, 250, 0.725);
+    font-size: 1.2rem;
+    text-align: left;
+    font-weight: 500;
+    font-family: "Montserrat";
 }

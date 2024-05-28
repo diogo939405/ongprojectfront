@@ -11,21 +11,17 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import logo2 from '../../Imagens/logo_diogo-removebg-preview.png';
 import Footer from '../../footer/Footer'
-
+import Float from '../../floatButton/Float'
 
 
 export default function Ongs() {
 
-  const [isfliped, setIsFliped] = useState(false)
 
-  function Fliped() {
-    setIsFliped(!isfliped)
-  }
 
   return (
     <AnimatedPage>
-     <header className='cabeca'>
-        <Menu/>
+      <header className='cabeca'>
+        <Menu />
         <div className='div-texto'>
           <div >
             <h4 className='div-titulo'>titulo pagina</h4>
@@ -41,15 +37,15 @@ export default function Ongs() {
         </div>
       </header>
       <section className='secao-body'>
-      <div className='secao-cards'>
-        <OngsCard/>
-      </div>  
+        <div className='secao-cards'>
+          <OngsCard />
+        </div>
       </section>
-    
-      <footer>
-        <Footer/>
-      </footer>
 
+      <footer>
+        <Footer />
+      </footer>
+      <Float />
       <Outlet />
     </AnimatedPage>
 

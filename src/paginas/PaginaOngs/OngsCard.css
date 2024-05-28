@@ -109,3 +109,9 @@ card.card-back {
     background-color: purple;
     color: black;
 }
+
+.ongs-form{
+    background-color: #f0f0f0;
+    margin-top: 100px;
+    margin-bottom: -400px;
+}
