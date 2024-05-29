@@ -226,8 +226,8 @@
 .linha-etapas:nth-child(odd) div::before,
 .linha-etapas:nth-child(even) div::before {
     content: '';
-    background: white;
-    box-shadow: 0 0 0.5em #353501;
+    background:red;
+    box-shadow: 0 0 0.5em black;
     position: absolute;
     width: 0.8em;
     height: 0.8em;
