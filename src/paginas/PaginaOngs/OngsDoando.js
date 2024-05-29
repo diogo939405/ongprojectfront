@@ -29,6 +29,10 @@ export default function OngsDoando() {
     let botaoDoar = document.getElementById('botao-doar')
 
     useEffect(() => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        })
         axios.get(`http://localhost:5000/TodosDados/${infoId}`)
             .then((resp) => {
                 setInfoDetails(resp.data)
@@ -47,14 +51,14 @@ export default function OngsDoando() {
         console.log('objeto em input ', products)
     }
 
-    function onlyNumbers(t) {
-        var nu = t.which || t.keycode;
-        if ((nu >= 48 && nu < 57)) {
-            return true
-        } else {
-            return false
-        }
-    }
+    // function onlyNumbers(t) {
+    //     var nu = t.which || t.keycode;
+    //     if ((nu >= 48 && nu <= 57)) {
+    //         return true
+    //     } else {
+    //         return false
+    //     }
+    // }
 
     return (
         <>
@@ -95,9 +99,13 @@ export default function OngsDoando() {
                                     It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
                                     It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
                                     and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+
                             </div>
-                            {/* <div>
-                                <button className="btn btn-three">oie</button>
+                            {/* <div className='dados'>
+                                <p className='dados-titulo'>Dados para compra</p>
+                                <p> Login:weifweogrw</p>
+                                <p> Senha:wnfwngjrwngrjnh</p>
+
                             </div> */}
                         </Col>
                         <Col>
@@ -110,18 +118,18 @@ export default function OngsDoando() {
                                         </div>
                                         <br />
                                         <div className='input-box' >
-                                        <label className='label-for'>Nome</label>
-                                            <input type='text' placeholder='digite seu Nome(Opcional)'  />
+                                            <label className='label-for'>Nome</label>
+                                            <input type='text' placeholder='digite seu Nome(Opcional)' />
                                         </div>
 
                                         <div className='input-box'>
-                                        <label className='label-for'>Gmail</label>
-                                            <input type='text' placeholder='digite sua email(Opcional)'  />
+                                            <label className='label-for'>Gmail</label>
+                                            <input type='text' placeholder='digite sua email(Opcional)' />
                                         </div>
 
                                         <div className='input-box'>
-                                        <label className='label-for'>Valor a ser Doado</label>
-                                            <input type='text' id='doar' placeholder='Faça sua doação' value={inputValue} onChange={beforeSend} onKeyDown={(y) => onlyNumbers(y)}></input>
+                                            <label className='label-for'>Valor a ser Doado</label>
+                                            <input type='text' id='doar' placeholder='Faça sua doação' value={inputValue} onChange={beforeSend} ></input>
                                         </div>
                                         <div className='paypal-button-container'>
                                             <BotaoPagamento product={infoDetails} price={inputValue} doar={doar} />
@@ -138,7 +146,7 @@ export default function OngsDoando() {
                 </Container>
             </section>
             <section className='ongs-form '>
-                <SlideGallery/>
+                <SlideGallery />
 
             </section>
 

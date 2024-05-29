@@ -1,0 +1,29 @@
+.float {
+   
+    color: white;
+    position: fixed;
+    top: 520px;
+    /* left:50px; */
+    right: 10px;
+    height:55px;
+    width: 60px;
+    font-size: 70px;
+    background-color:rgba(128, 128, 0, 0.495);
+    transition: all 0.2s;
+    border-radius: 50%;
+    padding: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.416);
+}
+
+.float:hover{
+    background-color:olive;
+    cursor: pointer;
+    color: black;
+    transform: translateY(-15px);
+    border: 2px solid black;
+}
+/* .back-float{
+    background-color: aqua;
+    width: 70px;
+    height: 60px;
+} */

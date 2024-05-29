@@ -19,7 +19,7 @@ export default function Ongs() {
 
 
   return (
-    <AnimatedPage>
+    <>
       <header className='cabeca'>
         <Menu />
         <div className='div-texto'>
@@ -36,19 +36,20 @@ export default function Ongs() {
           </div>
         </div>
       </header>
-      <section className='secao-body'>
-        <div className='secao-cards'>
-          <OngsCard />
-        </div>
-      </section>
-
+      <AnimatedPage>
+        <section className='secao-body'>
+          <div className='secao-cards'>
+            <OngsCard />
+          </div>
+        </section>
+      </AnimatedPage>
       <footer>
         <Footer />
       </footer>
       <Float />
       <Outlet />
-    </AnimatedPage>
 
+    </>
 
   )
 }

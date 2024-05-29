@@ -43,8 +43,7 @@ export default function Principal() {
   const [file, setFile] = useState(null)
 
   return (
-
-    <AnimatedPage>
+    <>
       <div className='abc'>
         <header>
 
@@ -69,7 +68,7 @@ export default function Principal() {
 
                 <div className='cards-col'>
                   {
-                    data.map((x,index) => {
+                    data.map((x, index) => {
                       return (
                         <div className='cardss' key={index} onClick={() => setFile(file)}>
                           <img src={x.imgSrc} className='imagemdoCard' />
@@ -77,15 +76,6 @@ export default function Principal() {
                       )
                     })
                   }
-                  {/* <div className='popud-image'>
-                    <span>&times;</span>
-                    {
-                      data.map((x)=>{
-                        <img src={x.imgSrc}/>
-                      })
-                    }
-                  </div> */}
-                
                 </div>
               </Col>
             </Row>
@@ -98,6 +88,6 @@ export default function Principal() {
         </footer>
       </div>
       <Outlet />
-    </AnimatedPage>
+    </>
   )
 }

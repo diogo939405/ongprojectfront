@@ -26,7 +26,8 @@ export default function Doacao() {
   }
 
   return (
-    <AnimatedPage>
+    <>
+
       <header className='cabeca'>
         <Menu />
         <div className='div-texto'>
@@ -45,114 +46,116 @@ export default function Doacao() {
 
 
       </header>
-      <body className='corpo'>
+      <AnimatedPage>
+        <body className='corpo'>
 
-        <section className='secao1'>
+          <section className='secao1'>
 
-          <Container>
-            <Row id='corpo-mensagem'>
-              <Col id='mensagem-imagem'>
-                <Image src={foto} id='foto-texto' />
-              </Col>
+            <Container>
+              <Row id='corpo-mensagem'>
+                <Col id='mensagem-imagem'>
+                  <Image src={foto} id='foto-texto' />
+                </Col>
 
-              <Col className='mensagem-texto'>
-                <h4 id='titulo'>Titulo</h4>
-                {/* <h5 id='subtitulo'>subtitulo</h5> */}
-                <p id='conteudo'>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                  when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                  It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                  It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-                  and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                </p>
-              </Col>
-            </Row>
-            {/* <div className='seta'>
+                <Col className='mensagem-texto'>
+                  <h4 id='titulo'>Titulo</h4>
+                  {/* <h5 id='subtitulo'>subtitulo</h5> */}
+                  <p id='conteudo'>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                    when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                    It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                    and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                  </p>
+                </Col>
+              </Row>
+              {/* <div className='seta'>
               <Button id='botao-seta' onClick={() => scrollToDados(dados)} behavior="smooth"> AQUI</Button>
             </div> */}
 
 
-          </Container>
-        </section>
+            </Container>
+          </section>
 
 
-        <section className='secao2'>
-          <Container id='container-icons'>
-            <Row id='corpo-icons' className='gx-5'>
-              <Col id='icons'>
-                <div className='mensagem-icons'>
-                  <div className='imagem-icons'>
-                    <img src={logo1} height='95px' width='100px' alt='oie' />
+          <section className='secao2'>
+            <Container id='container-icons'>
+              <Row id='corpo-icons' className='gx-5'>
+                <Col id='icons'>
+                  <div className='mensagem-icons'>
+                    <div className='imagem-icons'>
+                      <img src={logo1} height='95px' width='100px' alt='oie' />
+                    </div>
+                    <p className='texto-icon'>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
                   </div>
-                  <p className='texto-icon'>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-                </div>
-              </Col>
-              <Col id='icons'>
-                <div className='mensagem-icons'>
-                  <div className='imagem-icons'>
-                    <img src={logo1} height='95px' width='100px' alt='oie' />
+                </Col>
+                <Col id='icons'>
+                  <div className='mensagem-icons'>
+                    <div className='imagem-icons'>
+                      <img src={logo1} height='95px' width='100px' alt='oie' />
+                    </div>
+                    <p className='texto-icon'>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
                   </div>
-                  <p className='texto-icon'>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-                </div>
-              </Col>
-              <Col id='icons'>
-                <div className='mensagem-icons'>
-                  <div className='imagem-icons'>
-                    <img src={logo1} height='95px' width='100px' alt='oie' />
+                </Col>
+                <Col id='icons'>
+                  <div className='mensagem-icons'>
+                    <div className='imagem-icons'>
+                      <img src={logo1} height='95px' width='100px' alt='oie' />
+                    </div>
+                    <p className='texto-icon'>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
                   </div>
-                  <p className='texto-icon'>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-                </div>
-              </Col>
-            </Row>
-            <Row id='corpo-icons' className='gx-5'>
-              <Col id='icons'>
-                <div className='mensagem-icons'>
-                  <div className='imagem-icons'>
-                    <img src={logo1} height='95px' width='100px' alt='oie' />
+                </Col>
+              </Row>
+              <Row id='corpo-icons' className='gx-5'>
+                <Col id='icons'>
+                  <div className='mensagem-icons'>
+                    <div className='imagem-icons'>
+                      <img src={logo1} height='95px' width='100px' alt='oie' />
+                    </div>
+                    <p className='texto-icon'>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
                   </div>
-                  <p className='texto-icon'>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-                </div>
-              </Col>
-              <Col id='icons'>
-                <div className='mensagem-icons'>
-                  <div className='imagem-icons'>
-                    <img src={logo1} height='95px' width='100px' alt='oie' />
+                </Col>
+                <Col id='icons'>
+                  <div className='mensagem-icons'>
+                    <div className='imagem-icons'>
+                      <img src={logo1} height='95px' width='100px' alt='oie' />
+                    </div>
+                    <p className='texto-icon'>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
                   </div>
-                  <p className='texto-icon'>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-                </div>
-              </Col>
-              <Col id='icons'>
-                <div className='mensagem-icons'>
-                  <div className='imagem-icons'>
-                    <img src={logo1} height='95px' width='100px' alt='oie' />
+                </Col>
+                <Col id='icons'>
+                  <div className='mensagem-icons'>
+                    <div className='imagem-icons'>
+                      <img src={logo1} height='95px' width='100px' alt='oie' />
+                    </div>
+                    <p className='texto-icon'> Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
                   </div>
-                  <p className='texto-icon'> Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-                </div>
-              </Col>
-            </Row>
-            <Row>
-              <Col>
-                <div className='seta'>
-                  <Button id='botao-seta' behavior="smooth" href='/Ongs'> Doe Agora</Button>
-                </div>
-              </Col>
-            </Row>
-          </Container>
-        </section>
-      </body>
+                </Col>
+              </Row>
+              <Row>
+                <Col>
+                  <div className='seta'>
+                    <Button id='botao-seta' behavior="smooth" href='/Ongs'> Doe Agora</Button>
+                  </div>
+                </Col>
+              </Row>
+            </Container>
+          </section>
+        </body>
+      </AnimatedPage>
       <footer className='rodape-doacao'>
         <Footer />
       </footer>
       <Float />
 
 
+    </>
 
-    </AnimatedPage>
   )
 }
