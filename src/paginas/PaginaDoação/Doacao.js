@@ -69,9 +69,7 @@ export default function Doacao() {
                   </p>
                 </Col>
               </Row>
-              {/* <div className='seta'>
-              <Button id='botao-seta' onClick={() => scrollToDados(dados)} behavior="smooth"> AQUI</Button>
-            </div> */}
+            
 
 
             </Container>

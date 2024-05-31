@@ -209,9 +209,9 @@ form input {
     border-radius: 10px;
 } */
 
-form button {
+/* form button {
     background: #fffefeef;
-    /* 076f57 */
+   
     color: #808000;
     letter-spacing: 2px;
     border: none;
@@ -257,7 +257,7 @@ form button:hover:before,
 button:hover:after {
     width: 100%;
     transition: 800ms ease all;
-}
+} */
 
 .label-for{
     letter-spacing: 2px;

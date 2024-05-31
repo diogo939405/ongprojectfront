@@ -12,7 +12,7 @@
     transition: all 0.2s;
     border-radius: 50%;
     padding: 10px;
-    border: 2px solid rgba(0, 0, 0, 0.416);
+    border: 2px solid rgba(23, 23, 23, 0.238);
 }
 
 .float:hover{

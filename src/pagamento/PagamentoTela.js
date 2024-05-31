@@ -2,43 +2,60 @@ import React from 'react'
 import gerarToken from './Paypal';
 import axios from 'axios'
 import props from 'prop-types';
+import Menu from '../menu/Menu'
+import Footer from '../footer/Footer';
+import AnimatedPage from '../AnimatedPage';
+import './PagamentoTela.css'
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col'
 
 
 
 
 export default function PagamentoTela() {
-
-
-
-
-  // const { token, orderid } = props.params
-  // console.log('TESTE DE PARAM', token, orderid)
-
-
-  // async function pegardados() {
-  //   var dados = param;
-  //   const orderId = dados.id;
-
-  //   console.log('pagamento tela', orderId, param)
-  //   // const acessToken = await gerarToken()
-  //   // console.log('TOKEN EM PEGAR', acessToken, param, process.env.REACT_APP_PAYPAL_BASE_URL + `/v2/checkout/orders/${orderId}/capture`)
-  //   const response = await axios({
-  //     url: process.env.REACT_APP_PAYPAL_BASE_URL + `/v2/checkout/orders/${orderId}/capture`,
-  //     method: 'post',
-  //     headers: {
-  //       'Content-Type': 'application/json',
-  //       Authorization: `Bearer ${token}`,
-  //       'PayPal-Request-Id': orderId,
-  //     }
-  //   })
-  //   const data = await response.json()
-  //   console.log('response 2', data);
-  // }
-
-  // pegardados();
   return (
-    <div>
-      <h1>pagamento</h1>
-    </div>
+    <>
+      <header className='cabeca'>
+        <Menu />
+        <div className='div-texto'>
+          <div >
+            <h4 className='div-titulo'>titulo pagina</h4>
+          </div>
+          <div className='div-info'>
+            <span>
+              <a href='/' className='link-home'> Home</a>
+            </span>
+            <span style={{ color: 'white', fontSize: '1.3rem' }}>/</span>
+            <span className='pagina-atual'>Ongs</span>
+            <span></span>
+          </div>
+        </div>
+      </header>
+
+      <AnimatedPage>
+        <body className='conte'>
+          <section className='t'>
+            <Container>
+              <Row>
+                <Col>
+                  <div className='conte-body'>
+                    <div className='conte-texto1'>Obrigado por ter doado</div>
+                    <div className='conte-buttons'>
+                      <button className='conte-buttonOnly' href='/SobreMim'> SobreMim</button>
+                      <button className='conte-buttonOnly' href='/Ongs'> Voltar ao Home</button>
+                    </div>
+                  </div>
+                </Col>
+              </Row>
+            </Container>
+          </section>
+        </body>
+      </AnimatedPage>
+      <footer className='rodape-doandoo'>
+        <Footer />
+      </footer>
+    </>
+
   )
 }
