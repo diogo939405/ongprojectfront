@@ -18,9 +18,13 @@ const BotaoPagamento = (props) => {
         //if response is sucess
         setPaidFor(true)
         if (paidFor) { window.alert('pagamento sucesso') }
+        window.location.href = "/PagamentoTela"
     }
 
-    if (erro) { window.alert('pagamento deu erro' + props.price + '--' + parseFloat(props.price).toFixed(2)) }
+    if (erro) {
+        window.alert('pagamento deu erro' + props.price + '--' + parseFloat(props.price).toFixed(2))
+        console.log(erro)
+    }
 
     return <PayPalButtons
 

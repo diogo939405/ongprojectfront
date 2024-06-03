@@ -124,7 +124,9 @@ export default function OngsDoando() {
 
                                         <div className='input-box'>
                                             <label className='label-for'>Gmail</label>
-                                            <input type='text' placeholder='digite sua email(Opcional)' />
+                                            <input type='text' placeholder='digite sua email(Opcional)'
+                                                // defaultValue="@gmail.com"
+                                            />
                                         </div>
 
                                         <div className='input-box'>

@@ -1,12 +1,14 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import './Form.css'
 
 export default function Form() {
     const form = useRef();
+    const [dados, setDados] = useState("")
 
     const sendEmail = (e) => {
         e.preventDefault();
+
 
         emailjs
             .sendForm('service_r0d46nu', 'template_p2hdmmh', form.current, {
@@ -15,6 +17,9 @@ export default function Form() {
             .then(
                 () => {
                     console.log('SUCCESS!');
+                    form.current.value = ""
+
+
                 },
                 (error) => {
                     console.log('FAILED...', error.text);
@@ -39,21 +44,23 @@ export default function Form() {
                 <br />
                 <div className='input-boxx' >
                     <label className='label-form'>Nome</label>
-                    <input type='text' name="from_name" placeholder='digite seu Nome' required />
+                    <input type='text' ref={form} name="from_name" placeholder='digite seu Nome' required onChange={(e) => setDados(e.target.value)} />
                 </div>
 
                 <div className='input-boxx'>
                     <label className='label-form'> Gmail ou telefone para contato</label>
-                    <input type='text' placeholder='digite sua email' name="from_email" required />
+                    <input type='text' ref={form} placeholder='digite sua email' name="from_email" required onChange={(e) => setDados(e.target.value)} />
                 </div>
 
                 <div className='input-text'>
                     <label className='label-form'>Escreva sua mensagem</label>
                     {/* <label>Message</label> */}
                     <textarea name="message"
+                        ref={form}
                         className='mensagem-area'
                         placeholder='Digite algo'
-                        onKeyUp={margin} />
+                        onKeyUp={margin}
+                        onChange={(e) => setDados(e.target.value)} />
 
                 </div>
                 <button className='bot-doarr'>Enviar</button>
