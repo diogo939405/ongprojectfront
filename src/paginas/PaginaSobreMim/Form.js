@@ -17,7 +17,7 @@ export default function Form() {
             .then(
                 () => {
                     console.log('SUCCESS!');
-                    form.current.value = ""
+                    form.current.reset();
 
 
                 },
