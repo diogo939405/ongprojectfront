@@ -4,8 +4,6 @@ import './Form.css'
 
 export default function Form() {
     const form = useRef();
-    const [dados, setDados] = useState("")
-
     const sendEmail = (e) => {
         e.preventDefault();
 
@@ -44,12 +42,12 @@ export default function Form() {
                 <br />
                 <div className='input-boxx' >
                     <label className='label-form'>Nome</label>
-                    <input type='text' ref={form} name="from_name" placeholder='digite seu Nome' required onChange={(e) => setDados(e.target.value)} />
+                    <input type='text' ref={form} name="from_name" placeholder='digite seu Nome' required />
                 </div>
 
                 <div className='input-boxx'>
                     <label className='label-form'> Gmail ou telefone para contato</label>
-                    <input type='text' ref={form} placeholder='digite sua email' name="from_email" required onChange={(e) => setDados(e.target.value)} />
+                    <input type='text' ref={form} placeholder='digite sua email' name="from_email" required />
                 </div>
 
                 <div className='input-text'>
@@ -60,7 +58,7 @@ export default function Form() {
                         className='mensagem-area'
                         placeholder='Digite algo'
                         onKeyUp={margin}
-                        onChange={(e) => setDados(e.target.value)} />
+                    />
 
                 </div>
                 <button className='bot-doarr'>Enviar</button>
