@@ -1,6 +1,8 @@
 import { PayPalButtons } from '@paypal/react-paypal-js';
 import { useState, useEffect } from 'react';
 import { FUNDING } from "@paypal/react-paypal-js";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const BotaoPagamento = (props) => {
     const { products } = props.product;
@@ -16,7 +18,7 @@ const BotaoPagamento = (props) => {
 
     const style = {
         "layout": "vertical",
-        "shape":"rect",
+        "shape": "rect",
         "color": "silver",
         "size": "small",
         "label": "pay",
@@ -24,10 +26,11 @@ const BotaoPagamento = (props) => {
         "tagline": "false",
         "borderRadius": 10,
         "padding": 20,
-        "heigth":55
-        
+        "heigth": 55
+    }
 
-
+    function notify() {
+        toast.info("Houve um problema ao efetuar o pagamento,por favor tente de novo ou aperte F5")
     }
 
     const handleApprove = (orderID) => {
@@ -38,11 +41,14 @@ const BotaoPagamento = (props) => {
     }
 
     if (erro) {
-        window.alert('pagamento deu erro' + props.price + '--' + parseFloat(props.price).toFixed(2))
+        notify()
+        // window.alert('pagamento deu erro' + props.price + '--' + parseFloat(props.price).toFixed(2))
         console.log(erro)
     }
 
     return <PayPalButtons
+
+
         style={style}
         createOrder={(data, actions) => {
             return actions.order.create({
@@ -72,6 +78,19 @@ const BotaoPagamento = (props) => {
         }}
         fundingSource={FUNDING.PAYPAL}
     />;
+    <ToastContainer
+        position="top-right"
+        autoClose={7000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+
+    />
 };
 
 export default BotaoPagamento;

@@ -8,17 +8,23 @@ import Col from 'react-bootstrap/Col';
 import logo from '../../Imagens/_A smile is the universal welcome__.jpg'
 import axios from 'axios'
 import { Link } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function OngsCard() {
 
     const [data, setData] = useState([])
+
+    function notify() {
+        toast.info("Houve um problema ao carregar a pagina,aguarde um pouco ou aperte F5")
+    }
 
     useEffect(() => {
         axios.get('http://localhost:5000/TodosDados')
             .then((resp) => {
                 setData(resp.data)
             })
-            .catch((err) => console.log(err))
+            .catch((err) => notify())
     }, []);
 
 
@@ -28,7 +34,21 @@ export default function OngsCard() {
     }
 
     return (
-        <><Outlet />
+        <>
+            <ToastContainer
+              position="top-right"
+              autoClose={7000}
+              hideProgressBar={false}
+              newestOnTop={false}
+              closeOnClick
+              rtl={false}
+              pauseOnFocusLoss
+              draggable
+              pauseOnHover
+              theme="light"
+
+            />
+            <Outlet />
             <Container>
                 <Row id='linha'>
                     {data.map((info) => {
