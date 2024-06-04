@@ -12,7 +12,7 @@ import 'react-toastify/dist/ReactToastify.css';
 export default function Menu() {
 
     function notify() {
-        toast.info(" Contato Gmail:Diogo.Favilla@gmail.com  Telefone:(21)973607207")
+        toast.info(" Contato Gmail:Diogo.Favilla@gmail.com  Telefone:(21)97360 - 7207")
     }
     return (
         <>
