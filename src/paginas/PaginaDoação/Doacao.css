@@ -54,17 +54,19 @@
 }
 
 .corpo {
-    margin-top: 500px;
+    padding: 20px;
+    margin-top: 370px;
     overflow-x: hidden;
     background-color: rgba(240, 251, 240, 0.521);
 }
 
 .secao1 {
-
+    
     padding: 10px;
 }
 
 #titulo {
+    padding: 15px;
     color: #808000;
     ;
     font-family: "Montserrat";
@@ -135,6 +137,7 @@
 
 .secao2 {
     margin-top: 100px;
+    margin-bottom: -220px;
     /* background-color:  rgba(197, 248, 197, 0.521); */
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
@@ -164,5 +167,6 @@
 }
 
 .rodape-doacao {
-    margin-top: -140px;
+    padding: 10px;
+    /* margin-bottom:-100px; */
 }

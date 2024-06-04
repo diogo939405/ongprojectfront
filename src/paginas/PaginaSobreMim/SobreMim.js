@@ -16,10 +16,13 @@ import eu from '../../Imagens/diogo.jpg';
 import Float from '../../floatButton/Float';
 
 
+
 export default function SobreMim() {
+
+
   return (
     <>
-
+  
       <header className='cabeca'>
         <Menu />
         <div className='div-texto'>
@@ -77,35 +80,7 @@ export default function SobreMim() {
                   <div className='linha-tempo'>
                     <div className='linha-etapas'>
                       <div>
-                        <h2 className='titulo-etapa'> parte 1</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-                      </div>
-                    </div>
-                    <div className='linha-etapas'>
-                      <div>
-                        <h2 className='titulo-etapa'> parte 2</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-                      </div>
-                    </div>
-                    <div className='linha-etapas'>
-                      <div>
-                        <h2 className='titulo-etapa'> parte 3</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-                      </div>
-                    </div>
-                    <div className='linha-etapas'>
-                      <div>
-                        <h2 className='titulo-etapa'> parte 4</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-                      </div>
-                    </div>
-                    <div className='linha-etapas'>
-                      <div>
-                        <h2 className='titulo-etapa'> parte 5</h2>
+                        <h2 className='titulo-etapa'> parte 7</h2>
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                           Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
                       </div>
@@ -119,7 +94,35 @@ export default function SobreMim() {
                     </div>
                     <div className='linha-etapas'>
                       <div>
-                        <h2 className='titulo-etapa'> parte 7</h2>
+                        <h2 className='titulo-etapa'> parte 5</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                      </div>
+                    </div>
+                    <div className='linha-etapas'>
+                      <div>
+                        <h2 className='titulo-etapa'> parte 4</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                      </div>
+                    </div>
+                    <div className='linha-etapas'>
+                      <div>
+                        <h2 className='titulo-etapa'> parte 3</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                      </div>
+                    </div>
+                    <div className='linha-etapas'>
+                      <div>
+                        <h2 className='titulo-etapa'> parte 2</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                      </div>
+                    </div>
+                    <div className='linha-etapas'>
+                      <div>
+                        <h2 className='titulo-etapa'> parte 1</h2>
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                           Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
                       </div>
@@ -150,52 +153,11 @@ export default function SobreMim() {
                 </div>
               </Col>
             </Row>
-
           </Container>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          {/* <Container id='corpo'>
-          <Row id='linha'>
-            <Col id='coluna-texto'>
-              <h4 className='titulo-about'> Titulo</h4>
-              <p className='texto-about'>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-                and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-              </p>
-              <div className='botoes-about'>
-                <button className='botao-about'> botão aqui</button>
-              </div>
-              <div className='icon-about'>
-
-                <h4>Redes sociais aqui</h4>
-              </div>
-            </Col>
-
-            <Col id='coluna-imagem'>
-              <h5>Diogo imagem</h5>
-
-            </Col>
-          </Row>
-        </Container> */}
         </section>
       </AnimatedPage>
 
-      <footer>
+      <footer className='under'>
         <Footer />
       </footer>
       <Float />

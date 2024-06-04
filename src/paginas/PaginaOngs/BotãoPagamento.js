@@ -1,5 +1,6 @@
 import { PayPalButtons } from '@paypal/react-paypal-js';
 import { useState, useEffect } from 'react';
+import { FUNDING } from "@paypal/react-paypal-js";
 
 const BotaoPagamento = (props) => {
     const { products } = props.product;
@@ -13,6 +14,21 @@ const BotaoPagamento = (props) => {
         console.log('useEffect', valor)
     }, [props]);
 
+    const style = {
+        "layout": "vertical",
+        "shape":"rect",
+        "color": "silver",
+        "size": "small",
+        "label": "pay",
+        "height": 48,
+        "tagline": "false",
+        "borderRadius": 10,
+        "padding": 20,
+        "heigth":55
+        
+
+
+    }
 
     const handleApprove = (orderID) => {
         //if response is sucess
@@ -27,7 +43,7 @@ const BotaoPagamento = (props) => {
     }
 
     return <PayPalButtons
-
+        style={style}
         createOrder={(data, actions) => {
             return actions.order.create({
                 purchase_units: [
@@ -54,6 +70,7 @@ const BotaoPagamento = (props) => {
             setErro(err)
             console.error('pagamento com erro', props.price)
         }}
+        fundingSource={FUNDING.PAYPAL}
     />;
 };
 

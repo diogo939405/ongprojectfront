@@ -41,14 +41,15 @@
 
 .corpo-ong {
     height: 100vh;
-    margin-top: 450px;
+    margin-top: 380px;
     overflow-x: hidden;
     overflow-y: hidden;
     background-color: rgba(240, 251, 240, 0.521);
 }
 
 .rodape-doando {
-    margin-top: 500px;
+    margin-top: 400px;
+    padding: 20px;
 }
 
 .input-doar {
@@ -126,7 +127,13 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    padding: 20px 0px 10px 0px;
+    
 }
+SlideGallery{
+    
+}
+
 
 .form-titu h2 {
     margin-top: 20px;
@@ -141,7 +148,7 @@
 .ong-wrapper {
     margin-right: -200px;
     margin-top: 30px;
-    height: 94vh;
+    height: 88vh;
     width: 35em;
     /* rgba(0, 86, 67, 0.818) */
     background-color: #8a8a02;
@@ -150,6 +157,9 @@
     border: 3px solid white
 }
 
+.ong-wrapper form{
+    padding: 20px;
+}
 .ong-wrapper .input-box {
     width: 100%;
     height: 80px;
@@ -199,65 +209,7 @@ form input {
     border-radius: 20px;
 }
 
-/* form button {
-    background-color: #808000;
-    color: white;
-    font-size: 1rem;
-    font-family: 'roboto';
-    width: 200px;
-    border: none;
-    border-radius: 10px;
-} */
 
-/* form button {
-    background: #fffefeef;
-   
-    color: #808000;
-    letter-spacing: 2px;
-    border: none;
-    border-radius: 10px;
-    position: relative;
-    height: 50px;
-    font-size: 1.6em;
-    padding: 0 2em;
-    margin-bottom: 15px;
-    cursor: pointer;
-    transition: 800ms ease all;
-    outline: none;
-    
-
-}
-
-form button:hover {
-    transform: scale(1.1);
-    background: #808000;
-    color: white;
-}
-
-form button:before,
-button:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 2px;
-    width: 0;
-    background: white;
-    transition: 400ms ease all;
-}
-
-form button:after {
-    right: inherit;
-    top: inherit;
-    left: 0;
-    bottom: 0;
-}
-
-form button:hover:before,
-button:hover:after {
-    width: 100%;
-    transition: 800ms ease all;
-} */
 
 .label-for{
     letter-spacing: 2px;
@@ -268,5 +220,17 @@ button:hover:after {
     text-align: left;
     font-weight: 500;
     font-family: "Montserrat";
+}
+
+.paypal-button-container{
+    padding: 10px 45px 10px 45px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    /* width: 50%; */
+
+}
+.rodape-doando{
+
 }
 

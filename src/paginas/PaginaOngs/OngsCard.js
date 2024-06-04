@@ -42,7 +42,6 @@ export default function OngsCard() {
                                         <button className='btnm' onClick={() => datPass(info._id)}>
                                             <Link className='linkBotao' to={`/OngsDoando/${info._id}`}> Saiba mais</Link>
                                         </button>
-                                        <button className='btnm'>Doe</button>
                                     </div>
 
                                 </card>

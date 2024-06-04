@@ -68,9 +68,9 @@ card.card-back {
     text-decoration: none;
     font-family: "roboto";
     font-size: 1.3vw;
-    padding: 0px 3px 0px 3px;
-    width: 9vw;
-    height: 5.6vh;
+    padding: 5px 3px 5px 3px;
+    width: 10vw;
+    height: 5.3vh;
     border: none;
     border-radius: 20px;
     background-color: #808000;
@@ -81,6 +81,7 @@ card.card-back {
     margin-right: 8px;
     margin-left: 8px;
     letter-spacing: 0.7px;
+    transition: all 0.5s
 }
 
 .linkBotao{

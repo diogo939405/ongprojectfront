@@ -96,10 +96,10 @@
 
 .descricao {
     /* margin-top: 50px; */
-    margin-top: 400px;
-    margin-bottom: 200px;
+    margin-top: 360px;
+    margin-bottom: 150px;
     background-color: rgba(240, 251, 240, 0.521);
-    padding: 120px;
+    padding: 100px;
 }
 
 .descrição-imagem {
@@ -127,6 +127,7 @@
 
 .final {
     margin-top: -100px;
+    margin-bottom: -130px;
 
 }
 
@@ -331,106 +332,7 @@
     outline: none;
 }
 
-.input-box input {
-    width: 80%;
-    height: 80%;
-    padding: 20px 10px 20px 10px;
-    border-radius: 10px;
-    outline: none;
-    border: none;
+.under{
+    margin-top: -290px;
+    padding: 20px;
 }
-
-::placeholder {
-    color: rgba(0, 0, 0, 0.541);
-    font-family: 'arial';
-    font-weight: 300;
-    font-size: 0.8rem;
-    font-style: italic;
-}
-
-
-form div label {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-
-}
-
-form div {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 30px;
-}
-
-form input {
-    outline: unset;
-    padding: 10px;
-    width: 50%;
-    border-radius: 20px;
-}
-
-/* form button {
-    background-color: #808000;
-    color: white;
-    font-size: 1rem;
-    font-family: 'roboto';
-    width: 200px;
-    border: none;
-    border-radius: 10px;
-} */
-
-form button {
-    background: #fffefeef;
-    /* 076f57 */
-    color: #808000;
-    letter-spacing: 2px;
-    border: none;
-    border-radius: 10px;
-    position: relative;
-    height: 50px;
-    font-size: 1.6em;
-    padding: 0 2em;
-    margin-bottom: 15px;
-    cursor: pointer;
-    transition: 800ms ease all;
-    outline: none;
-
-
-}
-
-form button:hover {
-    transform: scale(1.1);
-    background: #808000;
-    color: white;
-}
-
-form button:before,
-button:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 2px;
-    width: 0;
-    background: white;
-    transition: 400ms ease all;
-}
-
-form button:after {
-    right: inherit;
-    top: inherit;
-    left: 0;
-    bottom: 0;
-}
-
-form button:hover:before,
-button:hover:after {
-    width: 100%;
-    transition: 800ms ease all;
-}
-
-/* .ong-imagens {
-    background-color: rgba(240, 251, 240, 0.521);
-} */
-
-/* //linha do tempo */

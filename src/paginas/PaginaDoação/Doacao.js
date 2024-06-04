@@ -69,9 +69,6 @@ export default function Doacao() {
                   </p>
                 </Col>
               </Row>
-            
-
-
             </Container>
           </section>
 

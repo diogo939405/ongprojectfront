@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
+
 import axios from 'axios';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -112,7 +113,7 @@ export default function OngsDoando() {
                             <div className='ongs-imagens'>
 
                                 <div className='ong-wrapper'>
-                                    <form >
+                                    <form className='form-do' >
                                         <div className='form-titu'>
                                             <h2> Formulário de doação</h2>
                                         </div>
@@ -125,7 +126,7 @@ export default function OngsDoando() {
                                         <div className='input-box'>
                                             <label className='label-for'>Gmail</label>
                                             <input type='text' placeholder='digite sua email(Opcional)'
-                                                // defaultValue="@gmail.com"
+                                            // defaultValue="@gmail.com"
                                             />
                                         </div>
 
