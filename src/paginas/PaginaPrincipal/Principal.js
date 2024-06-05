@@ -1,17 +1,10 @@
 import React, { useState } from 'react'
 import { Outlet } from 'react-router'
-import AnimatedPage from '../../AnimatedPage'
-import logo from '../../Imagens/logo_diogo-removebg-preview.png'
 import "./Principal.css"
 import Menu from '../../menu/Menu'
-import { Media } from './media'
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
 import Footer from '../../footer/Footer'
 import imagemCard from '../../Imagens/download (2).jpg'
 
@@ -24,23 +17,31 @@ export default function Principal() {
   let data = [
     {
       id: 1,
-      imgSrc: imagemCard
+      imgSrc: imagemCard,
+      tex: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry1111'
     },
     {
       id: 2,
-      imgSrc: imagemCard
+      imgSrc: imagemCard,
+      tex: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry2222'
     },
     {
       id: 3,
-      imgSrc: imagemCard
+      imgSrc: imagemCard,
+      tex: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry3333'
     },
     {
       id: 4,
-      imgSrc: imagemCard
+      imgSrc: imagemCard,
+      tex: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry4444'
     }
   ]
 
-  const [file, setFile] = useState(null)
+  const [file, setFile] = useState(-1);
+
+  const handleClick = (index) => {
+    setFile(index)
+  }
 
   return (
     <>
@@ -56,10 +57,9 @@ export default function Principal() {
             <Row id='principal-row'>
               <Col className='sm={6}'>
                 <div className='principal-texto'>
-                  <h1 className='principal-titulo'>Titulo</h1>
-                  <p className='principal-descricao'>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                    when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                  <h1 className='principal-titulo' >Titulo</h1>
+                  <p className='principal-descricao' >
+                    {file !== -1 ? data[file].tex : "nfuhurshurihiuvif"}
                   </p>
                 </div>
               </Col>
@@ -69,9 +69,10 @@ export default function Principal() {
                 <div className='cards-col'>
                   {
                     data.map((x, index) => {
+
                       return (
-                        <div className='cardss' key={index} onClick={() => setFile(file)}>
-                          <img src={x.imgSrc} className='imagemdoCard' />
+                        <div className='cardss' >
+                          <img src={x.imgSrc} className='imagemdoCard' key={index} onClick={() => handleClick(index)} />
                         </div>
                       )
                     })
