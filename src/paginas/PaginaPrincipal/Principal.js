@@ -69,7 +69,6 @@ export default function Principal() {
                 <div className='cards-col'>
                   {
                     data.map((x, index) => {
-
                       return (
                         <div className='cardss' >
                           <img src={x.imgSrc} className='imagemdoCard' key={index} onClick={() => handleClick(index)} />
