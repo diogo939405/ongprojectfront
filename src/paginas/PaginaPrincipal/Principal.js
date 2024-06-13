@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Outlet } from 'react-router'
 import "./Principal.css"
 import Menu from '../../menu/Menu'
@@ -9,6 +9,7 @@ import Footer from '../../footer/Footer'
 import larOasis from '../../assets/larOasis1.png'
 import casaLuz from '../../assets/casaLuzDoCaminho5.png'
 import obraSocial from '../../assets/Obra-Social-Dona-Meca2-removebg-preview.png'
+import defaultBackground from '../../Imagens/background.png'
 import soVamos from '../../assets/soVamos3.jpeg'
 import larOasisFun from '../../assets/larOasis3.png'
 import casaLuzFun from '../../assets/casaLuzDoCaminho3.png'
@@ -20,6 +21,8 @@ import obraSocialFun from '../../assets/Obra-Social-Dona-Meca4.jpeg'
 
 
 export default function Principal() {
+
+  const [imagemFundo, setImagemFundo] = useState(defaultBackground)
 
   let data = [
     {
@@ -52,10 +55,21 @@ export default function Principal() {
 
   const handleClick = (index) => {
     setFile(index)
-    console.log(data[file], document.getElementById('fundo'))
-    document.getElementById('fundo').style.backgroundImage = `url("https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png")`
-
+    console.log(data[index].imgFun, document.getElementById('fundo'))
+    setImagemFundo(data[index].imgFun)
   }
+
+  useEffect(() => {
+    document.getElementById('fundo').style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.7),
+        rgba(0, 0, 0, 0.7)), url(${imagemFundo}`
+    // document.getElementById('fundo').style.backgroundColor = linear-gradient(rgba(0, 0, 0, 0.7),
+    //   rgba(0, 0, 0, 0.7));
+
+
+
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.7),
+        rgba(0, 0, 0, 0.7)), url('../../Imagens/background.png'); */
+  }, [imagemFundo])
 
   return (
     <>
