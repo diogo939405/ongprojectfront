@@ -13,7 +13,7 @@ import defaultBackground from '../../Imagens/background.png'
 import soVamos from '../../assets/soVamos3.jpeg'
 import larOasisFun from '../../assets/larOasis3.png'
 import casaLuzFun from '../../assets/casaLuzDoCaminho3.png'
-import soVamosFun from '../../assets/soVamos4.jpeg'
+import soVamosFun from '../../assets/soVamos5.jpeg'
 import obraSocialFun from '../../assets/Obra-Social-Dona-Meca4.jpeg'
 
 
