@@ -57,7 +57,7 @@ export default function OngsCard() {
                             < Col id='coluna' >
                                 <card className='card' key={info._id}  >
                                     <img src={logo} alt='descrição' className='imagem-descricao'></img>
-                                    <h3 className='titulo-card'>{info.Nome}</h3>
+                                    <h3 className='titulo-card'>{info.nome}</h3>
                                     <div className='botoes'>
                                         <button className='btnm' onClick={() => datPass(info._id)}>
                                             <Link className='linkBotao' to={`/OngsDoando/${info._id}`}> Saiba mais</Link>
