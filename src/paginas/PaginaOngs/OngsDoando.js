@@ -22,9 +22,6 @@ export default function OngsDoando() {
     const [products, setProducts] = useState({})
     const [inputValue, setInputValue] = useState()
     const [loadingSpinner, setLoadingSpinner] = useState(false)
-    let dadospgto;
-    var token = '';
-    let param = ''
     let doar = document.getElementById("doar");//.target.value
     // let dado2 = document.getElementById("doar").target.value
     let botaoDoar = document.getElementById('botao-doar')
@@ -51,23 +48,13 @@ export default function OngsDoando() {
         setInputValue(valorNovo)
         console.log('objeto em input ', products)
     }
-
-    // function onlyNumbers(t) {
-    //     var nu = t.which || t.keycode;
-    //     if ((nu >= 48 && nu <= 57)) {
-    //         return true
-    //     } else {
-    //         return false
-    //     }
-    // }
-
     return (
         <>
             <header className='cabeca'>
                 <Menu />
                 <div className='div-texto'>
                     <div >
-                        <h4 className='div-titulo'>titulo pagina</h4>
+                        <h4 className='div-titulo'>{infoDetails.nome}</h4>
                     </div>
                     <div className='div-info'>
                         <span>

@@ -15,7 +15,7 @@
     height: 50vh;
 } */
 
-.abc {}
+
 
 
 
@@ -74,23 +74,15 @@
     transition: all 1s;
 }
 
-#quadrado {
-    width: 200px;
-    height: 230px;
-    display: inline-block;
-    border-radius: 10px;
-    padding: 15px 25px;
-    box-sizing: border-box;
-    cursor: pointer;
-    margin: 10px 15px;
-}
+
 
 .cards-col {
     margin-right: -100px;
+    margin-top:-6vh;
 }
 
-.cardss {
-    /* background-color: aqua; */
+.cardse {
+
     /* background-image:url('../../Imagens/download\ \(2\).jpg'); */
     width: 15vw;
     height: 15vw;
@@ -100,7 +92,13 @@
     box-sizing: border-box;
     cursor: pointer;
     margin: 12px 20px;
-    transition: 0.5s;
+    transition: all 0.5s;
+}
+
+.cardse:hover {
+
+    transform: scale(1.4) translateY(15px);
+    z-index: 2;
 }
 
 .imagemdoCard {
@@ -110,41 +108,3 @@
     width: 100%;
     height: 30vh;
 }
-
-.cardss:hover {
-    transform: scale(1.4) translateY(15px);
-    z-index: 2;
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* #home{
-    padding: 0;
-    margin: 0;
-}
-
-#imagem{
-    height: 91.5vh;
-
-    
-}
-
-.titulo{
-    color: white;
-}
-
-.sobre{
-    color: white;
-} */

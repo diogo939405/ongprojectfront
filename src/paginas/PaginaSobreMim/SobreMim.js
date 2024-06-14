@@ -11,7 +11,7 @@ import './SobreMim.css'
 import gerarToken from '../../pagamento/Paypal'
 import PagamentoTela from '../../pagamento/PagamentoTela';
 import Form from './Form'
-import logo1 from '../PaginaDoação/Icons/information.png';
+import logo1 from '../../assets/icons/information (1).png';
 import eu from '../../Imagens/diogo.jpg';
 import Float from '../../floatButton/Float';
 
@@ -22,7 +22,7 @@ export default function SobreMim() {
 
   return (
     <>
-  
+
       <header className='cabeca'>
         <Menu />
         <div className='div-texto'>

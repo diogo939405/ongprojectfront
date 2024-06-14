@@ -35,7 +35,6 @@ export default function Menu() {
                 <header>
                     <Container>
                         <Row>
-
                             <nav class="navbar navbar-expand-lg navbar-dark">
                                 <div class="container">
                                     <a class="navbar-brand" onClick={notify} id='logobrand'>
@@ -61,11 +60,12 @@ export default function Menu() {
                                             </li>
                                         </ul>
                                     </div>
-                                    <div class="socialIcons">
-                                        <a href="https://www.linkedin.com/in/diogo-favilla-g-jacintho-8728041ba/" target="_blank"><i><AiFillLinkedin /></i></a>
-                                        <a href="https://github.com/diogo939405" target="_blank"><i><AiFillGithub /></i></a>
-                                        <a href="https://www.instagram.com/di_ogo01/" target="_blank"><i><AiFillInstagram /></i></a>
-                                    </div>
+
+                                </div>
+                                <div class="socialIcons">
+                                    <a href="https://www.linkedin.com/in/diogo-favilla-g-jacintho-8728041ba/" target="_blank"><i><AiFillLinkedin /></i></a>
+                                    <a href="https://github.com/diogo939405" target="_blank"><i><AiFillGithub /></i></a>
+                                    <a href="https://www.instagram.com/di_ogo01/" target="_blank"><i><AiFillInstagram /></i></a>
                                 </div>
                             </nav>
                         </Row>

@@ -73,53 +73,51 @@ export default function Principal() {
 
   return (
     <>
-      <div className='abc'>
-        <header>
 
-        </header>
-        {data.map((x, inde) => {
-          return (
-            <main className='man' id='fundo'  >
-              <div>
-                <Menu />
+      {/* <header>
+        <Menu />
+      </header> */}
+
+      <main className='man' id='fundo'  >
+        <div>
+              <Menu />
+            </div>
+        <Container>
+          <Row id='principal-row'>
+            <Col className='sm={6}'>
+              <div className='principal-texto'>
+                <h1 className='principal-titulo' >Titulo</h1>
+                <p className='principal-descricao' >
+                  {file !== -1 ? data[file].text : "nfuhurshurihiuvif"}
+                </p>
               </div>
-              <Container>
-                <Row id='principal-row'>
-                  <Col className='sm={6}'>
-                    <div className='principal-texto'>
-                      <h1 className='principal-titulo' >Titulo</h1>
-                      <p className='principal-descricao' >
-                        {file !== -1 ? data[file].text : "nfuhurshurihiuvif"}
-                      </p>
-                    </div>
-                  </Col>
+            </Col>
 
-                  <Col className='sm={6}'>
+            <Col className='sm={6}'>
 
-                    <div className='cards-col'>
-                      {
-                        data.map((x, index) => {
-                          return (
-                            <div className='cardss' >
-                              <img src={x.imgSrc} className='imagemdoCard' key={index} onClick={() => handleClick(index)} />
-                            </div>
-                          )
-                        })
-                      }
-                    </div>
-                  </Col>
-                </Row>
+              <div className='cards-col'>
+                {
+                  data.map((x, index) => {
+                    return (
+                      <div className='cardse' >
+                        <img src={x.imgSrc} className='imagemdoCard' key={index} onClick={() => handleClick(index)} />
+                      </div>
+                    )
+                  })
+                }
+              </div>
+            </Col>
+          </Row>
 
-              </Container>
-            </main>
-          )
-        })}
+        </Container>
+      </main>
 
 
-        <footer className='rodape-principal'>
-          <Footer />
-        </footer>
-      </div>
+
+      <footer className='rodape-principal'>
+        <Footer />
+      </footer>
+
       <Outlet />
     </>
   )

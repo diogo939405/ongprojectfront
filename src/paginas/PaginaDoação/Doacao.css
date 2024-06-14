@@ -61,7 +61,7 @@
 }
 
 .secao1 {
-    
+
     padding: 10px;
 }
 
@@ -93,6 +93,7 @@
     font-family: "Roboto";
     font-weight: 400;
     line-height: 32px;
+    padding: 10px;
 }
 
 #foto-texto {
@@ -101,8 +102,9 @@
 }
 
 #mensagem-imagem {
-    margin-right: 60px;
-    margin-left: -85px;
+    margin-top: 25vh;
+    margin-right: 5vw;
+    margin-left: -5vw;
 }
 
 .seta {
@@ -148,13 +150,21 @@
 }
 
 #corpo-icons {
-    margin-bottom: 150px;
+    margin-bottom: 10px;
 }
 
-#icons {}
+#icons {
+    padding: 10px 5px;
+}
+
+.mensagem-icons {
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
 
 .imagem-icons {
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 
 .texto-icon {
@@ -164,6 +174,8 @@
     font-family: "Roboto";
     font-weight: 400;
     font-size: 1rem;
+    padding: 50px;
+
 }
 
 .rodape-doacao {

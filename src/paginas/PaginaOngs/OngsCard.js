@@ -28,10 +28,7 @@ export default function OngsCard() {
     }, []);
 
 
-    function datPass(id) {
-        console.log('item clicado', id)
-
-    }
+   
 
     return (
         <>
@@ -59,7 +56,7 @@ export default function OngsCard() {
                                     <img src={logo} alt='descrição' className='imagem-descricao'></img>
                                     <h3 className='titulo-card'>{info.nome}</h3>
                                     <div className='botoes'>
-                                        <button className='btnm' onClick={() => datPass(info._id)}>
+                                        <button className='btnm' >
                                             <Link className='linkBotao' to={`/OngsDoando/${info._id}`}> Saiba mais</Link>
                                         </button>
                                     </div>

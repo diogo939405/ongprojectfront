@@ -7,9 +7,13 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
-import foto from '../../Imagens/Gift Catalog.jpg'
+import foto from '../../assets/icons/banner-blog-post-01.png'
 import Button from 'react-bootstrap/Button';
-import logo1 from './Icons/information.png'
+import logo1 from '../../assets/icons/information (1).png';
+import logo2 from '../../assets/icons/search.png'
+import logo3 from '../../assets/icons/information (1).png'
+import logo4 from '../../assets/icons/list.png'
+
 import Footer from '../../footer/Footer'
 import Float from '../../floatButton/Float'
 
@@ -54,7 +58,9 @@ export default function Doacao() {
             <Container>
               <Row id='corpo-mensagem'>
                 <Col id='mensagem-imagem'>
-                  <Image src={foto} id='foto-texto' />
+                  <Image src={foto} id='foto-texto' 
+                  // width={'640vw'} height={'700vh'} 
+                  />
                 </Col>
 
                 <Col className='mensagem-texto'>
@@ -88,33 +94,34 @@ export default function Doacao() {
                 <Col id='icons'>
                   <div className='mensagem-icons'>
                     <div className='imagem-icons'>
-                      <img src={logo1} height='95px' width='100px' alt='oie' />
+                      <img src={logo2} height='95px' width='100px' alt='oie' />
                     </div>
                     <p className='texto-icon'>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                       Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
                   </div>
                 </Col>
-                <Col id='icons'>
-                  <div className='mensagem-icons'>
-                    <div className='imagem-icons'>
-                      <img src={logo1} height='95px' width='100px' alt='oie' />
-                    </div>
-                    <p className='texto-icon'>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-                  </div>
-                </Col>
+               
               </Row>
               <Row id='corpo-icons' className='gx-5'>
-                <Col id='icons'>
+              <Col id='icons'>
                   <div className='mensagem-icons'>
                     <div className='imagem-icons'>
-                      <img src={logo1} height='95px' width='100px' alt='oie' />
+                      <img src={logo3} height='95px' width='100px' alt='oie' />
                     </div>
                     <p className='texto-icon'>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                       Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
                   </div>
                 </Col>
                 <Col id='icons'>
+                  <div className='mensagem-icons'>
+                    <div className='imagem-icons'>
+                      <img src={logo4} height='95px' width='100px' alt='oie' />
+                    </div>
+                    <p className='texto-icon'>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                  </div>
+                </Col>
+                {/* <Col id='icons'>
                   <div className='mensagem-icons'>
                     <div className='imagem-icons'>
                       <img src={logo1} height='95px' width='100px' alt='oie' />
@@ -131,7 +138,7 @@ export default function Doacao() {
                     <p className='texto-icon'> Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                       Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
                   </div>
-                </Col>
+                </Col> */}
               </Row>
               <Row>
                 <Col>
