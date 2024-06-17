@@ -23,7 +23,6 @@ export default function OngsDoando() {
     const [inputValue, setInputValue] = useState()
     const [loadingSpinner, setLoadingSpinner] = useState(false)
     let doar = document.getElementById("doar");//.target.value
-    // let dado2 = document.getElementById("doar").target.value
     let botaoDoar = document.getElementById('botao-doar')
 
     useEffect(() => {
@@ -45,6 +44,13 @@ export default function OngsDoando() {
 
     const beforeSend = (valor) => {
         const valorNovo = Number(valor.target.value)
+        if (valorNovo < 1) {
+            setInputValue(1)
+        }else if(valorNovo>50){
+            setInputValue(50)
+        }else{
+            setInputValue(valorNovo)
+        }
         setInputValue(valorNovo)
         console.log('objeto em input ', products)
     }
@@ -79,17 +85,11 @@ export default function OngsDoando() {
                                     <h2 className='ongs-texto-titulo'>
                                         {infoDetails.descricaoCurta}
                                     </h2>
-                                    {/* <hr className='barra'/> */}
+
                                 </div>
                                 <p className='ongs-texto-textos'>{infoDetails.descricaoLonga}</p>
 
                             </div>
-                            {/* <div className='dados'>
-                                <p className='dados-titulo'>Dados para compra</p>
-                                <p> Login:weifweogrw</p>
-                                <p> Senha:wnfwngjrwngrjnh</p>
-
-                            </div> */}
                         </Col>
                         <Col>
                             <div className='ongs-imagens'>

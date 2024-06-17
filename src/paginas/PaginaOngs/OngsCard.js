@@ -28,21 +28,21 @@ export default function OngsCard() {
     }, []);
 
 
-   
+
 
     return (
         <>
             <ToastContainer
-              position="top-right"
-              autoClose={7000}
-              hideProgressBar={false}
-              newestOnTop={false}
-              closeOnClick
-              rtl={false}
-              pauseOnFocusLoss
-              draggable
-              pauseOnHover
-              theme="light"
+                position="top-right"
+                autoClose={7000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="light"
 
             />
             <Outlet />
@@ -51,18 +51,16 @@ export default function OngsCard() {
                     {data.map((info) => {
 
                         return (
-                            < Col id='coluna' >
+                            <Col id='coluna' >
                                 <card className='card' key={info._id}  >
-                                    <img src={logo} alt='descrição' className='imagem-descricao'></img>
+                                    <img src={info.foto}   alt='descrição' className='imagem-descricao'></img>
                                     <h3 className='titulo-card'>{info.nome}</h3>
                                     <div className='botoes'>
                                         <button className='btnm' >
                                             <Link className='linkBotao' to={`/OngsDoando/${info._id}`}> Saiba mais</Link>
                                         </button>
                                     </div>
-
                                 </card>
-
                             </Col>
                         );
                     })}

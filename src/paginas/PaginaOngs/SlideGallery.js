@@ -22,16 +22,16 @@ export default function SlideGallery() {
 
     const images = [
         {
-            original: infoDetails.foto,
-            thumbnail: infoDetails.foto,
-        },
-        {
-            original: "https://picsum.photos/id/1015/250/150/",
-            thumbnail: "https://picsum.photos/id/1015/250/150/",
+            original: infoDetails.foto2,
+            thumbnail: infoDetails.foto1,
         },
         {
             original: infoDetails.foto3,
-            thumbnail: "https://picsum.photos/id/1019/250/150/",
+            thumbnail:  infoDetails.foto3,
+        },
+        {
+            original:  infoDetails.foto4,
+            thumbnail:  infoDetails.foto4,
         },
     ];
     return (
