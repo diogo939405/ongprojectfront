@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import CurrencyInput from 'react-currency-input-field';
 
 
 import axios from 'axios';
@@ -46,9 +47,9 @@ export default function OngsDoando() {
         const valorNovo = Number(valor.target.value)
         if (valorNovo < 1) {
             setInputValue(1)
-        }else if(valorNovo>50){
+        } else if (valorNovo > 50) {
             setInputValue(50)
-        }else{
+        } else {
             setInputValue(valorNovo)
         }
         setInputValue(valorNovo)
@@ -111,7 +112,14 @@ export default function OngsDoando() {
                                             // defaultValue="@gmail.com"
                                             />
                                         </div>
-
+                                        <CurrencyInput
+                                            id="input-example"
+                                            name="input-name"
+                                            placeholder="Please enter a number"
+                                            defaultValue={0}
+                                            decimalsLimit={2}
+                                            onValueChange={(value, name, values) => console.log(value, name, values)}
+                                        />;
                                         <div className='input-box'>
                                             <label className='label-for'>Valor a ser Doado</label>
                                             <input type='text' id='doar' placeholder='Faça sua doação' value={inputValue} onChange={beforeSend} ></input>
