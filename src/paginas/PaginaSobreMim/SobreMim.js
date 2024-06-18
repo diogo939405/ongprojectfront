@@ -12,7 +12,7 @@ import gerarToken from '../../pagamento/Paypal'
 import PagamentoTela from '../../pagamento/PagamentoTela';
 import Form from './Form'
 import logo1 from '../../assets/icons/information (1).png';
-import eu from '../../Imagens/diogo.jpg';
+import eu from '../../assets/WhatsApp Image 2024-06-17 at 16.51.29.jpeg';
 import Float from '../../floatButton/Float';
 
 

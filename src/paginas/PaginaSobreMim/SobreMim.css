@@ -96,7 +96,7 @@
 
 .descricao {
     /* margin-top: 50px; */
-    margin-top: 56vh;
+    /* margin-top: 55.5vh; */
     margin-bottom: 25vh;
     background-color: rgba(240, 251, 240, 0.521);
     padding: 100px;
@@ -261,7 +261,7 @@
 
 @media (min-width: 1201px) {
     .descricao {
-        margin-top: 70vh;
+        margin-top: 56vh;
     }
 }
 

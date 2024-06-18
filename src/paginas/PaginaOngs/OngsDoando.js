@@ -86,15 +86,12 @@ export default function OngsDoando() {
                                     <h2 className='ongs-texto-titulo'>
                                         {infoDetails.descricaoCurta}
                                     </h2>
-
                                 </div>
                                 <p className='ongs-texto-textos'>{infoDetails.descricaoLonga}</p>
-
                             </div>
                         </Col>
                         <Col>
                             <div className='ongs-imagens'>
-
                                 <div className='ong-wrapper'>
                                     <form className='form-do' >
                                         <div className='form-titu'>
@@ -112,18 +109,22 @@ export default function OngsDoando() {
                                             // defaultValue="@gmail.com"
                                             />
                                         </div>
-                                        <CurrencyInput
-                                            id="input-example"
-                                            name="input-name"
-                                            placeholder="Please enter a number"
-                                            defaultValue={0}
-                                            decimalsLimit={2}
-                                            onValueChange={(value, name, values) => console.log(value, name, values)}
-                                        />;
                                         <div className='input-box'>
                                             <label className='label-for'>Valor a ser Doado</label>
-                                            <input type='text' id='doar' placeholder='Faça sua doação' value={inputValue} onChange={beforeSend} ></input>
+                                            <CurrencyInput
+                                                id="input-example"
+                                                name="input-name"
+                                                placeholder="digite um valor"
+                                                value={inputValue}
+                                                defaultValue={0}
+                                                decimalsLimit={2}
+                                                onValueChange={(value, name, values) => console.log(value, name, values)}
+                                            />;
                                         </div>
+                                        {/* <div className='input-box'>
+                                            <label className='label-for'>Valor a ser Doado</label>
+                                            <input type='text' id='doar' placeholder='Faça sua doação' value={inputValue} onChange={beforeSend} ></input>
+                                        </div> */}
                                         <div className='paypal-button-container'>
                                             <BotaoPagamento product={infoDetails} price={inputValue} doar={doar} />
                                         </div>

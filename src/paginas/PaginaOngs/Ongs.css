@@ -51,10 +51,17 @@
 }
 
 .secao-body{
-    margin-top: -180px;
+    margin-top: 0px;
     padding: 10px;
 }
 
 .secao-cards {
+    margin-top: -40vh;
     background-color: rgba(240, 251, 240, 0.521);
+}
+
+@media (min-width: 1201px) {
+    .secao-cards {
+        margin-top: -25vh;
+    }
 }

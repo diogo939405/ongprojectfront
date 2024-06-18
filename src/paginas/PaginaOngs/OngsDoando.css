@@ -40,11 +40,12 @@
 }
 
 .corpo-ong {
-    height: 100vh;
-    margin-top: 380px;
+    /* height: 100vh; */
+    margin-top: 56vh;
     overflow-x: hidden;
     overflow-y: hidden;
     background-color: rgba(240, 251, 240, 0.521);
+
 }
 
 .rodape-doando {
@@ -117,9 +118,7 @@
 
 
 
-.dados-titulo{
-
-}
+.dados-titulo {}
 
 
 .ongs-form {
@@ -128,11 +127,10 @@
     align-items: center;
     min-height: 100vh;
     padding: 20px 0px 10px 0px;
-    
+
 }
-SlideGallery{
-    
-}
+
+SlideGallery {}
 
 
 .form-titu h2 {
@@ -148,7 +146,7 @@ SlideGallery{
 .ong-wrapper {
     margin-right: -200px;
     margin-top: 30px;
-    height: 88vh;
+    height: 92vh;
     width: 35em;
     /* rgba(0, 86, 67, 0.818) */
     background-color: #8a8a02;
@@ -157,9 +155,10 @@ SlideGallery{
     border: 3px solid white
 }
 
-.ong-wrapper form{
+.ong-wrapper form {
     padding: 20px;
 }
+
 .ong-wrapper .input-box {
     width: 100%;
     height: 80px;
@@ -211,7 +210,7 @@ form input {
 
 
 
-.label-for{
+.label-for {
     letter-spacing: 2px;
     padding: 5px 5px;
     margin-bottom: 5px;
@@ -222,7 +221,7 @@ form input {
     font-family: "Montserrat";
 }
 
-.paypal-button-container{
+.paypal-button-container {
     padding: 10px 45px 10px 45px;
     display: flex;
     justify-content: center;
@@ -230,7 +229,90 @@ form input {
     /* width: 50%; */
 
 }
-.rodape-doando{
 
+.rodape-doando {}
+
+@media (min-width: 1201px) {
+    .corpo-ong{
+        margin-top: 56vh;
+    }
 }
 
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .corpo-ong {}
+
+    .ong-wrapper {
+        margin-right: 0px;
+        margin-top: 0px;
+        height: 72vh;
+        margin-bottom: 3vh;
+    }
+
+    .ongs-texto-textos {
+        font-size: 1rem;
+        line-height: 30px;
+    }
+
+    .ongs-texto-titulo {
+        font-size: 1.4rem;
+        letter-spacing: 0.1px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+    .ongs-texto-titulo {
+        font-size: 1.2rem;
+        padding: 10px 15px;
+        letter-spacing: 0.1px;
+    }
+
+    .ongs-texto-textos {
+        font-size: 1rem;
+        line-height: 30px;
+        padding: 10px 15px;
+    }
+
+    .ong-wrapper {
+        margin-right: 0px;
+        margin-top: 0px;
+        height: 78vh;
+        margin-bottom: 2vh;
+        width: 25em;
+        border-radius: 25px;
+    }
+
+    .corpo-ong {
+        margin-bottom: -12vh;
+        margin-top: 60vh;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .ongs-texto-titulo {
+        font-size: 1.1rem;
+        letter-spacing: 0.5px;
+        padding: 5px 10px;
+    }
+
+    .ongs-texto-textos {
+        font-size: 0.9rem;
+        padding: 5px 10px;
+    }
+
+    .ong-wrapper {
+        margin-right: 0px;
+        height: 86vh;
+        width: 18em;
+        margin-bottom: 2vh
+    }
+
+    .corpo-ong {
+        margin-bottom: -12vh;
+    }
+}
+
+/* .corpo-ong{
+        margin-bottom: 20vh;
+    } */

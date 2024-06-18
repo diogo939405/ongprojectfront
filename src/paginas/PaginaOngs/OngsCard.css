@@ -127,6 +127,7 @@ card.card-back {
     margin-bottom: -400px;
 }
 
+
 @media (min-width: 768px) and (max-width: 1024px) {
     card.card {
         height: 50vh;
