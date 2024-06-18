@@ -96,8 +96,8 @@
 
 .descricao {
     /* margin-top: 50px; */
-    margin-top: 360px;
-    margin-bottom: 150px;
+    margin-top: 56vh;
+    margin-bottom: 25vh;
     background-color: rgba(240, 251, 240, 0.521);
     padding: 100px;
 }
@@ -227,7 +227,7 @@
 .linha-etapas:nth-child(odd) div::before,
 .linha-etapas:nth-child(even) div::before {
     content: '';
-    background:red;
+    background: red;
     box-shadow: 0 0 0.5em black;
     position: absolute;
     width: 0.8em;
@@ -256,6 +256,34 @@
     font-size: 2rem;
     font-weight: 500;
     font-family: 'Montserrat';
+}
+
+
+@media (min-width: 1201px) {
+    .descricao {
+        margin-top: 70vh;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .descricao {
+        margin-bottom: 5vh;
+        margin-top: 55vh;
+    }
+
+    .textoLinha {
+        line-height: 4vh;
+        font-size: 1rem;
+        padding: 8px;
+        letter-spacing: 0.4vw;
+        line-height: 5vh;
+    }
+
+    .colTexto {
+        margin-right: 5vh;
+        line-height: 2vh;
+    }
 }
 
 @media screen and (max-width:1150px) {
@@ -332,7 +360,34 @@
     outline: none;
 }
 
-.under{
+.under {
     margin-top: -290px;
     padding: 20px;
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .descricao {
+        margin-top: 56vh;
+        margin-bottom: 4vh;
+    }
+
+    .imagem-minha {
+        width: 60vw;
+        height: 45vh;
+        margin-left: -10vw;
+    }
+
+    .textoLinha {
+        line-height: 4vh;
+        font-size: 1.2rem;
+        letter-spacing: 0.4vw;
+        line-height: 5vh; 
+    }
+
+    #icons{
+        padding: 5px;
+    }
+    .texto-icon-sobre{
+        padding:10px 15px
+    }
 }
