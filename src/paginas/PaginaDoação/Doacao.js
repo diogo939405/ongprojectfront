@@ -58,7 +58,7 @@ export default function Doacao() {
             <Container>
               <Row id='corpo-mensagem'>
                 <Col id='mensagem-imagem'>
-                  <Image src={foto} id='foto-texto' 
+                  <Image src={foto} id='foto-texto'
                   // width={'640vw'} height={'700vh'} 
                   />
                 </Col>
@@ -71,7 +71,7 @@ export default function Doacao() {
                     when an unknown printer took a galley of type and scrambled it to make a type specimen book.
                     It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
                     It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-                    and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                    and Lembre-se: cada doação, por menor que seja, faz a diferença. Seja parte da solução!.
                   </p>
                 </Col>
               </Row>
@@ -87,8 +87,7 @@ export default function Doacao() {
                     <div className='imagem-icons'>
                       <img src={logo1} height='95px' width='100px' alt='oie' />
                     </div>
-                    <p className='texto-icon'>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                    <p className='texto-icon'>Toda ajuda é importante! Você pode doar dinheiro, bens materiais, tempo ou trabalho voluntário. Escolha uma ONG confiável, pesquise a reputação e o histórico da instituição, e faça sua doação com segurança.</p>
                   </div>
                 </Col>
                 <Col id='icons'>
@@ -96,20 +95,19 @@ export default function Doacao() {
                     <div className='imagem-icons'>
                       <img src={logo2} height='95px' width='100px' alt='oie' />
                     </div>
-                    <p className='texto-icon'>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                    <p className='texto-icon'>Existem mais de 820 mil ONGs no Brasil, cada uma com sua causa e impacto. Elas trabalham em diversas áreas</p>
                   </div>
                 </Col>
-               
+
               </Row>
               <Row id='corpo-icons' className='gx-5'>
-              <Col id='icons'>
+                <Col id='icons'>
                   <div className='mensagem-icons'>
                     <div className='imagem-icons'>
                       <img src={logo3} height='95px' width='100px' alt='oie' />
                     </div>
-                    <p className='texto-icon'>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                    <p className='texto-icon'>84% dos brasileiros doam para um futuro melhor!
+                      Junte-se a essa corrente do bem e faça a diferença na vida de quem mais precisa. Doar para uma ONG é investir em educação, saúde, meio ambiente e um futuro mais justo para todos.</p>
                   </div>
                 </Col>
                 <Col id='icons'>
@@ -117,8 +115,7 @@ export default function Doacao() {
                     <div className='imagem-icons'>
                       <img src={logo4} height='95px' width='100px' alt='oie' />
                     </div>
-                    <p className='texto-icon'>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                    <p className='texto-icon'>Escolha uma ONG confiável: pesquise a reputação e o histórico da instituição, verifique se ela possui registro no CNAS(Conselho Nacional de Assistência Social) e visite a instituição pessoalmente, se possível.</p>
                   </div>
                 </Col>
                 {/* <Col id='icons'>

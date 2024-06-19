@@ -51,12 +51,11 @@ export default function SobreMim() {
               <Col id='descrição-coluna2'>
                 <div className='colTexto'>
                   <p className='textoLinha'>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                    when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                    It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                    It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-                    and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                    Olá me chamo Diogo Favilla Gonçalves Jacintho tenho 23 anos e esse é meu site de Doações 100% feito por mim.
+                    Sou formado em análise e desenvolvimento de sistemas e em lingua inglesa pelo Brasas English Course(nível C2),já trabalhei como estágiario na área de programação
+                    e em diversos projetos como freelancer além de outros que fiz para aprendizado, Dentre os projetos posso destacar um sistema CRUD com integração ao banco de dados de um
+                    site do wordpress, meu portfólio e um aplicativo em flutter. Possuo conhecimento em  Javascript,React.js,Angular,MongoDb,Postman,Next.js,Pyton,Typescript,Redux,Boostrap
+                    Node.js,conceitos de Ui/Ux e entre outros conhecimentos; aliando se a isso Prezo sempre por sistemas polidos e bem organizados em que as partes presentes conversem entre si,procuro sempre inserir  um design moderno e atrativo nos meus projetos, afinal de tudo a primeira impressão é a que fica.
                   </p>
                 </div>
               </Col>
@@ -142,9 +141,8 @@ export default function SobreMim() {
                   <div className='imagem-icons'>
                     <img src={logo1} height='95px' width='100px' alt='oie' />
                   </div>
-                  <h4 className='icon-descrição'>Titulo</h4>
-                  <p className='texto-icon-sobre'>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                  <h4 className='icon-descrição'></h4>
+                  <p className='texto-icon-sobre'>Preencha o formulário ao lado para enviar uma mensagem ao criador do site, a mensagem será enviada por gmail.</p>
                 </div>
               </Col>
               <Col>

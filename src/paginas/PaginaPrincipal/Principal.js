@@ -58,7 +58,6 @@ export default function Principal() {
     console.log(data[index].imgFun, document.getElementById('fundo'))
     setImagemFundo(data[index].imgFun)
   }
-
   useEffect(() => {
     document.getElementById('fundo').style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.7),
         rgba(0, 0, 0, 0.7)), url(${imagemFundo}`
@@ -73,15 +72,10 @@ export default function Principal() {
 
   return (
     <>
-
-      {/* <header>
-        <Menu />
-      </header> */}
-
       <main className='man' id='fundo'  >
         <div>
-              <Menu />
-            </div>
+          <Menu />
+        </div>
         <Container>
           <Row id='principal-row'>
             <Col className='sm={6}'>
@@ -92,9 +86,7 @@ export default function Principal() {
                 </p>
               </div>
             </Col>
-
             <Col className='sm={6}'>
-
               <div className='cards-col'>
                 {
                   data.map((x, index) => {
@@ -108,16 +100,11 @@ export default function Principal() {
               </div>
             </Col>
           </Row>
-
         </Container>
       </main>
-
-
-
       <footer className='rodape-principal'>
         <Footer />
       </footer>
-
       <Outlet />
     </>
   )
