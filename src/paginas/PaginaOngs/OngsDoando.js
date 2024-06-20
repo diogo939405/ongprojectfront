@@ -45,13 +45,6 @@ export default function OngsDoando() {
 
     const beforeSend = (valor) => {
         const valorNovo = Number(valor.target.value)
-        if (valorNovo < 1) {
-            setInputValue(1)
-        } else if (valorNovo > 50) {
-            setInputValue(50)
-        } else {
-            setInputValue(valorNovo)
-        }
         setInputValue(valorNovo)
         console.log('objeto em input ', products)
     }
@@ -109,7 +102,7 @@ export default function OngsDoando() {
                                             // defaultValue="@gmail.com"
                                             />
                                         </div>
-                                        <div className='input-box'>
+                                        {/* <div className='input-box'>
                                             <label className='label-for'>Valor a ser Doado</label>
                                             <CurrencyInput
                                                 id="input-example"
@@ -120,11 +113,11 @@ export default function OngsDoando() {
                                                 decimalsLimit={2}
                                                 onValueChange={(value, name, values) => console.log(value, name, values)}
                                             />;
-                                        </div>
-                                        {/* <div className='input-box'>
+                                        </div> */}
+                                        <div className='input-box'>
                                             <label className='label-for'>Valor a ser Doado</label>
                                             <input type='text' id='doar' placeholder='Faça sua doação' value={inputValue} onChange={beforeSend} ></input>
-                                        </div> */}
+                                        </div>
                                         <div className='paypal-button-container'>
                                             <BotaoPagamento product={infoDetails} price={inputValue} doar={doar} />
                                         </div>

@@ -13,7 +13,7 @@ const BotaoPagamento = (props) => {
     useEffect(() => {
         // console.log('useEffect', props.product.price)
         setValor(parseFloat(props.price).toFixed(2))
-        console.log('useEffect', valor)
+        console.log('useEffect', valor, 'PASSOU VALOR')
     }, [props]);
 
     const style = {
@@ -43,7 +43,7 @@ const BotaoPagamento = (props) => {
     if (erro) {
         notify()
         // window.alert('pagamento deu erro' + props.price + '--' + parseFloat(props.price).toFixed(2))
-        console.log(erro)
+        console.log('NO BOTAO')
     }
 
     return <PayPalButtons
@@ -52,9 +52,10 @@ const BotaoPagamento = (props) => {
         style={style}
         createOrder={(data, actions) => {
             return actions.order.create({
+                intent:"CAPTURE",
                 purchase_units: [
                     {
-                        description: 'props.product.description',
+                        description: 'oie',
                         amount: {
                             currency_code: "USD",
                             value: props.doar?.value // parseFloat(Number(props.price)).toFixed(2),
@@ -65,7 +66,7 @@ const BotaoPagamento = (props) => {
         }}
         onApprove={async (data, actions) => {
             const orders = await actions.order.capture();
-            console.log('ordem', orders)
+            console.log('ordem PASSOU')
 
             handleApprove(data.orderID)
         }}
@@ -74,7 +75,7 @@ const BotaoPagamento = (props) => {
         }}
         onError={(err) => {
             setErro(err)
-            console.error('pagamento com erro', props.price)
+            console.error('pagamento com erro')
         }}
         fundingSource={FUNDING.PAYPAL}
     />;
