@@ -22,12 +22,11 @@ export default function SobreMim() {
 
   return (
     <>
-
       <header className='cabeca'>
         <Menu />
         <div className='div-texto'>
           <div >
-            <h4 className='div-titulo'>titulo pagina</h4>
+            <h4 className='div-titulo'>Sobre mim</h4>
           </div>
           <div className='div-info'>
             <span>
@@ -52,10 +51,7 @@ export default function SobreMim() {
                 <div className='colTexto'>
                   <p className='textoLinha'>
                     Olá me chamo Diogo Favilla Gonçalves Jacintho tenho 23 anos e esse é meu site de Doações 100% feito por mim.
-                    Sou formado em análise e desenvolvimento de sistemas e em lingua inglesa pelo Brasas English Course(nível C2),já trabalhei como estágiario na área de programação
-                    e em diversos projetos como freelancer além de outros que fiz para aprendizado, Dentre os projetos posso destacar um sistema CRUD com integração ao banco de dados de um
-                    site do wordpress, meu portfólio e um aplicativo em flutter. Possuo conhecimento em  Javascript,React.js,Angular,MongoDb,Postman,Next.js,Pyton,Typescript,Redux,Boostrap
-                    Node.js,conceitos de Ui/Ux e entre outros conhecimentos; aliando se a isso Prezo sempre por sistemas polidos e bem organizados em que as partes presentes conversem entre si,procuro sempre inserir  um design moderno e atrativo nos meus projetos, afinal de tudo a primeira impressão é a que fica.
+                    Sou formado em análise e desenvolvimento de sistemas e em lingua inglesa pelo Brasas English Course(nível C2),já trabalhei como estágiario na área de programação e em diversos projetos como freelancer além de outros que fiz para aprendizado, Dentre os projetos posso destacar um sistema CRUD com integração ao banco de dados de um site do wordpress, meu portfólio e um aplicativo em flutter. Possuo conhecimento em Javascript, React.js, Angular, MongoDb, Postman, Next.js, Pyton, Typescript, Redux,Boostrap, Node.js, conceitos de Ui/Ux e entre outros conhecimentos; aliando-se a isso prezo sempre por códigos limpos e reutilizaveis utilizando o conceito do Solid (S) bem organizados em que as partes presentes conversem entre si,procuro sempre inserir  um design moderno e atrativo nos meus projetos, afinal de tudo a primeira impressão é a que fica.
                   </p>
                 </div>
               </Col>
@@ -82,9 +78,9 @@ export default function SobreMim() {
                         <h2 className='titulo-etapa'> 2024</h2>
                         <p>
                           <li>Fim do estágio na INETEP</li>
-                          <li>início da participação em um projeto de  aplicativo utilizando flutter</li>
+                          <li>Participação em um projeto de aplicativo para comunicação paroquial utilizando flutter/firebase</li>
                           <li>Criação do site de doação e meu portfólio </li>
-                          <li>Estudos em novas tecnologias como Redux,Pyton,Next.js e de APis de pagamento como Mercado Pago e Paypal</li>
+                          <li>Estudos em novas tecnologias como Redux, Pyton, Next.js e de APis de pagamento como Mercado Pago e Paypal</li>
                           <li>Conclusão da graduação de análise e desenvolvimento</li>
                           <li>Inicio do meu curso de espanhol</li>
                         </p>
@@ -94,10 +90,10 @@ export default function SobreMim() {
                       <div>
                         <h2 className='titulo-etapa'> 2023-2024</h2>
                         <p>
-                          <li>Interrupção do contrato Jovem Aprendiz na Universal Music</li>
+                          <li>Encerramento do contrato Jovem Aprendiz na Universal Music</li>
                           <li>Inicio do estágio de programação na INETEP</li>
                           <li>Conclusão do curso de inglês(8 anos) no Brasas English Course(B2)</li>
-                          <li>Criação de um sistema CRUD com integração a API de um site no wordpress</li>
+                          <li>Criação de um sistema CRUD (reactjs) com integração a API (nodejs/mysql) de um site no wordpress</li>
                           <li>Participação na criação de um sistema financeiro para um cliente(freelancer)</li>
                         </p>
                       </div>
@@ -106,11 +102,11 @@ export default function SobreMim() {
                       <div>
                         <h2 className='titulo-etapa'> 2022-2023</h2>
                         <p>
-                        <li>Encerramento do contrato de Jovem Aprendiz na Rodobens Automóveis</li>
-                        <li>Início do contrato de Jovem Aprendiz na Universal Music</li>
-                        <li>Estudo constante em React,Javascript,Typescript,Angular,HTML e CSS</li>
-                        <li>Criação de projetos própios para aprendizado</li>
-                        <li>Freelancer em projetos utilizando wordpress </li>
+                          <li>Encerramento do contrato de Jovem Aprendiz na Rodobens Automóveis</li>
+                          <li>Início do contrato de Jovem Aprendiz na Universal Music</li>
+                          <li>Estudo constante em React, Javascript, Typescript, Angular, HTML e CSS</li>
+                          <li>Criação de projetos próprios para aprendizado</li>
+                          <li>Freelancer em projetos utilizando wordpress </li>
                         </p>
                       </div>
                     </div>
@@ -128,10 +124,10 @@ export default function SobreMim() {
                       <div>
                         <h2 className='titulo-etapa'> 2020-2021</h2>
                         <p>
-                        <li>Inicio da faculdade em análise e desenvolvimento de sistemas</li>
-                        <li>Estudo iniciais em linguagens de programação</li>
-                        <li>Aprimoramento dos conhecimentos em wordpress</li>
-                        <li>Aprovação em concurso militar(ESA)</li>
+                          <li>Inicio da faculdade em análise e desenvolvimento de sistemas</li>
+                          <li>Estudo iniciais em linguagens de programação</li>
+                          <li>Aprimoramento dos conhecimentos em wordpress</li>
+                          <li>Aprovação em concurso militar(ESA)</li>
                         </p>
                       </div>
                     </div>

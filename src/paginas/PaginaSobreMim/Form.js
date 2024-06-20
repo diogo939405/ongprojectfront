@@ -59,7 +59,7 @@ export default function Form() {
                                 </div>
 
                                 <div className='input-boxx'>
-                                    <label className='label-form'> Gmail ou telefone para contato</label>
+                                    <label className='label-form'> Email ou telefone para contato</label>
                                     <input type='text' ref={form} placeholder='digite sua email' name="from_email" required />
                                 </div>
 

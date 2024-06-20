@@ -36,7 +36,7 @@ export default function Doacao() {
         <Menu />
         <div className='div-texto'>
           <div >
-            <h4 className='div-titulo'>titulo pagina</h4>
+            <h4 className='div-titulo'>A importância de Doar</h4>
           </div>
           <div className='div-info'>
             <span>
@@ -70,7 +70,7 @@ export default function Doacao() {
                     Apesar de ser algo relativamente comum nos dias de hoje,muitas pessoas ainda subestimam o poder que uma doação, de qualquer valor, pode ter
                     na vida de pessoas que necessitam de qualquer ajudar possível. Uma das formas mais eficientes e confiáveis que temos hoje em dia é através das Ongs, que tem
                     como o intuito mobilizar recursos financeiros, humanos e materiais para alcançar seus objetivos e promover mudanças positivas na sociedade, Contudo é muito importante ter
-                    bastante atenção a Ong que voçê estara enviando suas doações, é muito comum pessoas que se aproveitam da bondade de outras para aplicar golpes.Se ainda não fez sua doação ou não sabe a instituição
+                    bastante atenção a Ong que voçê estara enviando suas doações, é muito comum pessoas de má índole se aproveitarem da bondade de outras para aplicar golpes.Se ainda não fez sua doação ou não sabe a instituição
                     a qual doar? aqui no site você tem 4 opções de Ongs que fazem um lindo trabalho, NÃO PERCA TEMPO DOE JÁ!
                   </p>
                 </Col>
