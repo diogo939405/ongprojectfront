@@ -73,59 +73,84 @@ export default function SobreMim() {
               <Col>
                 <div className='linha-historia'>
                   <div className='linha-titulo'>
-                    <h1 className='titulo-linha'>historia</h1>
-                    <p> um pouco mais sobre minha trajetória</p>
+                    <h1 className='titulo-linha'>História</h1>
+                    <p className='p'> Um pouco mais sobre meu caminho até aqui</p>
                   </div>
                   <div className='linha-tempo'>
                     <div className='linha-etapas'>
                       <div>
-                        <h2 className='titulo-etapa'> parte 7</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                        <h2 className='titulo-etapa'> 2024</h2>
+                        <p>
+                          <li>Fim do estágio na INETEP</li>
+                          <li>início da participação em um projeto de  aplicativo utilizando flutter</li>
+                          <li>Criação do site de doação e meu portfólio </li>
+                          <li>Estudos em novas tecnologias como Redux,Pyton,Next.js e de APis de pagamento como Mercado Pago e Paypal</li>
+                          <li>Conclusão da graduação de análise e desenvolvimento</li>
+                          <li>Inicio do meu curso de espanhol</li>
+                        </p>
                       </div>
                     </div>
                     <div className='linha-etapas'>
                       <div>
-                        <h2 className='titulo-etapa'> parte 6</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                        <h2 className='titulo-etapa'> 2023-2024</h2>
+                        <p>
+                          <li>Interrupção do contrato Jovem Aprendiz na Universal Music</li>
+                          <li>Inicio do estágio de programação na INETEP</li>
+                          <li>Conclusão do curso de inglês(8 anos) no Brasas English Course(B2)</li>
+                          <li>Criação de um sistema CRUD com integração a API de um site no wordpress</li>
+                          <li>Participação na criação de um sistema financeiro para um cliente(freelancer)</li>
+                        </p>
                       </div>
                     </div>
                     <div className='linha-etapas'>
                       <div>
-                        <h2 className='titulo-etapa'> parte 5</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                        <h2 className='titulo-etapa'> 2022-2023</h2>
+                        <p>
+                        <li>Encerramento do contrato de Jovem Aprendiz na Rodobens Automóveis</li>
+                        <li>Início do contrato de Jovem Aprendiz na Universal Music</li>
+                        <li>Estudo constante em React,Javascript,Typescript,Angular,HTML e CSS</li>
+                        <li>Criação de projetos própios para aprendizado</li>
+                        <li>Freelancer em projetos utilizando wordpress </li>
+                        </p>
                       </div>
                     </div>
                     <div className='linha-etapas'>
                       <div>
-                        <h2 className='titulo-etapa'> parte 4</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                        <h2 className='titulo-etapa'> 2021-2022</h2>
+                        <p>
+                          <li>Início do meu primeiro trabalho, Jovem Aprendiz na Rodobens Automóveis </li>
+                          <li>Estudo em cursos de especialização com certificados na Alura e Cursoemvideo(Gustavo Guanabara)</li>
+                          <li>Criação de sites utilizando wordpress(freelancer)</li>
+                        </p>
                       </div>
                     </div>
                     <div className='linha-etapas'>
                       <div>
-                        <h2 className='titulo-etapa'> parte 3</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                        <h2 className='titulo-etapa'> 2020-2021</h2>
+                        <p>
+                        <li>Inicio da faculdade em análise e desenvolvimento de sistemas</li>
+                        <li>Estudo iniciais em linguagens de programação</li>
+                        <li>Aprimoramento dos conhecimentos em wordpress</li>
+                        <li>Aprovação em concurso militar(ESA)</li>
+                        </p>
                       </div>
                     </div>
                     <div className='linha-etapas'>
                       <div>
-                        <h2 className='titulo-etapa'> parte 2</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                        <h2 className='titulo-etapa'> 2020</h2>
+                        <p>
+                          <li>Primeiro contato com programação</li>
+                          <li>Estudava para concursos militares desde de o ensino Médio</li>
+                        </p>
                       </div>
                     </div>
-                    <div className='linha-etapas'>
+                    {/* <div className='linha-etapas'>
                       <div>
                         <h2 className='titulo-etapa'> parte 1</h2>
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                           Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </Col>

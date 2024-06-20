@@ -52,7 +52,7 @@ const BotaoPagamento = (props) => {
         style={style}
         createOrder={(data, actions) => {
             return actions.order.create({
-                intent:"CAPTURE",
+                intent: "CAPTURE",
                 purchase_units: [
                     {
                         description: 'oie',
@@ -81,7 +81,7 @@ const BotaoPagamento = (props) => {
     />;
     <ToastContainer
         position="top-right"
-        autoClose={7000}
+        autoClose={2000}
         hideProgressBar={false}
         newestOnTop={false}
         closeOnClick

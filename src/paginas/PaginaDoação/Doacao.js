@@ -52,9 +52,7 @@ export default function Doacao() {
       </header>
       <AnimatedPage>
         <body className='corpo'>
-
           <section className='secao1'>
-
             <Container>
               <Row id='corpo-mensagem'>
                 <Col id='mensagem-imagem'>
@@ -62,16 +60,18 @@ export default function Doacao() {
                   // width={'640vw'} height={'700vh'} 
                   />
                 </Col>
+              </Row>
+              <Row>
 
                 <Col className='mensagem-texto'>
-                  <h4 id='titulo'>Titulo</h4>
+                  {/* <h4 id='titulo'>Titulo</h4> */}
                   {/* <h5 id='subtitulo'>subtitulo</h5> */}
-                  <p id='conteudo'>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                    when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                    It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                    It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-                    and Lembre-se: cada doação, por menor que seja, faz a diferença. Seja parte da solução!.
+                  <p id='conteudo'>
+                    Apesar de ser algo relativamente comum nos dias de hoje,muitas pessoas ainda subestimam o poder que uma doação, de qualquer valor, pode ter
+                    na vida de pessoas que necessitam de qualquer ajudar possível. Uma das formas mais eficientes e confiáveis que temos hoje em dia é através das Ongs, que tem
+                    como o intuito mobilizar recursos financeiros, humanos e materiais para alcançar seus objetivos e promover mudanças positivas na sociedade, Contudo é muito importante ter
+                    bastante atenção a Ong que voçê estara enviando suas doações, é muito comum pessoas que se aproveitam da bondade de outras para aplicar golpes.Se ainda não fez sua doação ou não sabe a instituição
+                    a qual doar? aqui no site você tem 4 opções de Ongs que fazem um lindo trabalho, NÃO PERCA TEMPO DOE JÁ!
                   </p>
                 </Col>
               </Row>

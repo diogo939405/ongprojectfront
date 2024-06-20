@@ -190,7 +190,7 @@
     text-align: left;
     line-height: 27px;
     font-size: 1.1rem;
-    font-weight: 400;
+    font-weight: 500;
     color: rgb(40 40 40);
 }
 
@@ -251,12 +251,19 @@
     font-size: 3rem;
 }
 
+
 .titulo-etapa {
     margin-bottom: 0.5em;
     color: #000000bd;
     font-size: 2rem;
     font-weight: 500;
     font-family: 'Montserrat';
+}
+
+.p{
+    font-style: italic;
+    font-weight: 300;
+    
 }
 
 

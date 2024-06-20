@@ -61,8 +61,8 @@
 }
 
 .secao1 {
-
-    padding: 10px;
+    margin-top: -15vh;
+    padding: 15px;
 }
 
 #titulo {
@@ -87,13 +87,19 @@
 
 #conteudo {
     color: rgb(97, 96, 96);
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     text-align: left;
-    letter-spacing: 1px;
-    font-family: "Roboto";
-    font-weight: 400;
-    line-height: 32px;
+    font-family: 'Roboto';
+    letter-spacing: 1.4px;
+    font-weight: 700;
+    line-height: 7vh;
     padding: 10px;
+}
+.strong{
+    font-size: 1.3rem;
+    font-weight: 900;
+    color: rgba(0, 0, 0, 0.637);
+    cursor: pointer;
 }
 
 #foto-texto {
