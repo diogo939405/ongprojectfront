@@ -91,7 +91,7 @@ export default function OngsDoando() {
         const id = await comprar()
         if (id) {
             setIdCompra(id);
-        }
+        }...
     };
 
     const beforeSend = (valor) => {
