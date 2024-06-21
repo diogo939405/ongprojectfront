@@ -54,7 +54,6 @@ export default function OngsDoando() {
     // }
 
     const comprar = async (dados) => {
-        debugger
         try {
 
             const response = await axios.post('http://localhost:4000/dados', {
@@ -63,7 +62,10 @@ export default function OngsDoando() {
                 currency_id: "BRL",
                 description: infoDetails.descricaoCurta,
                 quantity: 1
-            });
+            }).then((v) => {
+                console.log('RETORNO DA API', v)
+                window.location.href = v.data.url
+            })
             const { id } = response.data
             return id
 
@@ -90,7 +92,6 @@ export default function OngsDoando() {
     }
 
     const gerirCompra = async () => {
-        debugger
         const id = await comprar()
         if (id) {
             setIdCompra(id);
