@@ -110,7 +110,7 @@ export default function OngsDoando() {
                                                 placeholder="digite um valor"
                                                 value={inputValue}
                                                 defaultValue={0}
-                                                decimalsLimit={2}
+                                                drecimalsLimit={2}
                                                 onValueChange={(value, name, values) => console.log(value, name, values)}
                                             />;
                                         </div> */}
