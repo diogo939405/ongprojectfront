@@ -114,7 +114,7 @@ export default function SobreMim() {
                       <div>
                         <h2 className='titulo-etapa'> 2021-2022</h2>
                         <p>
-                          <li>Início do meu primheiro trabalho, Jovem Aprendiz na Rodobens Automóveis </li>
+                          <li>Início do meu primeiro trabalho, Jovem Aprendiz na Rodobens Automóveis </li>
                           <li>Estudo em cursos de especialização com certificados na Alura e Cursoemvideo(Gustavo Guanabara)</li>
                           <li>Criação de sites utilizando wordpress(freelancer)</li>
                         </p>
