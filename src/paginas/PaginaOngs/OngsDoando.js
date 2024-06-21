@@ -54,8 +54,10 @@ export default function OngsDoando() {
     // }
 
     const comprar = async (dados) => {
+        debugger
         try {
-            const response = await axios.post('https://localhost:4000/dados', {
+
+            const response = await axios.post('http://localhost:4000/dados', {
                 title: infoDetails.nome,
                 unit_price: inputValue,
                 currency_id: "BRL",
@@ -88,10 +90,11 @@ export default function OngsDoando() {
     }
 
     const gerirCompra = async () => {
+        debugger
         const id = await comprar()
         if (id) {
             setIdCompra(id);
-        }...
+        }
     };
 
     const beforeSend = (valor) => {
@@ -171,11 +174,7 @@ export default function OngsDoando() {
                                             <label className='label-for'>Valor a ser Doado</label>
                                             <input type='text' id='doar' placeholder='Faça sua doação' value={inputValue} onChange={beforeSend} ></input>
                                         </div>
-                                        <div>
-                                            <button onClick={gerirCompra}></button>
-                                            {idCompra && <Wallet initialization={{ preferenceId: idCompra }} />}
 
-                                        </div>
 
                                         {/* <div className='paypal-button-container'>
                                             <BotaoPagamento product={infoDetails} price={inputValue} doar={doar} />
@@ -184,7 +183,11 @@ export default function OngsDoando() {
                                         {/* <button id='botao-doar'> Doar </button> */}
                                         {/* onClick={(x) => tratarPagamento(x)} */}
                                     </form>
+                                    <div>
+                                        <button onClick={gerirCompra} >press</button>
+                                        {/* {idCompra && <Wallet initialization={{ preferenceId: idCompra }} />} */}
 
+                                    </div>
                                 </div>
                             </div>
                         </Col>
