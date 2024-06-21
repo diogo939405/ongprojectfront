@@ -1,30 +1,31 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import CurrencyInput from 'react-currency-input-field';
-
-
+import { initMercadoPago, Wallet } from '@mercadopago/sdk-react'
 import axios from 'axios';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Menu from '../../menu/Menu'
 import Footer from '../../footer/Footer'
-import gerarToken from '../../pagamento/Paypal';
 import Loading from '../../loading/Loading';
 import PagamentoTela from '../../pagamento/PagamentoTela';
 import BotaoPagamento from './BotãoPagamento';
 import SlideGallery from './SlideGallery';
 import './OngsDoando.css'
 
-export default function OngsDoando() {
 
+
+export default function OngsDoando() {
+    initMercadoPago('TEST-00a38ea9-801e-48c5-9c93-a252d6ac8884', {
+        locale: "pt-BR",
+    });
+    const [idCompra, setIdCompra] = useState(null)
     const { infoId } = useParams()
     const [infoDetails, setInfoDetails] = useState({})
     const [products, setProducts] = useState({})
     const [inputValue, setInputValue] = useState()
     const [loadingSpinner, setLoadingSpinner] = useState(false)
-    let doar = document.getElementById("doar");//.target.value
-    let botaoDoar = document.getElementById('botao-doar')
 
     useEffect(() => {
         window.scrollTo({
@@ -44,19 +45,54 @@ export default function OngsDoando() {
             })
     }, [infoId]);
 
-    const comprar = async (dados) => {
-        const response = await axios.post(
-            "https://localhost:4000/dados", {
-            title: "nome",
-            unit_price: 10,
-            currency_id: "BRL",
-            description: "e.descricaoCurta",
-            quantity: 2
-        }
-        )
+    // var dat = {
+    //     title: infoDetails.nome,
+    //     unit_price: inputValue,
+    //     currency_id: "BRL",
+    //     description: infoDetails.descricaoCurta,
+    //     quantity: 1
+    // }
 
-        window.location
+    const comprar = async (dados) => {
+        try {
+            const response = await axios.post('https://localhost:4000/dados', {
+                title: infoDetails.nome,
+                unit_price: inputValue,
+                currency_id: "BRL",
+                description: infoDetails.descricaoCurta,
+                quantity: 1
+            });
+            const { id } = response.data
+            return id
+
+            // window.location.href = response.data.init_point
+        } catch (error) {
+            console.log(error)
+        }
+
+
+        //     console.log(inputValue)
+        //     const response = await axios.post(
+        //         "https://localhost:4000/dados", data, {
+        //         headers: {
+        //             'Content-Type': 'application/json'
+        //         }
+        //     }
+        //     )
+        //         .then(response => {
+        //             console.log('respota API', response.init_point)
+        //             window.location.href = response.init_point
+        //         })
+        //     console.log(response.data)
+        //     // window.location.href = response.data
     }
+
+    const gerirCompra = async () => {
+        const id = await comprar()
+        if (id) {
+            setIdCompra(id);
+        }
+    };
 
     const beforeSend = (valor) => {
         const valorNovo = Number(valor.target.value)
@@ -65,6 +101,8 @@ export default function OngsDoando() {
     }
     return (
         <>
+
+
             <header className='cabeca'>
                 <Menu />
                 <div className='div-texto'>
@@ -134,7 +172,9 @@ export default function OngsDoando() {
                                             <input type='text' id='doar' placeholder='Faça sua doação' value={inputValue} onChange={beforeSend} ></input>
                                         </div>
                                         <div>
-                                            <button onClick={() => comprar(e)}></button>
+                                            <button onClick={gerirCompra}></button>
+                                            {idCompra && <Wallet initialization={{ preferenceId: idCompra }} />}
+
                                         </div>
 
                                         {/* <div className='paypal-button-container'>
