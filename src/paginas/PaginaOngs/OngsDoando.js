@@ -35,13 +35,28 @@ export default function OngsDoando() {
             .then((resp) => {
                 setInfoDetails(resp.data)
                 console.log('dados do card', resp.data, infoDetails)
-                setProducts({
-                    description: `${infoDetails.Nome}`,
-                    price: inputValue,
-                })
+                // setProducts({
+                //     description: `${infoDetails.descricaoCurta}`,
+
+                //     price: inputValue,
+                // })
                 console.log('dados do card', resp.data, infoDetails)
             })
     }, [infoId]);
+
+    const comprar = async (dados) => {
+        const response = await axios.post(
+            "https://localhost:4000/dados", {
+            title: "nome",
+            unit_price: 10,
+            currency_id: "BRL",
+            description: "e.descricaoCurta",
+            quantity: 2
+        }
+        )
+
+        window.location
+    }
 
     const beforeSend = (valor) => {
         const valorNovo = Number(valor.target.value)
@@ -118,9 +133,13 @@ export default function OngsDoando() {
                                             <label className='label-for'>Valor a ser Doado</label>
                                             <input type='text' id='doar' placeholder='Faça sua doação' value={inputValue} onChange={beforeSend} ></input>
                                         </div>
-                                        <div className='paypal-button-container'>
-                                            <BotaoPagamento product={infoDetails} price={inputValue} doar={doar} />
+                                        <div>
+                                            <button onClick={() => comprar(e)}></button>
                                         </div>
+
+                                        {/* <div className='paypal-button-container'>
+                                            <BotaoPagamento product={infoDetails} price={inputValue} doar={doar} />
+                                        </div> */}
 
                                         {/* <button id='botao-doar'> Doar </button> */}
                                         {/* onClick={(x) => tratarPagamento(x)} */}
