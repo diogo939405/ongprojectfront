@@ -11,7 +11,7 @@ import './SobreMim.css'
 import gerarToken from '../../pagamento/Paypal'
 import PagamentoTela from '../../pagamento/PagamentoTela';
 import Form from './Form'
-import logo1 from '../../assets/icons/information (1).png';
+import logo1 from '../../assets/pngtree-vector-send-message-icon-png-image_558846-removebg-preview.png';
 import eu from '../../assets/WhatsApp Image 2024-06-17 at 16.51.29.jpeg';
 import Float from '../../floatButton/Float';
 

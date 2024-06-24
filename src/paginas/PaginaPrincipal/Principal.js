@@ -10,6 +10,7 @@ import larOasis from '../../assets/larOasis1.png'
 import casaLuz from '../../assets/casaLuzDoCaminho5.png'
 import obraSocial from '../../assets/Obra-Social-Dona-Meca2-removebg-preview.png'
 import defaultBackground from '../../Imagens/background.png'
+import fotoFundo from '../../assets/R.jpeg'
 import soVamos from '../../assets/soVamos3.jpeg'
 import larOasisFun from '../../assets/larOasis3.png'
 import casaLuzFun from '../../assets/casaLuzDoCaminho3.png'
@@ -22,7 +23,7 @@ import obraSocialFun from '../../assets/Obra-Social-Dona-Meca4.jpeg'
 
 export default function Principal() {
 
-  const [imagemFundo, setImagemFundo] = useState(defaultBackground)
+  const [imagemFundo, setImagemFundo] = useState(fotoFundo)
 
   let data = [
     {
