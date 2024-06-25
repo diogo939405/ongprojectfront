@@ -110,7 +110,7 @@ export default function OngsDoando() {
     }
 
     const beforeSend = (valor) => {
-        const valorNovo = Number(valor.target.value)
+        const valorNovo = Number(valor.target.value.replace(/[^0-9]/g, ''))
         setInputValue(valorNovo)
         console.log('objeto em input ', valorNovo)
     }
@@ -160,7 +160,7 @@ export default function OngsDoando() {
                                 </div>
                                 <p className='ongs-texto-textos'>{infoDetails.descricaoLonga}<br />
                                     <br />
-                                    <span className='cartaoDados'>Dados para realizar a doação</span>
+                                    <span className='cartaoDados'>Dados Fictícios para realizar a doação</span>
                                     <br />
                                     <span className='cartaoDados'>Numero do cartão: 5031 4332 1540 6351
                                         <button onClick={copyToClipboard}>Copiar</button>
@@ -200,7 +200,8 @@ export default function OngsDoando() {
                                                 name="input-name"
                                                 placeholder="digite um valor"
                                                 value={inputValue}
-                                                prefix={'R$'}
+                                                defaultValue={1}
+                                                // prefix={'R$'}
                                                 onChange={beforeSend}
                                                 drecimalsLimit={8}
                                                 onValueChange={(value, name, values) => console.log(value, name, values)}

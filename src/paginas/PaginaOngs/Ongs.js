@@ -15,12 +15,9 @@ import Float from '../../floatButton/Float'
 
 
 export default function Ongs() {
-
-
-
   return (
     <>
-      <header className='cabeca'>
+      <header className='cabecaOng'>
         <Menu />
         <div className='div-texto'>
           <div >

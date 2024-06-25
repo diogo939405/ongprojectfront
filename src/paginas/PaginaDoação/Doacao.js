@@ -33,7 +33,7 @@ export default function Doacao() {
   return (
     <>
 
-      <header className='cabeca'>
+      <header className='cabecaa'>
         <Menu />
         <div className='div-texto'>
           <div >

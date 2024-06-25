@@ -20,7 +20,7 @@ export default function PagamentoTela() {
         <Menu />
         <div className='div-texto'>
           <div >
-            <h4 className='div-titulo'>titulo pagina</h4>
+            <h4 className='div-titulo'>Pagamento confirmado</h4>
           </div>
           <div className='div-info'>
             <span>
