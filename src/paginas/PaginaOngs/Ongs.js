@@ -17,8 +17,9 @@ import Float from '../../floatButton/Float'
 export default function Ongs() {
   return (
     <>
+      <Menu />
       <header className='cabecaOng'>
-        <Menu />
+
         <div className='div-texto'>
           <div >
             <h4 className='div-titulo'>Doe</h4>

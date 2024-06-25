@@ -156,9 +156,11 @@ export default function OngsDoando() {
                                 <div className='ongs-texto-conjunto'>
                                     <h2 className='ongs-texto-titulo'>
                                         {infoDetails.descricaoCurta}
-                                    </h2>
+                                    </h2> 
                                 </div>
-                                <p className='ongs-texto-textos'>{infoDetails.descricaoLonga}<br />
+                                <p className='ongs-texto-textos'>{infoDetails.descricaoLonga}
+                                    <span><a href={infoDetails.link} target="_blank" className='link-projeto'>Saiba mais sobre o projeto</a></span>
+                                    <br />
                                     <br />
                                     <span className='cartaoDados'>Dados Fictícios para realizar a doação</span>
                                     <br />
