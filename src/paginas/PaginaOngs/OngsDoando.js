@@ -1,178 +1,138 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import CurrencyInput from 'react-currency-input-field';
+import { initMercadoPago, Wallet } from '@mercadopago/sdk-react'
 import axios from 'axios';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Menu from '../../menu/Menu'
 import Footer from '../../footer/Footer'
-import gerarToken from '../../pagamento/Paypal';
 import Loading from '../../loading/Loading';
 import PagamentoTela from '../../pagamento/PagamentoTela';
+import BotaoPagamento from './BotãoPagamento';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import SlideGallery from './SlideGallery';
 import './OngsDoando.css'
 
-export default function OngsDoando() {
 
+
+export default function OngsDoando() {
+    initMercadoPago('TEST-00a38ea9-801e-48c5-9c93-a252d6ac8884', {
+        locale: "pt-BR",
+    });
+    const [idCompra, setIdCompra] = useState(null)
+    const textToCopy = '5031 4332 1540 6351';
+    const [copiado, setCopiado] = useState(false)
     const { infoId } = useParams()
     const [infoDetails, setInfoDetails] = useState({})
+    const [products, setProducts] = useState({})
     const [inputValue, setInputValue] = useState()
+    const [inputName, setInputName] = useState()
     const [loadingSpinner, setLoadingSpinner] = useState(false)
-    let dadospgto;
-    var token = '';
-    let param = ''
-    let dado = document.getElementById("doar")
-    let botaoDoar = document.getElementById('botao-doar')
 
     useEffect(() => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        })
         axios.get(`http://localhost:5000/TodosDados/${infoId}`)
             .then((resp) => {
                 setInfoDetails(resp.data)
+                console.log('dados do card', resp.data, infoDetails)
+                // setProducts({
+                //     description: `${infoDetails.descricaoCurta}`,
+
+                //     price: inputValue,
+                // })
+                console.log('dados do card', resp.data, infoDetails)
             })
     }, [infoId]);
 
-    const inputChange = (valor) => {
-        const valorNovo = Number(valor.target.value)
-        setInputValue(valorNovo)
-    }
-
-    async function tratarPagamento() {
-        console.log('valor recebido', inputValue)
-        setLoadingSpinner(true)
-        token = await gerarToken();
-        await efetuarPagamento(token)
-            .then(async result => {
-                try {
-                    const url = result
-                    window.open(`${url}`)
-                } catch (error) {
-                    console.log('erro no redirect', error)
-                }
-                setLoadingSpinner(false)
-            });
-        console.log('exibir pagamento')
-        // await CapturarPagamento(token)
-        //     .then(async resu => {
-        //         console.log(resu, 'resua auqi')
-        //         try {
-        //             let tokenId = await resu.data.id
-        //             console.log('tokenid aqui', tokenId)
-        //             return tokenId
-        //         } catch (error) {
-        //             console.log(error, 'erro final auqi')
-
-        //         }
-        //     })
-
-
-    }
-
-    let _data = {
-        id: ``,
-        cardId: `${infoDetails._id}`,
-        valor: `${inputValue}`,
-    }
-
-
-    fetch("http://localhost:5000/compra", {
-        method: "POST",
-        body: JSON.stringify(_data)
-    })
-        .then(response => response.json())
-        .then(data => console.log(data))
-        .catch(error => console.log(error))
-
-    async function efetuarPagamento(token) {
-        console.log('efetuando pagamento')
-        const tokenAcess = token
-        const response = await axios({
-            url: process.env.REACT_APP_PAYPAL_BASE_URL + '/v2/checkout/orders',
-            method: 'post',
-            headers: {
-                'Content-Type': 'application/json',
-                'Authorization': 'Bearer ' + tokenAcess
-            },
-            data: JSON.stringify({
-                intent: 'CAPTURE',
-                purchase_units: [
-                    {
-                        items: [
-                            {
-                                name: `${infoDetails.Nome}`,
-                                description: ' 1 teste de compra',
-                                quantity: '1',
-                                unit_amount: {
-                                    currency_code: "BRL",
-                                    value: `${inputValue}`
-                                }
-                            }
-                        ],
-
-                        amount: {
-                            currency_code: "BRL",
-                            value: `${inputValue}`,
-                            breakdown: {
-                                item_total: {
-                                    currency_code: 'BRL',
-                                    value: `${inputValue}`
-                                }
-                            }
-                        }
-                    }
-                ],
-
-                // ?token=${tokenAcess}&orderId=${response.data}
-
-                application_context: {
-                    return_url: `http://localhost:3000/PagamentoTela/`,
-                    cancel_url: 'https://ge.globo.com/futebol/times/sao-paulo/',
-                    shipping_preference: "NO_SHIPPING",
-                    brand_name: 'nome da ong'
-                }
-
-            })
-        })
-        console.log('DADOS DE COMPRA ====> ', response.data.id)
-
-        if (response.data.status == 'CREATED')
-            dadospgto = response.data;
-        // pegardados(response.data)
-        console.log('dados de compra', dadospgto)
-        return dadospgto.links.find(link => link.rel === 'approve').href
-    }
-
-    // async function CapturarPagamento(token) {
-    //     const tokeAcess = await token
-    //     let kid = dadospgto.id
-    //     console.log(kid, 'kid aqui')
-    //     console.log('token capt', tokeAcess)
-
-    //     const resp = await axios({
-    //         url: process.env.REACT_APP_PAYPAL_BASE_URL + `/v2/checkout/orders/${kid}/capture`,
-    //         method: 'post',
-    //         headers: {
-    //             'Content-Type': 'application/json',
-    //             'Authorization': 'Bearer ' + tokeAcess
-    //         },
-    //     })
-    //     console.log(resp.data.id, 'aqui capturar pagamento')
-    //     return resp.data
+    // var dat = {
+    //     title: infoDetails.nome,
+    //     unit_price: inputValue,
+    //     currency_id: "BRL",
+    //     description: infoDetails.descricaoCurta,
+    //     quantity: 1
     // }
-    function onlyNumbers(t) {
-        var nu = t.which || t.keycode;
-        if ((nu >= 48 && nu < 57)) {
-            return true
-        } else {
-            return false
+
+    const comprar = async (dados) => {
+        try {
+
+            const response = await axios.post('http://localhost:4000/dados', {
+                title: inputName,
+                unit_price: inputValue,
+                currency_id: "BRL",
+                description: infoDetails.descricaoCurta,
+                quantity: 1
+            }).then((v) => {
+                console.log('RETORNO DA API', v)
+                // window.location.href = v.data.url
+                window.open(v.data.url, "_blank")
+            })
+            const { id } = response.data
+            return id
+
+            // window.location.href = response.data.init_point
+        } catch (error) {
+            console.log(error)
         }
+
+
+        //     console.log(inputValue)
+        //     const response = await axios.post(
+        //         "https://localhost:4000/dados", data, {
+        //         headers: {
+        //             'Content-Type': 'application/json'
+        //         }
+        //     }
+        //     )
+        //         .then(response => {
+        //             console.log('respota API', response.init_point)
+        //             window.location.href = response.init_point
+        //         })
+        //     console.log(response.data)
+        //     // window.location.href = response.data
     }
 
+    const gerirCompra = async () => {
+        const id = await comprar()
+        if (id) {
+            setIdCompra(id);
+        }
+    };
+
+    const nomeEscrito = (nome) => {
+        const nomeNovo = nome.target.value
+        setInputName(nomeNovo)
+        // console.log(nomeNovo)
+    }
+
+    const beforeSend = (valor) => {
+        const valorNovo = Number(valor.target.value.replace(/[^0-9]/g, ''))
+        setInputValue(valorNovo)
+        console.log('objeto em input ', valorNovo)
+    }
+
+    const copyToClipboard = async () => {
+        try {
+            await navigator.clipboard.writeText(textToCopy);
+            setCopiado(true);
+            setTimeout(() => setCopiado(false), 2000); // Esconde a mensagem após 2 segundos
+        } catch (error) {
+            console.error('Falha ao copiar o texto:', error);
+        }
+    };
     return (
         <>
+
+
             <header className='cabeca'>
                 <Menu />
                 <div className='div-texto'>
                     <div >
-                        <h4 className='div-titulo'>titulo pagina</h4>
+                        <h4 className='div-titulo'>{infoDetails.nome}</h4>
                     </div>
                     <div className='div-info'>
                         <span>
@@ -195,44 +155,70 @@ export default function OngsDoando() {
                             <div className='ongs-texto'>
                                 <div className='ongs-texto-conjunto'>
                                     <h2 className='ongs-texto-titulo'>
-                                        {infoDetails.Nome}
-                                    </h2>
-                                    {/* <hr className='barra'/> */}
+                                        {infoDetails.descricaoCurta}
+                                    </h2> 
                                 </div>
-                                <p className='ongs-texto-textos'>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                                    when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                                    It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                                    It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-                                    and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                                <p className='ongs-texto-textos'>{infoDetails.descricaoLonga}
+                                    <span><a href={infoDetails.link} target="_blank" className='link-projeto'>Saiba mais sobre o projeto</a></span>
+                                    <br />
+                                    <br />
+                                    <span className='cartaoDados'>Dados Fictícios para realizar a doação</span>
+                                    <br />
+                                    <span className='cartaoDados'>Numero do cartão: 5031 4332 1540 6351
+                                        <button onClick={copyToClipboard}>Copiar</button>
+                                        {copiado && <span className='copy-return'>Texto copiado!</span>}
+                                    </span>
+                                    <br />
+                                    <span className='cartaoDados'>CVV:123</span>
+                                    <br />
+                                    <span className='cartaoDados'>Validade:11/25</span>
+                                </p>
+
                             </div>
-                            {/* <div>
-                                <button className="btn btn-three">oie</button>
-                            </div> */}
                         </Col>
                         <Col>
                             <div className='ongs-imagens'>
-
                                 <div className='ong-wrapper'>
-                                    <form >
+                                    <form className='form-do' >
                                         <div className='form-titu'>
                                             <h2> Formulário de doação</h2>
                                         </div>
                                         <br />
                                         <div className='input-box' >
-                                            <input type='text' placeholder='digite seu Nome' required />
+                                            <label className='label-for'>Nome</label>
+                                            <input type='text' value={inputName} onChange={nomeEscrito} placeholder='digite seu Nome' />
                                         </div>
 
                                         <div className='input-box'>
-                                            <input type='text' placeholder='digite sua email' required />
+                                            <label className='label-for'>Gmail</label>
+                                            <input type='text' placeholder='digite sua email(Opcional)'
+                                            // defaultValue="@gmail.com"
+                                            />
                                         </div>
-
                                         <div className='input-box'>
-                                            <input type='text' id='doar' placeholder='Faça sua doação' value={inputValue} onChange={inputChange} onKeyDown={(y) => onlyNumbers(y)}></input>
+                                            <label className='label-for'>Valor a ser Doado</label>
+                                            <CurrencyInput
+                                                id="input-example"
+                                                name="input-name"
+                                                placeholder="digite um valor"
+                                                value={inputValue}
+                                                defaultValue={0}
+                                                prefix={'R$'}
+                                                onChange={beforeSend}
+                                                drecimalsLimit={8}
+                                                onValueChange={(value, name, values) => console.log(value, name, values)}
+                                            />;
                                         </div>
-                                        <button onClick={(x) => tratarPagamento(x)} id='botao-doar'> Doar </button>
-
+                                        {/* <div className='input-box'>
+                                            <label className='label-for'>Valor a ser Doado</label>
+                                            <input type='text' id='doar' placeholder='Faça sua doação' value={inputValue} onChange={beforeSend} ></input>
+                                        </div> */}
                                     </form>
+                                    <div>
+                                        <button onClick={gerirCompra} className='confirma-compra' >Doar</button>
+                                        {/* {idCompra && <Wallet initialization={{ preferenceId: idCompra }} />} */}
+
+                                    </div>
                                 </div>
                             </div>
                         </Col>
@@ -240,6 +226,8 @@ export default function OngsDoando() {
                 </Container>
             </section>
             <section className='ongs-form '>
+                <SlideGallery />
+
             </section>
 
             {loadingSpinner ? <Loading /> : null

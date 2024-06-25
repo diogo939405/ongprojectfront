@@ -10,7 +10,7 @@
     padding: 0;
 }
 
-.cabeca {
+/* .cabeca {
     width: 100%;
     height: 55vh;
     background-image: linear-gradient(rgba(0, 0, 0, 0.7),
@@ -21,7 +21,7 @@
     top: 0;
     left: 0;
     z-index: -1;
-}
+} */
 
 #teste {}
 
@@ -58,6 +58,7 @@
 
 .introducao {
     margin-top: 100px;
+    background-color: rgba(240, 251, 240, 0.521);
 }
 
 #container-icons {
@@ -79,26 +80,26 @@
     color: rgb(97, 96, 96);
     text-align: left;
     letter-spacing: 2px;
-    font-family: "Montserrat";
+    font-family: "Roboto";
     font-weight: 500;
     font-size: 1.2rem;
 }
 
 .icon-descrição {
-    font-family: "Montserrat";
-    font-weight: 600;
-    font-size: 2.2rem;
-    color: #808000;
-    padding: 25px 0px 10px 0px;
+    color: #434343;
+    font-size: 3rem;
+    font-weight: 500;
+    font-family: 'Montserrat';
+    letter-spacing: 5px;
 }
 
 
 .descricao {
     /* margin-top: 50px; */
-    margin-top: 400px;
-    margin-bottom: 200px;
+    /* margin-top: 55.5vh; */
+    margin-bottom: 25vh;
     background-color: rgba(240, 251, 240, 0.521);
-    padding: 120px;
+    padding: 100px;
 }
 
 .descrição-imagem {
@@ -121,16 +122,20 @@
     text-align: left;
     font-size: 1rem;
     font-family: 'Roboto';
-    letter-spacing: 1.8px;
+    letter-spacing: 1.4px;
+    font-weight: 700;
 }
 
 .final {
-    margin: 0;
+    margin-top: -100px;
+    margin-bottom: -130px;
 
 }
 
 .linha-historia {
     padding: 2em;
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+
 }
 
 
@@ -142,9 +147,14 @@
 }
 
 .linha-titulo h1 {
+    font-weight: 600;
+    font-size: 4.5rem;
+    font-family: "Montserrat";
     display: flex;
     text-align: center;
     justify-content: center;
+    color: #000000c2;
+    letter-spacing: 5px;
 }
 
 .linha-titulo p {
@@ -165,13 +175,23 @@
 }
 
 .linha-etapas div {
-    border: 2px solid #888;
+    border: 2px solid #fff9f9;
     border-radius: 1em;
     padding: 1.5em;
+    /* background-color: rgb(225 228 225 / 52%); */
+    background-color: #80800085;
+    transition: all 0.2s;
 }
 
+.linha-etapas div:hover {}
+
 .linha-etapas p {
+    font-family: 'Montserrat';
+    text-align: left;
     line-height: 27px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: rgb(40 40 40);
 }
 
 .linha-etapas:nth-child(odd) {
@@ -208,8 +228,8 @@
 .linha-etapas:nth-child(odd) div::before,
 .linha-etapas:nth-child(even) div::before {
     content: '';
-    background: #fa0f0f;
-    box-shadow: 0 0 0.5em #0d71fc;
+    background: red;
+    box-shadow: 0 0 0.5em black;
     position: absolute;
     width: 0.8em;
     height: 0.8em;
@@ -231,12 +251,51 @@
     font-size: 3rem;
 }
 
+
 .titulo-etapa {
     margin-bottom: 0.5em;
+    color: #000000bd;
+    font-size: 2rem;
+    font-weight: 500;
+    font-family: 'Montserrat';
+}
+
+.p{
+    font-style: italic;
+    font-weight: 300;
+    
+}
+
+
+@media (min-width: 1201px) {
+    .descricao {
+        margin-top: 56vh;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .descricao {
+        margin-bottom: 5vh;
+        margin-top: 55vh;
+    }
+
+    .textoLinha {
+        line-height: 4vh;
+        font-size: 1rem;
+        padding: 8px;
+        letter-spacing: 0.4vw;
+        line-height: 5vh;
+    }
+
+    .colTexto {
+        margin-right: 5vh;
+        line-height: 2vh;
+    }
 }
 
 @media screen and (max-width:1150px) {
-  
+
 
     .linha-tempo {
         width: 80vw;
@@ -263,9 +322,80 @@
         left: 50%;
         transform: translateX(-50%);
     }
+
+    .linha-etapas div:hover {
+        transform: none;
+    }
 }
 
+.ongs-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
 
+.form-titu h2 {
+    margin-top: 20px;
+    margin-bottom: -10px;
+    color: white;
+    font-size: 2.0rem;
+    letter-spacing: 2px;
+    font-weight: 400;
+    font-family: 'montserrat';
+}
 
+.ong-wrapper {
+    margin-right: -200px;
+    margin-top: 30px;
+    height: 80vh;
+    width: 35em;
+    /* rgba(0, 86, 67, 0.818) */
+    background-color: #8a8a02;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    border-radius: 30px;
+    border: 3px solid white
+}
 
-/* //linha do tempo */
+.ong-wrapper .input-box {
+    width: 100%;
+    height: 80px;
+    padding: 10px 5px 10px 5px;
+    /* margin: 50px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+}
+
+.under {
+    margin-top: -290px;
+    padding: 20px;
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .descricao {
+        margin-top: 56vh;
+        margin-bottom: 4vh;
+    }
+
+    .imagem-minha {
+        width: 60vw;
+        height: 45vh;
+        margin-left: -10vw;
+    }
+
+    .textoLinha {
+        line-height: 4vh;
+        font-size: 1.2rem;
+        letter-spacing: 0.4vw;
+        line-height: 5vh; 
+    }
+
+    #icons{
+        padding: 5px;
+    }
+    .texto-icon-sobre{
+        padding:10px 15px
+    }
+}

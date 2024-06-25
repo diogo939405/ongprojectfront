@@ -1,0 +1,10 @@
+curl -v -X POST https://api-m.sandbox.paypal.com/v2/checkout/orders/VSJDV4N3V525Y/authorize \
+-H 'PayPal-Request-Id: 7b92603e-77ed-4896-8e78-5dea2050476a' \
+-H 'Authorization: Bearer A21AAIuZUC0nDFuTQFzZ3-ActiFdIIQqYxbsI2hJLUaptJJhluLZ3oKr7wtASAoDcoq0bfYS3TWNNDZTCMkA-dFUPeou6udTA'
+
+
+
+
+curl -v -X POST https://api-m.sandbox.paypal.com/v2/checkout/orders/myOrederId/authorize \
+-H 'PayPal-Request-Id: my payId' \
+-H 'Authorization: Bearer mytoken'

@@ -1,5 +1,6 @@
 import './App.css';
 import { BrowserRouter, Route, RouterProvider, Routes, createBrowserRouter, createRoutesFromElements, useLocation } from 'react-router-dom';
+import { PayPalScriptProvider } from '@paypal/react-paypal-js'
 import { AnimatePresence } from "framer-motion";
 import Principal from './paginas/PaginaPrincipal/Principal';
 import Doacao from './paginas/PaginaDoação/Doacao';
@@ -20,20 +21,27 @@ function RoutesWithAnimation() {
   const location = useLocation();
 
   return (
-    <Routes key={location.pathname} location={location}>
-      {/* <Route path='/' element={<Menu />}> */}
-      <Route index element={<Principal />} />
-      <Route path='Doacao' element={<Doacao />}>
-        <Route path='DoacaoSessa01' element={<DoacaoSessao1 />}></Route>
-      </Route>
-      <Route path='Ongs' element={<Ongs />} />
-      {/* <Route path='OngsDoando' element={<OngsDoando />} /> */}
-      <Route path='OngsDoando/:infoId' element={<OngsDoando />} />
-      <Route path='SobreMim' element={<SobreMim />} />
-      <Route path='PagamentoTela' element={<PagamentoTela />} />
+    <PayPalScriptProvider options={{
+      "client-id": process.env.REACT_APP_PAYPAL_CLIENT_IDUSD
 
-      {/* </Route> */}
-    </Routes>
+    }}>
+      <Routes key={location.pathname} location={location}>
+        {/* <Route path='/' element={<Menu />}> */}
+        <Route index element={<Principal />} />
+        <Route path='Doacao' element={<Doacao />}>
+          <Route path='DoacaoSessa01' element={<DoacaoSessao1 />}></Route>
+        </Route>
+        <Route path='Ongs' element={<Ongs />} />
+        {/* <Route path='OngsDoando' element={<OngsDoando />} /> */}
+
+        <Route path='OngsDoando/:infoId' element={<OngsDoando />} />
+
+        <Route path='SobreMim' element={<SobreMim />} />
+        <Route path='PagamentoTela' element={<PagamentoTela />} />
+
+        {/* </Route> */}
+      </Routes>
+    </PayPalScriptProvider>
   );
 }
 

@@ -1,7 +1,8 @@
-
-*{
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+* {
     padding: 0;
-    margin: 0;  
+    margin: 0;
+
 }
 
 /* .bg-img{
@@ -15,22 +16,22 @@
     height: 50vh;
 } */
 
-.abc{
-   
-}
 
 
 
-.rodape-principal{
+
+.rodape-principal {
     /* padding: 30px; */
-    margin-top: 690.1px;
+    margin-top: 100vh;
+    margin-bottom: -10px;
+    padding: 10px;
 }
 
-.man{
+.man {
     width: 100%;
     height: 100vh;
-    background-image:linear-gradient(rgba(0,0,0,0.7),
-    rgba(0,0,0,0.7)) ,url('../../Imagens/background.png');
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.7)), url('../../Imagens/background.png'); */
     background-position: center;
     background-size: cover;
     position: absolute;
@@ -40,14 +41,14 @@
 }
 
 
-#principal-row{
+#principal-row {
     display: flex;
     align-items: center;
     height: 100vh;
 }
 
 
-.principal-texto{
+.principal-texto {
     margin-left: -70px;
     padding: 0px 5px 0px 5px;
     /* padding-left: 30px;
@@ -58,82 +59,139 @@
     flex-basis: 50%; */
 }
 
-.principal-titulo{
-    color: whitesmoke;
-    font-size: 4.7vw;
+.principal-titulo {
+    font-family: 'roboto';
+    color: rgb(218, 215, 215);
+    font-size: 4.4vw;
     text-align: left;
     padding: 15px;
     margin-left: -20px;
     margin-bottom: 10px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    z-index: 3;
 }
 
-.principal-descricao{
+.principal-descricao {
     color: whitesmoke;
-    font-size: 1rem;
+    font-size: 1.1rem;
+    font-weight: 400;
     text-align: left;
+    transition: all 1s;
+    font-style: italic;
 }
 
-#quadrado{
-    width: 200px;
-    height: 230px;
-    display: inline-block;
-    border-radius: 10px;
-    padding: 15px 25px;
-    box-sizing: border-box;
-    cursor: pointer;
-    margin: 10px 15px;
-}
 
-.cards-col{
+
+.cards-col {
     margin-right: -100px;
+    margin-top: -6vh;
 }
 
-.cardss{
+.cardse {
+
+    /* background-image:url('../../Imagens/download\ \(2\).jpg'); */
     width: 15vw;
-    height: 18vw;
+    height: 15vw;
     display: inline-block;
     border-radius: 15px;
     padding: 15px 25px;
     box-sizing: border-box;
     cursor: pointer;
     margin: 12px 20px;
-    background-color: aqua;
-    transition: 0.5s;
+    transition: all 0.5s;
 }
 
-.cardss:hover{
-    transform: translateY(-15px);
-    
+.cardse:hover {
+
+    transform: scale(1.4) translateY(15px);
+    z-index: 2;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* #home{
-    padding: 0;
-    margin: 0;
+.imagemdoCard {
+    background-position: center;
+    background-size: cover;
+    /* height: 100%; */
+    width: 100%;
+    height: 30vh;
 }
 
-#imagem{
-    height: 91.5vh;
+@media (min-width: 768px) and (max-width: 1024px) {
+    .cards-col {
+        margin-right: 0px;
+    }
 
-    
+    .cardse {
+        margin-bottom: 10vh;
+        width: 16vw;
+        height: 10vh;
+    }
+
+    .imagemdoCard {
+        height: 15vh;
+        width: 7em;
+    }
+
+    .principal-texto {
+        margin-left: 0px;
+    }
 }
 
-.titulo{
-    color: white;
+@media (min-width: 481px) and (max-width: 767px) {
+    .cards-col {
+        margin-right: 0px;
+        margin-bottom: 25vh;
+    }
+
+    .imagemdoCard {
+
+        height: 15vh;
+        width: 8em;
+    }
+
+    .cardse {
+        margin-top: 5vh;
+        margin-bottom: 13vh;
+        width: 35vw;
+        height: 4vh;
+    }
+
+    .principal-texto {
+        margin-left: 0px;
+    }
+
+    .principal-titulo {
+        font-size: 1.9rem;
+        padding: 20px;
+    }
 }
 
-.sobre{
-    color: white;
-} */
+@media (min-width: 320px) and (max-width: 480px) {
+    .cards-col {
+        margin-right: 0px;
+        margin-bottom: 10vh;
+    }
+    .cardse {
+        margin-top: 5vh;
+        margin-bottom: 12vh;
+        width: 46vw;
+        height: .4vh;
+    }
+    .imagemdoCard {
+
+        height: 12vh;
+        width: 8em;
+    }
+
+    .principal-texto {
+        margin-left: 0px;
+    }
+
+    .principal-titulo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5rem;
+ 
+    }
+}

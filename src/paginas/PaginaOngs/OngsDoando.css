@@ -15,7 +15,7 @@
     width: 100%;
     height: 55vh;
     background-image: linear-gradient(rgba(0, 0, 0, 0.7),
-            rgba(0, 0, 0, 0.7)), url('../../Imagens/background.png');
+            rgba(0, 0, 0, 0.7)), url('../../assets/R.jpeg');
     background-position: center;
     background-size: cover;
     position: absolute;
@@ -40,15 +40,17 @@
 }
 
 .corpo-ong {
-    height: 100vh;
-    margin-top: 450px;
+    /* height: 100vh; */
+    margin-top: 56vh;
     overflow-x: hidden;
     overflow-y: hidden;
     background-color: rgba(240, 251, 240, 0.521);
+
 }
 
 .rodape-doando {
-    margin-top: 500px;
+    margin-top: 400px;
+    padding: 20px;
 }
 
 .input-doar {
@@ -112,55 +114,11 @@
     font-weight: 300;
 }
 
-.btn-three {
-    line-height: 50px;
-    height: 50px;
-    text-align: center;
-    width: 250px;
-    cursor: pointer;
-}
 
-.btn-three {
-    color: black;
-    transition: all 0.5s;
-    position: relative;
-}
 
-.btn-three::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    background-color: rgba(255, 6, 6, 0.1);
-    transition: all 0.3s;
-}
 
-.btn-three:hover::before {
-    opacity: 0;
-    transform: scale(0.5, 0.5);
-}
 
-.btn-three::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    opacity: 0;
-    transition: all 0.3s;
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    transform: scale(1.2, 1.2);
-}
-
-.btn-three:hover::after {
-    opacity: 1;
-    transform: scale(1, 1);
-}
+.dados-titulo {}
 
 
 .ongs-form {
@@ -168,7 +126,12 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    padding: 20px 0px 10px 0px;
+
 }
+
+SlideGallery {}
+
 
 .form-titu h2 {
     margin-top: 20px;
@@ -183,13 +146,17 @@
 .ong-wrapper {
     margin-right: -200px;
     margin-top: 30px;
-    height: 80vh;
+    height: 92vh;
     width: 35em;
     /* rgba(0, 86, 67, 0.818) */
     background-color: #8a8a02;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
     border-radius: 30px;
     border: 3px solid white
+}
+
+.ong-wrapper form {
+    padding: 20px;
 }
 
 .ong-wrapper .input-box {
@@ -241,62 +208,165 @@ form input {
     border-radius: 20px;
 }
 
-/* form button {
-    background-color: #808000;
-    color: white;
-    font-size: 1rem;
-    font-family: 'roboto';
-    width: 200px;
-    border: none;
-    border-radius: 10px;
-} */
 
-form button {
-    background: #fffefeef;
-    /* 076f57 */
-    color: #808000;
+
+.label-for {
     letter-spacing: 2px;
+    padding: 5px 5px;
+    margin-bottom: 5px;
+    color: rgba(250, 250, 250, 0.725);
+    font-size: 1.2rem;
+    text-align: left;
+    font-weight: 500;
+    font-family: "Montserrat";
+}
+
+.paypal-button-container {
+    padding: 10px 45px 10px 45px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    /* width: 50%; */
+
+}
+
+.rodape-doando {}
+
+.confirma-compra {
+    width: 15vw;
+    background-color: #fff;
+    /* Cor de fundo branca */
+    color: #bba007;
+    /* Cor de texto mostarda */
     border: none;
-    border-radius: 10px;
-    position: relative;
-    height: 50px;
-    font-size: 1.6em;
-    padding: 0 2em;
-    margin-bottom: 15px;
+    padding: 10px 30px;
+    font-size: 1.4rem;
+    font-weight: 600;
     cursor: pointer;
-    transition: 800ms ease all;
-    outline: none;
-    
-
+    border-radius: 8px;
+    transition: background-color 0.3s;
+    /* Efeito hover suave */
 }
 
-form button:hover {
-    transform: scale(1.1);
-    background: #808000;
-    color: white;
+.confirma-compra:hover {
+    background-color: #bba007;
+    /* Cor de fundo mostarda no hover */
+    color: #fff;
+    /* Cor de texto branca no hover */
 }
 
-form button:before,
-button:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 2px;
-    width: 0;
-    background: white;
-    transition: 400ms ease all;
+.cartaoDados{
+    font-size: 1rem;
+    font-weight: 400;
+    font-style: italic;
+    letter-spacing: 1px;
+    color: black;
 }
 
-form button:after {
-    right: inherit;
-    top: inherit;
-    left: 0;
-    bottom: 0;
+#iconCopy{
+    width: 10vw;
+    height: 5vh;
 }
 
-form button:hover:before,
-button:hover:after {
-    width: 100%;
-    transition: 800ms ease all;
+@media (min-width: 1201px) {
+    .corpo-ong {
+        margin-top: 56vh;
+    }
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .confirma-compra{
+        font-size: 1.1rem;
+        padding: 6px 20px;
+        
+    }
+
+    .ong-wrapper {
+        margin-right: 0px;
+        margin-top: 0px;
+        height: 80vh;
+        margin-bottom: 3vh;
+    }
+
+    .ongs-texto-textos {
+        font-size: 1rem;
+        line-height: 30px;
+    }
+
+    .ongs-texto-titulo {
+        font-size: 1.4rem;
+        letter-spacing: 0.1px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+    .confirma-compra{
+        font-size: 1.1rem;
+        padding: 4px 20px;
+        
+    }
+
+
+    .ongs-texto-titulo {
+        font-size: 1.2rem;
+        padding: 10px 15px;
+        letter-spacing: 0.1px;
+    }
+
+    .ongs-texto-textos {
+        font-size: 1rem;
+        line-height: 30px;
+        padding: 10px 15px;
+    }
+
+    .ong-wrapper {
+        margin-right: 0px;
+        margin-top: 0px;
+        height: 84vh;
+        margin-bottom: 2vh;
+        width: 25em;
+        border-radius: 25px;
+    }
+
+    .corpo-ong {
+        margin-bottom: -12vh;
+        margin-top: 60vh;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+    .confirma-compra{
+        font-size: 1.1rem;
+        padding: 4px 20px;
+        
+    }
+
+    .ongs-texto-titulo {
+        font-size: 1.1rem;
+        letter-spacing: 0.5px;
+        padding: 5px 10px;
+    }
+
+    .ongs-texto-textos {
+        font-size: 0.9rem;
+        padding: 5px 10px;
+    }
+
+    .ong-wrapper {
+        margin-right: 0px;
+        height: 86vh;
+        width: 18em;
+        margin-bottom: 2vh
+    }
+
+    .corpo-ong {
+        margin-bottom: -12vh;
+    }
+}
+
+/* .corpo-ong{
+        margin-bottom: 20vh;
+    } */
