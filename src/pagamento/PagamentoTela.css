@@ -151,3 +151,12 @@
   width: 100%;
   transition: 800ms ease all;
 }
+
+button a {
+  text-decoration: none;
+  color: white;
+}
+
+button a:hover {
+  color: #808000;
+}

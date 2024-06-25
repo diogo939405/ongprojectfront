@@ -42,8 +42,8 @@ export default function PagamentoTela() {
                   <div className='conte-body'>
                     <div className='conte-texto1'>Obrigado por ter doado</div>
                     <div className='conte-buttons'>
-                      <button className='conte-buttonOnly' href='/SobreMim'> SobreMim</button>
-                      <button className='conte-buttonOnly' href='/Ongs'> Voltar ao Home</button>
+                      <button className='conte-buttonOnly'><a href='/SobreMim'>SobreMim</a></button>
+                      <button className='conte-buttonOnly'> <a href='/'>Voltar ao Home</a> </button>
                     </div>
                   </div>
                 </Col>

@@ -200,8 +200,8 @@ export default function OngsDoando() {
                                                 name="input-name"
                                                 placeholder="digite um valor"
                                                 value={inputValue}
-                                                defaultValue={1}
-                                                // prefix={'R$'}
+                                                defaultValue={0}
+                                                prefix={'R$'}
                                                 onChange={beforeSend}
                                                 drecimalsLimit={8}
                                                 onValueChange={(value, name, values) => console.log(value, name, values)}
