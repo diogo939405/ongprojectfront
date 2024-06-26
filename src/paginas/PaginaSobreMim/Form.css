@@ -205,3 +205,16 @@ textarea::-webkit-scrollbar {
         margin-right: 0vh;
     }
 }
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .ong-wrapperr {
+        margin-right: 0vh;
+        width: 20em;
+    }
+
+    .label-form {
+        text-align: center;
+        font-size: 0.9rem;
+        letter-spacing: 1px;
+    }
+}
