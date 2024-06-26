@@ -49,13 +49,6 @@ export default function OngsDoando() {
             })
     }, [infoId]);
 
-    // var dat = {
-    //     title: infoDetails.nome,
-    //     unit_price: inputValue,
-    //     currency_id: "BRL",
-    //     description: infoDetails.descricaoCurta,
-    //     quantity: 1
-    // }
 
     const comprar = async (dados) => {
         try {
@@ -172,6 +165,8 @@ export default function OngsDoando() {
                                     <span className='cartaoDados'>CVV:123</span>
                                     <br />
                                     <span className='cartaoDados'>Validade:11/25</span>
+                                    <br/>
+                                    <span className='cartaoDados'>CPF:12345678909</span>
                                 </p>
 
                             </div>
