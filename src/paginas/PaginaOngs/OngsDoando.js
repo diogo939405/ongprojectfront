@@ -24,6 +24,7 @@ export default function OngsDoando() {
     const [idCompra, setIdCompra] = useState(null)
     const textToCopy = '5031 4332 1540 6351';
     const [copiado, setCopiado] = useState(false)
+  
     const { infoId } = useParams()
     const [infoDetails, setInfoDetails] = useState({})
     const [products, setProducts] = useState({})
@@ -53,7 +54,7 @@ export default function OngsDoando() {
             })
     }, [infoId]);
 
-
+  
     const comprar = async (dados) => {
         try {
 
@@ -174,7 +175,6 @@ export default function OngsDoando() {
                                         <div className='input-box'>
                                             <label className='label-for'>Gmail</label>
                                             <input type='text' placeholder='digite sua email(Opcional)'
-                                            // defaultValue="@gmail.com"
                                             />
                                         </div>
                                         <div className='input-box'>
@@ -191,15 +191,9 @@ export default function OngsDoando() {
                                                 onValueChange={(value, name, values) => console.log(value, name, values)}
                                             />;
                                         </div>
-                                        {/* <div className='input-box'>
-                                            <label className='label-for'>Valor a ser Doado</label>
-                                            <input type='text' id='doar' placeholder='Faça sua doação' value={inputValue} onChange={beforeSend} ></input>
-                                        </div> */}
                                     </form>
                                     <div>
-                                        <button onClick={gerirCompra} className='confirma-compra' >Doar</button>
-                                        {/* {idCompra && <Wallet initialization={{ preferenceId: idCompra }} />} */}
-
+                                        <button onClick={gerirCompra} className='confirma-compra'>Doar</button>
                                     </div>
                                 </div>
                             </div>

@@ -15,12 +15,6 @@ export default function Footer() {
                     <div class="footerContainer">
                         
                         <div class="footerNav">
-                            <ul>
-                                <li><a href="/">Home</a></li>
-                                <li><a href="/Doacao">News</a></li>
-                                <li><a href="/SobreMim">About</a></li>
-                                <li><a href="/Ongs">Contact Us</a></li>
-                            </ul>
                         </div>
 
                         <div class="socialIcons">
