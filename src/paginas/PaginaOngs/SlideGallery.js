@@ -11,12 +11,14 @@ export default function SlideGallery() {
     const { infoId } = useParams()
     const [infoDetails, setInfoDetails] = useState({});
 
+    const apiDado = process.env.REACT_APP_BASE_URL_DADOS
+
     useEffect(() => {
-        axios.get(`http://localhost:5000/TodosDados/${infoId}`)
+        axios.get(`${apiDado}TodosDados/${infoId}`)
             .then((resp) => {
                 setInfoDetails(resp.data)
                 console.log('dados do card na galeria', infoDetails.foto)
-               
+
             })
     }, [infoId]);
 
@@ -27,11 +29,11 @@ export default function SlideGallery() {
         },
         {
             original: infoDetails.foto3,
-            thumbnail:  infoDetails.foto3,
+            thumbnail: infoDetails.foto3,
         },
         {
-            original:  infoDetails.foto4,
-            thumbnail:  infoDetails.foto4,
+            original: infoDetails.foto4,
+            thumbnail: infoDetails.foto4,
         },
     ];
     return (

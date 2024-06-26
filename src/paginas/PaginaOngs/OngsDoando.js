@@ -31,12 +31,16 @@ export default function OngsDoando() {
     const [inputName, setInputName] = useState()
     const [loadingSpinner, setLoadingSpinner] = useState(false)
 
+
+    const apiPagamento = process.env.REACT_APP_BASE_URL_PAGAMENTO
+
+    const apiData = process.env.REACT_APP_BASE_URL_DADOS
     useEffect(() => {
         window.scrollTo({
             top: 0,
             behavior: "smooth"
         })
-        axios.get(`http://localhost:5000/TodosDados/${infoId}`)
+        axios.get(`${apiData}TodosDados/${infoId}`)
             .then((resp) => {
                 setInfoDetails(resp.data)
                 console.log('dados do card', resp.data, infoDetails)
@@ -53,7 +57,9 @@ export default function OngsDoando() {
     const comprar = async (dados) => {
         try {
 
-            const response = await axios.post('http://localhost:4000/dados', {
+            const response = await axios.post(`${apiPagamento}dados`
+                // 'http://localhost:4000/dados'
+            , {
                 title: inputName,
                 unit_price: inputValue,
                 currency_id: "BRL",
@@ -61,32 +67,13 @@ export default function OngsDoando() {
                 quantity: 1
             }).then((v) => {
                 console.log('RETORNO DA API', v)
-                // window.location.href = v.data.url
                 window.open(v.data.url, "_blank")
             })
             const { id } = response.data
             return id
-
-            // window.location.href = response.data.init_point
         } catch (error) {
             console.log(error)
         }
-
-
-        //     console.log(inputValue)
-        //     const response = await axios.post(
-        //         "https://localhost:4000/dados", data, {
-        //         headers: {
-        //             'Content-Type': 'application/json'
-        //         }
-        //     }
-        //     )
-        //         .then(response => {
-        //             console.log('respota API', response.init_point)
-        //             window.location.href = response.init_point
-        //         })
-        //     console.log(response.data)
-        //     // window.location.href = response.data
     }
 
     const gerirCompra = async () => {
@@ -149,7 +136,7 @@ export default function OngsDoando() {
                                 <div className='ongs-texto-conjunto'>
                                     <h2 className='ongs-texto-titulo'>
                                         {infoDetails.descricaoCurta}
-                                    </h2> 
+                                    </h2>
                                 </div>
                                 <p className='ongs-texto-textos'>{infoDetails.descricaoLonga}
                                     <span><a href={infoDetails.link} target="_blank" className='link-projeto'>Saiba mais sobre o projeto</a></span>
@@ -165,7 +152,7 @@ export default function OngsDoando() {
                                     <span className='cartaoDados'>CVV:123</span>
                                     <br />
                                     <span className='cartaoDados'>Validade:11/25</span>
-                                    <br/>
+                                    <br />
                                     <span className='cartaoDados'>CPF:12345678909</span>
                                 </p>
 

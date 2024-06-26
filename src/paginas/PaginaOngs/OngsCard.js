@@ -13,14 +13,18 @@ import 'react-toastify/dist/ReactToastify.css';
 
 export default function OngsCard() {
 
+
     const [data, setData] = useState([])
+
+    const apiDados = process.env.REACT_APP_BASE_URL_DADOS
 
     function notify() {
         toast.info("Houve um problema ao carregar a pagina,aguarde um pouco ou aperte F5")
     }
 
     useEffect(() => {
-        axios.get('http://localhost:5000/TodosDados')
+        axios.get(`${apiDados}TodosDados`)
+
             .then((resp) => {
                 setData(resp.data)
             })
@@ -53,7 +57,7 @@ export default function OngsCard() {
                         return (
                             <Col id='coluna' >
                                 <card className='card' key={info._id}  >
-                                    <img src={info.foto}   alt='descrição' className='imagem-descricao'></img>
+                                    <img src={info.foto} alt='descrição' className='imagem-descricao'></img>
                                     <h3 className='titulo-card'>{info.nome}</h3>
                                     <div className='botoes'>
                                         <button className='btnm' >
