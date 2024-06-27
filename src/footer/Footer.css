@@ -45,12 +45,35 @@ footer {
     transition: 0.5s;
 }
 
+.description {
+    visibility: hidden;
+    width: 200px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; /* Posiciona acima do ícone */
+    left: 50%;
+    margin-left: -100px; /* Centraliza a descrição */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+
 /* Hover affect on social media icon */
 
-.socialIcons a i:hover {
+.socialIcons :hover {
     /* background-color: aliceblue;
     color: black; */
     transition: 0.5s;
+    opacity: 1;
+}
+
+.socialIcons a i:hover .description{
+    visibility: visible;
     opacity: 1;
 }
 
@@ -104,3 +127,4 @@ footer {
     font-weight: 400;
     margin: 0px 5px;
 }
+

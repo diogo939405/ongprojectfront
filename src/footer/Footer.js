@@ -24,9 +24,12 @@ export default function Footer() {
                             <a class="navbar-brand" href="https://diogo-portfolioo.netlify.app/">
                                 <img src={brand} alt="Bootstrap" width="30" height="30" className='logo-image' />
                             </a>
-                            <a href="https://diogo-portfolioo.netlify.app/" alt='Portfólio'><i><HiOutlineComputerDesktop /></i></a>
-                            <a href="https://github.com/"><i><AiFillGithub /></i></a>
-                            <a href="https://www.linkedin.com/in/diogo-favilla-g-jacintho-8728041ba/"><i><AiFillLinkedin /></i></a>
+                            <a href="https://diogo-portfolioo.netlify.app/" title='Portfólio'><i><HiOutlineComputerDesktop /></i>
+                                <div class="description">Esta é a descrição que aparece ao passar o mouse sobre o ícone.</div>
+                            </a>
+
+                            <a href="https://github.com/" title='Github'><i><AiFillGithub /></i></a>
+                            <a href="https://www.linkedin.com/in/diogo-favilla-g-jacintho-8728041ba/" title='Linkedin'><i><AiFillLinkedin /></i></a>
                         </div>
 
 

@@ -1,30 +1,28 @@
-
-*{
-    margin: 0;
-    padding: 0;
-}
-
-.principal{
-    left:500px;
-    top: 50%;
-}
-.loader {
-    width: 50px;
-    --b: 8px;
-    aspect-ratio: 1;
+.loading-spinner {
+    border: 16px solid #bfbebe;
+    border-top: 16px solid #808000;
     border-radius: 50%;
-    background-color: aqua;
-    background: #514b82;
-    -webkit-mask:
-        repeating-conic-gradient(#0000 0deg, #000 1deg 70deg, #0000 71deg 90deg),
-        radial-gradient(farthest-side, #0000 calc(100% - var(--b) - 1px), #000 calc(100% - var(--b)));
-    -webkit-mask-composite: destination-in;
-    mask-composite: intersect;
-    animation: l5 1s infinite;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+    margin: 0 auto;
 }
 
-@keyframes l5 {
-    to {
-        transform: rotate(.5turn)
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
     }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Estilos adicionais para centralizar o spinner na tela */
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    /* Altura total da viewport */
 }

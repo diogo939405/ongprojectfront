@@ -9,12 +9,14 @@ import logo from '../../Imagens/_A smile is the universal welcome__.jpg'
 import axios from 'axios'
 import { Link } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
+import Loading from '../../loading/Loading';
 import 'react-toastify/dist/ReactToastify.css';
 
 export default function OngsCard() {
 
 
     const [data, setData] = useState([])
+    const [loading, setLoading] = useState(true);
 
     const apiDados = process.env.REACT_APP_BASE_URL_DADOS
 
@@ -23,13 +25,22 @@ export default function OngsCard() {
     }
 
     useEffect(() => {
-        axios.get(`${apiDados}TodosDados`)
-
-            .then((resp) => {
+        const fetchData = async () => {
+            try {
+                const resp = await axios.get(`${apiDados}TodosDados`)
                 // notify()
                 setData(resp.data)
-            })
-            .catch((err) => notify())
+            }
+
+            catch (err) {
+                notify()
+            }
+            finally {
+                setLoading(false)
+            }
+        }
+
+        fetchData()
     }, []);
 
 
@@ -53,9 +64,13 @@ export default function OngsCard() {
             <Outlet />
             <Container>
                 <Row id='linha'>
-                    {data.map((info) => {
 
-                        return (
+                    {loading ? (
+                        <Loading />
+                    ) : (
+                        data.map(info => (
+
+
                             <Col id='coluna' >
                                 <card className='card' key={info._id}  >
                                     <img src={info.foto} alt='descrição' className='imagem-descricao'></img>
@@ -67,8 +82,8 @@ export default function OngsCard() {
                                     </div>
                                 </card>
                             </Col>
-                        );
-                    })}
+                        )))
+                    }
                 </Row>
             </Container >
         </>

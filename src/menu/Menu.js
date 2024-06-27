@@ -47,7 +47,7 @@ export default function Menu() {
             <div>
                 <header>
                     <nav className="nav">
-                        <a class="navbar-brand" onClick={notify} id='logobrand'>
+                        <a class="navbar-brand" title='Contato' onClick={notify} id='logobrand'>
                             <img src={logo} alt="Bootstrap" width="30" height="30" />
                         </a>
                         <ul className={active}>
@@ -78,9 +78,9 @@ export default function Menu() {
                             <div className="line3"></div>
                         </div>
                         <div class="socialIcons">
-                            <a href="https://www.linkedin.com/in/diogo-favilla-g-jacintho-8728041ba/" target="_blank"><i><AiFillLinkedin /></i></a>
-                            <a href="https://github.com/diogo939405" target="_blank"><i><AiFillGithub /></i></a>
-                            <a href="https://diogo-portfolioo.netlify.app/" target="_blank"><i><HiOutlineComputerDesktop /></i></a>
+                            <a href="https://www.linkedin.com/in/diogo-favilla-g-jacintho-8728041ba/" title='Linkedin' target="_blank"><i><AiFillLinkedin /></i></a>
+                            <a href="https://github.com/diogo939405" target="_blank" title='Github'><i><AiFillGithub /></i></a>
+                            <a href="https://diogo-portfolioo.netlify.app/" target="_blank" title='Portfólio'><i><HiOutlineComputerDesktop /></i></a>
                         </div>
                     </nav>
 
