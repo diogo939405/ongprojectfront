@@ -41,6 +41,8 @@
 
 .corpo-ong {
     /* height: 100vh; */
+    position: relative;
+    z-index: -1000;
     margin-top: 56vh;
     overflow-x: hidden;
     overflow-y: hidden;
@@ -81,6 +83,8 @@
 }
 
 .ongs-texto {
+    position: relative;
+    z-index: -1000;
     padding: 5px 0px 5px 5px;
     margin-left: -20px;
 }
@@ -122,6 +126,8 @@
 
 
 .ongs-form {
+    position: relative;
+    z-index: -1000;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -365,6 +371,11 @@ form input {
 
     .corpo-ong {
         margin-bottom: -12vh;
+    }
+
+    .div-titulo{
+        font-size: 2rem;
+        margin-top: -4vh;
     }
 }
 
