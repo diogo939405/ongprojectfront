@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import AnimatedPage from '../../AnimatedPage'
 import { Outlet } from 'react-router'
-import logo from '../../Imagens/_A smile is the universal welcome__.jpg'
+
 import './Ongs.css'
 import ReactCardFlip from 'react-card-flip'
 import OngsCard from './OngsCard'
@@ -35,11 +35,16 @@ export default function Ongs() {
         </div>
       </header>
       <AnimatedPage>
-        <section className='secao-body'>
+        <Container>
+          <Row>
+          <section className='secao-body'>
           <div className='secao-cards'>
             <OngsCard />
           </div>
         </section>
+          </Row>
+        </Container>
+      
       </AnimatedPage>
       <footer>
         <Footer />

@@ -57,12 +57,22 @@
 }
 
 .secao-cards {
-    /* margin-top: -40vh; */
+    margin-top: -40vh;
     background-color: rgba(240, 251, 240, 0.521);
 }
 
 @media (min-width: 1201px) {
     .secao-body {
         margin-top: -38vh;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .secao-body{
+        /* margin-top: -20vh; */
+    }
+
+    section .secao-cards {
+        /* margin-top: -40vh; */
     }
 }

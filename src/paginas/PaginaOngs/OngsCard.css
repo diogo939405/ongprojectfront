@@ -60,7 +60,7 @@ card.card-back {
     color: #808000;
     font-weight: 700;
 
-    
+
 }
 
 .botoes {
@@ -146,8 +146,49 @@ card.card-back {
         width: 58vw;
         border-radius: 40px;
     }
+
     .btnm {
         padding-bottom: 8px;
         width: 25vw;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    card.card {
+        height: 45vh;
+        width: 50vw;
+        border-radius: 40px;
+    }
+
+    .imagem-descricao {
+        margin-top: -3vh;
+    }
+
+    .titulo-card {
+        font-size: 1.3rem;
+        margin-top: -4vh;
+        font-weight: 500;
+        letter-spacing: 1px;
+    }
+
+    .btnm {
+        padding: 2px 0px;
+        width: 35vw;
+        height: 5vh;
+        border-radius: 15px;
+        
+    }
+    .botoes{
+        margin-top: 20px;
+    }
+
+    .linkBotao {
+        
+        text-decoration: none;
+        font-weight: 400;
+        color: #fff;
+        letter-spacing: 0.9px;
+        padding: 5px;
+        font-size: 1rem;
     }
 }
