@@ -339,6 +339,7 @@ form input {
 @media (min-width: 320px) and (max-width: 480px) {
 
     .confirma-compra{
+        width: 20vw;
         font-size: 1.1rem;
         padding: 4px 20px;
         

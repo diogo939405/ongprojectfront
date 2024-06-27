@@ -2,7 +2,10 @@ import React from 'react'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import { AiFillLinkedin, AiFillGithub, AiFillInstagram } from "react-icons/ai";
+import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
+import { HiOutlineComputerDesktop } from "react-icons/hi2";
+
+
 import './Footer.css'
 import brand from '../Imagens/logo_diogo-removebg-preview.png'
 
@@ -13,7 +16,7 @@ export default function Footer() {
 
                 <footer>
                     <div class="footerContainer">
-                        
+
                         <div class="footerNav">
                         </div>
 
@@ -21,9 +24,9 @@ export default function Footer() {
                             <a class="navbar-brand" href="https://diogo-portfolioo.netlify.app/">
                                 <img src={brand} alt="Bootstrap" width="30" height="30" className='logo-image' />
                             </a>
-                            <a href="https://www.instagram.com/di_ogo01/"><i><AiFillLinkedin /></i></a>
+                            <a href="https://diogo-portfolioo.netlify.app/" alt='Portfólio'><i><HiOutlineComputerDesktop /></i></a>
                             <a href="https://github.com/"><i><AiFillGithub /></i></a>
-                            <a href="https://www.linkedin.com/in/diogo-favilla-g-jacintho-8728041ba/"><i><AiFillInstagram /></i></a>
+                            <a href="https://www.linkedin.com/in/diogo-favilla-g-jacintho-8728041ba/"><i><AiFillLinkedin /></i></a>
                         </div>
 
 

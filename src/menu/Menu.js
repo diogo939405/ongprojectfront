@@ -11,6 +11,7 @@ import Row from 'react-bootstrap/Row';
 import "./Menu.css"
 import 'react-toastify/dist/ReactToastify.css';
 import { AiFillLinkedin, AiFillGithub, AiFillInstagram } from "react-icons/ai";
+import { HiOutlineComputerDesktop } from "react-icons/hi2";
 import brand from '../Imagens/logo_diogo-removebg-preview.png'
 
 export default function Menu() {
@@ -79,7 +80,7 @@ export default function Menu() {
                         <div class="socialIcons">
                             <a href="https://www.linkedin.com/in/diogo-favilla-g-jacintho-8728041ba/" target="_blank"><i><AiFillLinkedin /></i></a>
                             <a href="https://github.com/diogo939405" target="_blank"><i><AiFillGithub /></i></a>
-                            <a href="https://www.instagram.com/di_ogo01/" target="_blank"><i><AiFillInstagram /></i></a>
+                            <a href="https://diogo-portfolioo.netlify.app/" target="_blank"><i><HiOutlineComputerDesktop /></i></a>
                         </div>
                     </nav>
 
