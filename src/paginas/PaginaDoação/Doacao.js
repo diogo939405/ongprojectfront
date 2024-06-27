@@ -32,9 +32,9 @@ export default function Doacao() {
 
   return (
     <>
-
+<Menu />
       <header className='cabecaa'>
-        <Menu />
+        
         <div className='div-texto'>
           <div >
             <h4 className='div-titulo'>A importância de Doar</h4>

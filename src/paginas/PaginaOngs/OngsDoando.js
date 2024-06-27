@@ -156,7 +156,7 @@ export default function OngsDoando() {
                                     <br />
                                     <span className='cartaoDados'>CPF:12345678909</span>
                                     <br/>
-                                    <span className='cartaoDados'>Caso não abra um nova guia ao clicar no botão doar,verifique se o seu browser esta com "pop-up bloqueado</span>
+                                    <span className='cartaoDados'>Caso não abra um nova guia ao clicar no botão doar,verifique se o seu browser esta com "pop-up" bloqueado</span>
                                 </p>
 
                             </div>

@@ -26,10 +26,12 @@
 }
 
 .div-titulo {
+    margin-top: 8vh;
     font-size: 3rem;
     letter-spacing: 3px;
     color: whitesmoke;
     font-family: 'Roboto';
+    font-weight: 400;
 }
 
 .link-home {
@@ -68,7 +70,11 @@
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
-    .secao-body{
+    .div-titulo {
+        margin-top: 8vh;
+    }
+
+    .secao-body {
         /* margin-top: -20vh; */
     }
 

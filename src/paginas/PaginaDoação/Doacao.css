@@ -29,8 +29,10 @@
 }
 
 .div-titulo {
+    margin-top: 8vh;
     font-size: 3rem;
     letter-spacing: 3px;
+    font-weight: 400;
     color: whitesmoke;
     font-family: 'Roboto';
 }
@@ -54,6 +56,8 @@
 }
 
 .corpo {
+    position: relative;
+    z-index: -1000;
     padding: 20px;
     margin-top: 70vh;
     overflow-x: hidden;

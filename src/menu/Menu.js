@@ -83,43 +83,6 @@ export default function Menu() {
                             <a href="https://diogo-portfolioo.netlify.app/" target="_blank" title='Portfólio'><i><HiOutlineComputerDesktop /></i></a>
                         </div>
                     </nav>
-
-                    {/* <Container>
-                        <Row>
-                            <nav class="navbar navbar-expand-lg navbar-dark">
-                                <div class="container">
-                                    <a class="navbar-brand" onClick={notify} id='logobrand'>
-                                        <img src={logo} alt="Bootstrap" width="30" height="30" />
-                                    </a>
-                                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                                        <span class="navbar-toggler-icon"></span>
-                                    </button>
-                                    <div class="collapse navbar-collapse" id="navbarNav">
-                                        <ul class="navbar-nav ms-auto">
-                                            <li class="nav-item me-5" id='menuPalavra'>
-                                                <a class="nav-link " aria-current="page" href="/">Home</a>
-                                            </li>
-                                            <li class="nav-item me-5" id='menuPalavra'>
-                                                <a class="nav-link" href="/Doacao">Doacao</a>
-                                            </li>
-                                            <li class="nav-item me-5" id='menuPalavra'>
-                                                <a class="nav-link" href="/SobreMim">SobreMim</a>
-                                            </li>
-                                            <li class="nav-item me-5" id='menuPalavra'>
-                                                <a class="nav-link" href="/Ongs">Ongs</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-
-                                </div>
-                                <div class="socialIcons">
-                                    <a href="https://www.linkedin.com/in/diogo-favilla-g-jacintho-8728041ba/" target="_blank"><i><AiFillLinkedin /></i></a>
-                                    <a href="https://github.com/diogo939405" target="_blank"><i><AiFillGithub /></i></a>
-                                    <a href="https://www.instagram.com/di_ogo01/" target="_blank"><i><AiFillInstagram /></i></a>
-                                </div>
-                            </nav>
-                        </Row>
-                    </Container> */}
                 </header>
             </div>
         </>

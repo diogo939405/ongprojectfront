@@ -23,7 +23,7 @@
     z-index: -1;
 } */
 
-#teste {}
+
 
 .div-texto {
     margin-top: 50px;
@@ -57,6 +57,8 @@
 }
 
 .introducao {
+    position: relative;
+    z-index: -1000;
     margin-top: 100px;
     background-color: rgba(240, 251, 240, 0.521);
 }
@@ -97,9 +99,11 @@
 .descricao {
     /* margin-top: 50px; */
     /* margin-top: 55.5vh; */
+    position: relative;
     margin-bottom: 25vh;
     background-color: rgba(240, 251, 240, 0.521);
     padding: 100px;
+    z-index: -1000;
 }
 
 .descrição-imagem {
@@ -126,7 +130,10 @@
     font-weight: 700;
 }
 
+
 .final {
+    position: relative;
+    z-index: -1000;
     margin-top: -100px;
     margin-bottom: -130px;
 
@@ -430,8 +437,7 @@
         font-size: 1rem;
         padding: 10px 18px;
     }
-    #descrição-coluna2{
-        
-    }
+
+    #descrição-coluna2 {}
 
 }

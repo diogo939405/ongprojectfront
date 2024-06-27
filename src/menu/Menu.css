@@ -79,10 +79,10 @@ li {
     align-items: center;
     justify-content: space-around;
     height: 10vh;
+    position: relative;
+    z-index: 2000;
     /* background: rgb(0, 33, 65); */
 }
-
-
 
 .nav__menu {
     display: flex;
@@ -117,14 +117,14 @@ li {
         font-size: 1.3rem;
     }
     .nav__menu {
-        z-index: 99;
+        z-index: 2001;
         position: fixed;
         top: 0.5vh;
         padding: 10px 5px;
         right: 0;
         height: 93vh;
         width: 45vw;
-        background-color: rgba(92, 67, 3, 0.984);
+        background-color: rgb(92 67 3 / 88%);
         flex-direction: column;
         transform: translateX(100%);
         transition: 0.5s ease-in;

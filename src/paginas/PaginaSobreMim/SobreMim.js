@@ -22,8 +22,9 @@ export default function SobreMim() {
 
   return (
     <>
+     <Menu />
       <header className='cabeca'>
-        <Menu />
+       
         <div className='div-texto'>
           <div >
             <h4 className='div-titulo'>Sobre mim</h4>
@@ -140,13 +141,6 @@ export default function SobreMim() {
                         </p>
                       </div>
                     </div>
-                    {/* <div className='linha-etapas'>
-                      <div>
-                        <h2 className='titulo-etapa'> parte 1</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-                      </div>
-                    </div> */}
                   </div>
                 </div>
               </Col>
