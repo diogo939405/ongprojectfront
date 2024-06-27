@@ -42,7 +42,7 @@
 .corpo-ong {
     /* height: 100vh; */
     position: relative;
-    z-index: -1000;
+    z-index: -2100;
     margin-top: 56vh;
     overflow-x: hidden;
     overflow-y: hidden;
@@ -97,6 +97,8 @@
 }
 
 .ongs-texto-conjunto {
+    position:relative;
+    z-index: -2000;
     margin-bottom: 15px;
     padding: 20px 0px 20px 0px;
 }

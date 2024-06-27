@@ -243,4 +243,9 @@
     .secao1 {
         margin-top: -11vh;
     }
+
+    .div-titulo {
+        font-size: 2rem;
+        margin-top: 8vh;
+    }
 }

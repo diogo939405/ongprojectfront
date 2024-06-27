@@ -22,7 +22,7 @@ export default function Ongs() {
 
         <div className='div-texto'>
           <div >
-            <h4 className='div-titulo'>Doe</h4>
+            <h4 className='div-tituloo'>Doe</h4>
           </div>
           <div className='div-info'>
             <span>
