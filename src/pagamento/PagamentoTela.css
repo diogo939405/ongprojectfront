@@ -23,7 +23,7 @@
 }
 .t{
   position: relative;
-  z-index: -1000;
+  z-index: 1;
 }
 .div-texto {
   margin-top: 50px;

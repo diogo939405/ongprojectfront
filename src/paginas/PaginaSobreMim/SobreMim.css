@@ -105,7 +105,7 @@
     margin-bottom: 25vh;
     background-color: rgba(240, 251, 240, 0.521);
     padding: 100px;
-    z-index: -1000;
+    z-index: 1;
 }
 
 .descrição-imagem {
@@ -135,7 +135,7 @@
 
 .final {
     position: relative;
-    z-index: -1000;
+    z-index: 1;
     margin-top: -100px;
     margin-bottom: -130px;
 
