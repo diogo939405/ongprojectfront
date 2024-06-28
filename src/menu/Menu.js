@@ -80,7 +80,7 @@ export default function Menu() {
                         <div class="socialIcons">
                             <a href="https://www.linkedin.com/in/diogo-favilla-g-jacintho-8728041ba/" title='Linkedin' target="_blank"><i><AiFillLinkedin /></i></a>
                             <a href="https://github.com/diogo939405" target="_blank" title='Github'><i><AiFillGithub /></i></a>
-                            <a href="https://diogo-portfolioo.netlify.app/" target="_blank" title='Portfólio'><i><HiOutlineComputerDesktop /></i></a>
+                            <a href="https://diogo-portfolioo.netlify.app/" target="_blank" title='Meu Portfólio'><i><HiOutlineComputerDesktop /></i></a>
                         </div>
                     </nav>
                 </header>
