@@ -54,7 +54,7 @@ footer {
     border-radius: 6px;
     padding: 5px 0;
     position: absolute;
-    z-index: 1;
+    z-index: 0;
     bottom: 125%; /* Posiciona acima do ícone */
     left: 50%;
     margin-left: -100px; /* Centraliza a descrição */
