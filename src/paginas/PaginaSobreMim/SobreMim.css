@@ -31,11 +31,12 @@
     line-height: 50px;
 }
 
-.div-titulo {
+.div-tituloSobre {
     font-size: 3rem;
     letter-spacing: 3px;
     color: whitesmoke;
     font-family: 'Roboto';
+    font-weight: 400;
 }
 
 .link-home {
@@ -422,7 +423,7 @@
     }
 
     .colTexto {
-        padding: 3px 4px;
+        padding: 7px 0px;
         line-height: 32px;
         margin-top: 45px;
         margin-right: 0px;
@@ -438,6 +439,8 @@
         padding: 10px 18px;
     }
 
-    #descrição-coluna2 {}
+    .div-tituloSobre{
+        margin-top: 8vh;
+    }
 
 }

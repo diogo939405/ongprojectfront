@@ -37,7 +37,7 @@ export default function Doacao() {
         
         <div className='div-texto'>
           <div >
-            <h4 className='div-titulo'>A importância de Doar</h4>
+            <h4 className='div-tituloDoar'>A importância de Doar</h4>
           </div>
           <div className='div-info'>
             <span>

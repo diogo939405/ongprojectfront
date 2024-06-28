@@ -65,7 +65,6 @@ export default function Form() {
 
                                 <div className='input-text'>
                                     <label className='label-form'>Escreva sua mensagem</label>
-                                    {/* <label>Message</label> */}
                                     <textarea name="message"
                                         ref={form}
                                         className='mensagem-area'

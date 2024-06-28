@@ -52,13 +52,13 @@
     margin-left: 5px;
 }
 
-.secao-body {
-    margin-top: -29vh;
+.secao-bodyy {
+    margin-top: -28vh;
     margin-top: 0px;
     padding: 10px;
 }
 
-.secao-cards {
+.secao-cardss {
     margin-top: -40vh;
     background-color: rgba(240, 251, 240, 0.521);
 }
@@ -75,11 +75,11 @@
         
     }
 
-    .secao-body {
-        /* margin-top: -20vh; */
+    .secao-bodyy {
+        /* margin-top: -30vh; */
     }
 
     section .secao-cards {
-        /* margin-top: -40vh; */
+        margin-top: -40vh;
     }
 }

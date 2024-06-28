@@ -27,7 +27,7 @@ export default function SobreMim() {
        
         <div className='div-texto'>
           <div >
-            <h4 className='div-titulo'>Sobre mim</h4>
+            <h4 className='div-tituloSobre'>Sobre mim</h4>
           </div>
           <div className='div-info'>
             <span>

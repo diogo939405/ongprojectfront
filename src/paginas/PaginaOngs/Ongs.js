@@ -37,8 +37,8 @@ export default function Ongs() {
       <AnimatedPage>
         <Container>
           <Row>
-          <section className='secao-body'>
-          <div className='secao-cards'>
+          <section className='secao-bodyy'>
+          <div className='secao-cardss'>
             <OngsCard />
           </div>
         </section>

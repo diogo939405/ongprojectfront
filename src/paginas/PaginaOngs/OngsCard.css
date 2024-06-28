@@ -154,6 +154,10 @@ card.card-back {
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
+    /* #linha {
+        margin-top: 620px;
+    } */
+
     card.card {
         height: 45vh;
         width: 50vw;
@@ -176,14 +180,15 @@ card.card-back {
         width: 35vw;
         height: 5vh;
         border-radius: 15px;
-        
+
     }
-    .botoes{
+
+    .botoes {
         margin-top: 20px;
     }
 
     .linkBotao {
-        
+
         text-decoration: none;
         font-weight: 400;
         color: #fff;

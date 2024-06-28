@@ -28,7 +28,7 @@
     line-height: 50px;
 }
 
-.div-titulo {
+.div-tituloDoar {
     margin-top: 8vh;
     font-size: 3rem;
     letter-spacing: 3px;
@@ -244,7 +244,7 @@
         margin-top: -11vh;
     }
 
-    .div-titulo {
+    .div-tituloDoar {
         font-size: 2rem;
         margin-top: 8vh;
     }
