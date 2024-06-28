@@ -24,7 +24,7 @@ export default function OngsDoando() {
     const [idCompra, setIdCompra] = useState(null)
     const textToCopy = '5031 4332 1540 6351';
     const [copiado, setCopiado] = useState(false)
-  
+
     const { infoId } = useParams()
     const [infoDetails, setInfoDetails] = useState({})
     const [products, setProducts] = useState({})
@@ -54,22 +54,22 @@ export default function OngsDoando() {
             })
     }, [infoId]);
 
-  
+
     const comprar = async (dados) => {
         try {
 
             const response = await axios.post(`${apiPagamento}dados`
                 // 'http://localhost:4000/dados'
-            , {
-                title: inputName,
-                unit_price: inputValue,
-                currency_id: "BRL",
-                description: infoDetails.descricaoCurta,
-                quantity: 1
-            }).then((v) => {
-                console.log('RETORNO DA API', v)
-                window.open(v.data.url, "_blank")
-            })
+                , {
+                    title: inputName,
+                    unit_price: inputValue,
+                    currency_id: "BRL",
+                    description: infoDetails.descricaoCurta,
+                    quantity: 1
+                }).then((v) => {
+                    console.log('RETORNO DA API', v)
+                    window.open(v.data.url, "_blank")
+                })
             const { id } = response.data
             return id
         } catch (error) {
@@ -108,12 +108,11 @@ export default function OngsDoando() {
     return (
         <>
 
-
+            <Menu />
             <header className='cabeca'>
-                <Menu />
                 <div className='div-texto'>
                     <div >
-                        <h4 className='div-titulo'>{infoDetails.nome}</h4>
+                        <h4 className='div-tituloDoando'>{infoDetails.nome}</h4>
                     </div>
                     <div className='div-info'>
                         <span>
@@ -155,7 +154,7 @@ export default function OngsDoando() {
                                     <span className='cartaoDados'>Validade:11/25</span>
                                     <br />
                                     <span className='cartaoDados'>CPF:12345678909</span>
-                                    <br/>
+                                    <br />
                                     <span className='cartaoDados'>Caso não abra um nova guia ao clicar no botão doar,verifique se o seu browser esta com "pop-up" bloqueado</span>
                                 </p>
 
@@ -210,6 +209,7 @@ export default function OngsDoando() {
 
             {loadingSpinner ? <Loading /> : null
             }
+
             <footer className='rodape-doando' >
                 <Footer />
             </footer>

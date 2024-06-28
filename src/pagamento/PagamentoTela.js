@@ -16,11 +16,12 @@ import Col from 'react-bootstrap/Col'
 export default function PagamentoTela() {
   return (
     <>
+      <Menu />
       <header className='cabeca'>
-        <Menu />
+      
         <div className='div-texto'>
           <div >
-            <h4 className='div-titulo'>Pagamento confirmado</h4>
+            <h4 className='div-tituloPagamento'>Pagamento confirmado</h4>
           </div>
           <div className='div-info'>
             <span>

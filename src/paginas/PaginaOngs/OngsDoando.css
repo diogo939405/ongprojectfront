@@ -32,23 +32,24 @@
     line-height: 50px;
 }
 
-.div-titulo {
+.div-tituloDoando {
     font-size: 3rem;
     letter-spacing: 3px;
     color: whitesmoke;
     font-family: 'Roboto';
+    font-weight: 400;
+    margin-top: 10vh;
 }
 
 .corpo-ong {
     /* height: 100vh; */
     position: relative;
-    z-index: -2100;
+    z-index: 1;
     margin-top: 56vh;
     overflow-x: hidden;
     overflow-y: hidden;
     background-color: rgba(240, 251, 240, 0.521);
-
-}
+}   
 
 .rodape-doando {
     margin-top: 400px;
@@ -375,9 +376,9 @@ form input {
         margin-bottom: -12vh;
     }
 
-    .div-titulo{
+    .div-tituloDoando{
         font-size: 2rem;
-        margin-top: -4vh;
+        margin-top: 4vh;
     }
 }
 

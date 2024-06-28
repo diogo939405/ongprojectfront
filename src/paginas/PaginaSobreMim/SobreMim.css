@@ -37,6 +37,7 @@
     color: whitesmoke;
     font-family: 'Roboto';
     font-weight: 400;
+    margin-top: 10vh;
 }
 
 .link-home {
@@ -59,7 +60,7 @@
 
 .introducao {
     position: relative;
-    z-index: -1000;
+    z-index: 1;
     margin-top: 100px;
     background-color: rgba(240, 251, 240, 0.521);
 }
