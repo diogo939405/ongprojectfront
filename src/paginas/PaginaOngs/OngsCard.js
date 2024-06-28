@@ -31,8 +31,8 @@ export default function OngsCard() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const resp = await axios.get(`${apiDados}TodosDados`)
                 notifyAtraso()
+                const resp = await axios.get(`${apiDados}TodosDados`)
                 setData(resp.data)
             }
 
