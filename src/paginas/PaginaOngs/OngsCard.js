@@ -24,11 +24,15 @@ export default function OngsCard() {
         toast.info("Houve um problema ao carregar a pagina,aguarde um pouco ou aperte F5")
     }
 
+    function notifyAtraso() {
+        toast.info("Os dados podem demorar um pouco para aparecer na primeiro carregamento da página, aguarde um pouco ou recarregue a página")
+    }
+
     useEffect(() => {
         const fetchData = async () => {
             try {
                 const resp = await axios.get(`${apiDados}TodosDados`)
-                // notify()
+                notifyAtraso()
                 setData(resp.data)
             }
 
