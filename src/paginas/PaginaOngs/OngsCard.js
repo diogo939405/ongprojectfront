@@ -30,9 +30,10 @@ export default function OngsCard() {
 
     useEffect(() => {
         const fetchData = async () => {
+            notifyAtraso()
             try {
                 const resp = await axios.get(`${apiDados}TodosDados`)
-                notifyAtraso()
+
                 setData(resp.data)
             }
             catch (err) {
