@@ -35,7 +35,6 @@ export default function OngsCard() {
                 const resp = await axios.get(`${apiDados}TodosDados`)
                 setData(resp.data)
             }
-
             catch (err) {
                 notify()
             }
