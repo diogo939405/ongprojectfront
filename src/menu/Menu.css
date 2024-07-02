@@ -103,7 +103,87 @@ li {
     transition: 0.3s ease-in ease-out;
 }
 
+#botao-Doar {
+    margin-top: 4.8vh;
+    background-color: rgba(29, 126, 29, 0.704);
+    /* border: 1px solid white; */
+    border-radius: 15px;
+    width: 6vw;
+    height: 5.1vh;
+    transition: 0.5s all ease;
+}
+
+#letra-Doar {
+    margin-left: 5px;
+    letter-spacing: 1px;
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+#botao-Doar:hover {
+    background-color: #fffffff7;
+    border: none;
+    transform: scale(1.2);
+}
+
+#letra-Doar:hover {
+    color: #808000;
+}
+
+.socialIconss {
+    display: flex;
+    justify-content: center;
+    margin-top: -10px;
+    justify-content: space-around;
+    gap: 1rem;
+}
+
+.socialIconss a {
+    text-decoration: none;
+    padding: 10px;
+    margin: 10px;
+
+}
+
+.socialIconss a i {
+    font-size: 2rem;
+    color: white;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+
+.socialIconss :hover {
+    /* background-color: aliceblue;
+    color: black; */
+    transition: 0.5s;
+    opacity: 1;
+}
+
+@media (min-width: 842px) and (max-width: 1117px) {
+
+.nav__menu{
+    gap: 2rem;
+}
+
+    #botao-Doar {
+        width: 10vw;
+    }
+
+    .socialIconss {
+        margin-top: -6vh;
+    }
+
+    .socialIconss a {
+        width: 0vw;
+        height: 0vh;
+    }
+}
+
 @media screen and (max-width: 841px) {
+
+    header {}
+
     .nav__toggler {
         display: block;
         cursor: pointer;
@@ -112,6 +192,7 @@ li {
     .nav__link {
         font-size: 1.3rem;
     }
+
     .nav__menu {
         z-index: 99;
         position: fixed;
@@ -124,10 +205,12 @@ li {
         flex-direction: column;
         transform: translateX(100%);
         transition: 0.5s ease-in;
-        border:solid 1px ;
+        border: solid 1px;
         border-radius: 10px;
     }
 }
+
+
 
 /* Active Class */
 .nav__active {
@@ -146,4 +229,34 @@ li {
 
 .toggle .line3 {
     transform: rotate(45deg) translate(-4px, -5px);
+}
+
+@media (min-width: 388px) and (max-width: 841px) {
+
+    .nav{
+        gap: 0rem;
+    }
+    .socialIconss{
+        /* margin-left: -2vw; */
+        gap:0rem
+    }
+    #botao-Doar{
+        margin-left: -4vw;
+        margin-right: 7vw;
+        width:14vw
+    }
+    #letra-Doar{
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 387px) {
+    #botao-Doar{
+        margin-left: -3vw;
+        margin-right: 7vw;
+        width:14vw
+    }
+    #letra-Doar{
+        font-size: 1rem;
+    }
 }

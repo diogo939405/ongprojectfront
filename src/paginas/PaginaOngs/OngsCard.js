@@ -50,20 +50,29 @@ export default function OngsCard() {
                 <Row id='linha'>
                     {data.map((info) => {
 
-                        return (
-                            <Col id='coluna' >
-                                <card className='card' key={info._id}  >
-                                    <img src={info.foto}   alt='descrição' className='imagem-descricao'></img>
-                                    <h3 className='titulo-card'>{info.nome}</h3>
-                                    <div className='botoes'>
-                                        <button className='btnm' >
-                                            <Link className='linkBotao' to={`/OngsDoando/${info._id}`}> Saiba mais</Link>
-                                        </button>
-                                    </div>
-                                </card>
-                            </Col>
-                        );
-                    })}
+                        {
+                            loading ? (
+                                <>
+                                    <p className='aviso'>Nossa api esta hospedada em servidor free, por isso a primeira carga é um pouco mais lenta, por favor aguarde(em caso de erro o mesmo será exibido na tela)</p>
+                                    <Loading />
+                                </>
+                            ) : (
+                                data.map(info => (
+
+
+                                    <Col id='coluna' >
+                                        <card className='card' key={info._id}  >
+                                            <img src={info.foto} alt='descrição' className='imagem-descricao'></img>
+                                            <h3 className='titulo-card'>{info.nome}</h3>
+                                            <div className='botoes'>
+                                                <button className='btnm' >
+                                                    <Link className='linkBotao' to={`/OngsDoando/${info._id}`}> Saiba mais</Link>
+                                                </button>
+                                            </div>
+                                        </card>
+                                    </Col>
+                                );
+                        })}
                 </Row>
             </Container >
         </>

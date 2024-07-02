@@ -65,21 +65,26 @@ export default function Menu() {
                                     Sobre mim
                                 </a>
                             </li>
-                            <li className="nav__item">
-                                <a href="/Ongs" className="nav__link">
+                            {/* <li className="nav__item" id='botao-Doar'>
+                                <a href="/Ongs" className="nav__link" id='letra-Doar'>
                                     Doe
                                 </a>
-                            </li>
+                            </li> */}
                         </ul>
                         <div onClick={navToggle} className={icon}>
                             <div className="line1"></div>
                             <div className="line2"></div>
                             <div className="line3"></div>
                         </div>
-                        <div class="socialIcons">
-                            <a href="https://www.linkedin.com/in/diogo-favilla-g-jacintho-8728041ba/" target="_blank"><i><AiFillLinkedin /></i></a>
-                            <a href="https://github.com/diogo939405" target="_blank"><i><AiFillGithub /></i></a>
-                            <a href="https://www.instagram.com/di_ogo01/" target="_blank"><i><AiFillInstagram /></i></a>
+                        <div class="socialIconss">
+                            <div id='botao-Doar'>
+                                <a href="/Ongs" className="nav__link" id='letra-Doar'>
+                                    Doe
+                                </a>
+                            </div>
+                            <a href="https://www.linkedin.com/in/diogo-favilla-g-jacintho-8728041ba/" title='Linkedin' target="_blank"><i><AiFillLinkedin /></i></a>
+                            <a href="https://github.com/diogo939405" target="_blank" title='Github'><i><AiFillGithub /></i></a>
+                            <a href="https://diogo-portfolioo.netlify.app/" target="_blank" title='Meu Portfólio'><i><HiOutlineComputerDesktop /></i></a>
                         </div>
                     </nav>
 

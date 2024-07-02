@@ -106,6 +106,12 @@ card.card-back {
     color: #fff;
 }
 
+.aviso{
+    font-size: 1.3rem;
+    font-family: 'Montserrat';
+    font-weight: 400;
+}
+
 .texto-card {
     font-family: 'Roboto';
     padding: 20px;
