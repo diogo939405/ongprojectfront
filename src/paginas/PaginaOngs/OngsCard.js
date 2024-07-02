@@ -33,7 +33,7 @@ export default function OngsCard() {
             
             try {
                 const resp = await axios.get(`${apiDados}TodosDados`)
-                notifyAtraso()
+                // notifyAtraso()
                 setData(resp.data)
             }
             catch (err) {
@@ -71,7 +71,7 @@ export default function OngsCard() {
 
                     {loading ? (
                         <>
-                        <p className='aviso'>A Api esta hospedada em um servidor free, então o primeiro loading dos arquivos pode demorar um pouco, por favor aguarde(caso de erro irá ter uma mensagem)</p>
+                        <p className='aviso'>A Api esta hospedada em um servidor free, então a primeira chamada da Api pode demorar um pouco, por favor aguarde(caso de erro irá ter uma mensagem)</p>
                         <Loading />
                         </>
                     ) : (
