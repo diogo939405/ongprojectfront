@@ -121,6 +121,7 @@ card.card-back {
     color: black;
 }
 .aviso{
+    margin-top: 3vh;
     font-size: 1.3rem;
     font-weight: 500;
     font-family: 'montserrat';
