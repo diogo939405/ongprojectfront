@@ -120,7 +120,11 @@ card.card-back {
     background-color: purple;
     color: black;
 }
-
+.aviso{
+    font-size: 1.3rem;
+    font-weight: 500;
+    font-family: 'montserrat';
+}
 .ongs-form {
     background-color: #f0f0f0;
     margin-top: 100px;

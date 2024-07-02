@@ -70,7 +70,10 @@ export default function OngsCard() {
                 <Row id='linha'>
 
                     {loading ? (
+                        <>
+                        <p className='aviso'>A Api esta hospedada em um servidor free, então o primeiro loading dos arquivos pode demorar um pouco, por favor aguarde(caso de erro irá ter uma mensagem)</p>
                         <Loading />
+                        </>
                     ) : (
                         data.map(info => (
 
