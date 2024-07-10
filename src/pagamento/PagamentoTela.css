@@ -4,66 +4,66 @@
 
 
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 
 }
 
 .cabeca {
-    width: 100%;
-    height: 55vh;
-    /* background-image: linear-gradient(rgba(0, 0, 0, 0.7),
+  width: 100%;
+  height: 55vh;
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.7),
             rgba(0, 0, 0, 0.7)), url('../../Imagens/background.png'); */
-    background-position: center;
-    background-size: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
 .div-texto {
-    margin-top: 50px;
-    padding: 15px;
-    line-height: 50px;
+  margin-top: 50px;
+  padding: 15px;
+  line-height: 50px;
 }
 
 .div-titulo {
-    font-size: 3rem;
-    letter-spacing: 3px;
-    color: whitesmoke;
-    font-family: 'Roboto';
+  font-size: 3rem;
+  letter-spacing: 3px;
+  color: whitesmoke;
+  font-family: 'Roboto';
 }
 
 .link-home {
-    text-decoration: none;
-    outline: none;
-    color: #0dff0d;
-    font-size: 1.3rem;
-    font-family: 'Roboto';
-    margin-right: 5px;
+  text-decoration: none;
+  outline: none;
+  color: #0dff0d;
+  font-size: 1.3rem;
+  font-family: 'Roboto';
+  margin-right: 5px;
 }
 
 .pagina-atual {
-    text-decoration: none;
-    outline: none;
-    color: whitesmoke;
-    font-size: 1.3rem;
-    font-family: 'Roboto';
-    margin-left: 5px;
+  text-decoration: none;
+  outline: none;
+  color: whitesmoke;
+  font-size: 1.3rem;
+  font-family: 'Roboto';
+  margin-left: 5px;
 }
 
 
 .rodape-doandoo {
-    margin-top: 200px;
+  margin-top: 200px;
 }
 
 .conte {
-    margin-top: 500px;
+  margin-top: 500px;
 }
 
 .conte-body {
-    /* padding: 10px; */
+  /* padding: 10px; */
 }
 
 /* .conte-texto1 {
@@ -75,27 +75,27 @@
 } */
 
 .conte-texto1 {
-    font-size: 2rem;
-    text-transform: uppercase;
-    font-family: 'Montserrat';
-    letter-spacing:-2px;
-    transition: 700ms ease;
-    font-variation-settings: "wght" 311;
-    margin-bottom: 0.8rem;
-    color: black;
-    outline: none;
-    text-align: center;
-  }
-  
-  .conte-texto1:hover {
-    font-variation-settings: "wght" 582; 
-    letter-spacing: 5px;
-  }
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-family: 'Montserrat';
+  letter-spacing: -2px;
+  transition: 700ms ease;
+  font-variation-settings: "wght" 311;
+  margin-bottom: 0.8rem;
+  color: black;
+  outline: none;
+  text-align: center;
+}
+
+.conte-texto1:hover {
+  font-variation-settings: "wght" 582;
+  letter-spacing: 5px;
+}
 
 .conte-buttons {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 /* .conte-buttonOnly {
@@ -105,42 +105,58 @@
     border: 2px solid black;
 } */
 
-.conte-buttonOnly{
-    background:#1AAB8A;
-    color:#fff;
-    border:none;
-    position:relative;
-    height:60px;
-    border-radius: 10px;
-    font-size:1.6em;
-    font-weight:300;
-    letter-spacing: 3px;
-    padding:0 1.5em;
-    cursor:pointer;
-    transition:800ms ease all;
-    outline:none;
-  }
-  .conte-buttonOnly:hover{
-    background:#fff;
-    color:#1AAB8A;
-  }
-  .conte-buttonOnly:before,.conte-buttonOnly:after{
-    content:'';
-    position:absolute;
-    top:0;
-    right:0;
-    height:2px;
-    width:0;
-    background: #1AAB8A;
-    transition:400ms ease all;
-  }
-  .conte-buttonOnly:after{
-    right:inherit;
-    top:inherit;
-    left:0;
-    bottom:0;
-  }
-  .conte-buttonOnly:hover:before,.conte-buttonOnly:hover:after{
-    width:100%;
-    transition:800ms ease all;
-  }
+.conte-buttonOnly {
+  background: #808000;
+  ;
+  color: #fff;
+  border: none;
+  position: relative;
+  height: 60px;
+  border-radius: 10px;
+  font-size: 1.6em;
+  font-weight: 300;
+  letter-spacing: 3px;
+  padding: 0 1.5em;
+  cursor: pointer;
+  transition: 800ms ease all;
+  outline: none;
+}
+
+.conte-buttonOnly:hover {
+  background: #fff;
+  color: #808000;
+}
+
+.conte-buttonOnly:before,
+.conte-buttonOnly:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 2px;
+  width: 0;
+  background: #808000;
+  transition: 400ms ease all;
+}
+
+.conte-buttonOnly:after {
+  right: inherit;
+  top: inherit;
+  left: 0;
+  bottom: 0;
+}
+
+.conte-buttonOnly:hover:before,
+.conte-buttonOnly:hover:after {
+  width: 100%;
+  transition: 800ms ease all;
+}
+
+button a {
+  text-decoration: none;
+  color: white;
+}
+
+button a:hover {
+  color: #808000;
+}

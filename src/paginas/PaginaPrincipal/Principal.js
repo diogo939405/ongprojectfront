@@ -10,6 +10,7 @@ import larOasis from '../../assets/larOasis1.png'
 import casaLuz from '../../assets/casaLuzDoCaminho5.png'
 import obraSocial from '../../assets/Obra-Social-Dona-Meca2-removebg-preview.png'
 import defaultBackground from '../../Imagens/background.png'
+import fotoFundo from '../../assets/R.jpeg'
 import soVamos from '../../assets/soVamos3.jpeg'
 import larOasisFun from '../../assets/larOasis3.png'
 import casaLuzFun from '../../assets/casaLuzDoCaminho3.png'
@@ -22,32 +23,36 @@ import obraSocialFun from '../../assets/Obra-Social-Dona-Meca4.jpeg'
 
 export default function Principal() {
 
-  const [imagemFundo, setImagemFundo] = useState(defaultBackground)
+  const [imagemFundo, setImagemFundo] = useState(fotoFundo)
 
   let data = [
     {
       id: 1,
+      titulo: 'Lar Oásis',
       imgFun: larOasisFun,
       imgSrc: larOasis,
-      text: 'Lorem Ipsum is simply dummy textt of the printing and typesetting industry1111'
+      text: 'ONG dedicada à realocação de animais em situação de rua e abandono, proporcionando a eles novos lares cheios de amor e cuidado. Nossa missão é transformar a vida desses animais, oferecendo-lhes uma segunda chance e um futuro melhor.'
     },
     {
       id: 2,
+      titulo: 'Casa Luz do Caminho',
       imgFun: casaLuzFun,
       imgSrc: casaLuz,
-      text: 'Lorem Ipsum is simply dummy textt of the printing and typesetting industry2222'
+      text: ' Lar acolhedor para idosos carentes, localizado em Mandaqui, São Paulo (SP), onde proporcionam cuidados especiais e apoio contínuo. O objetivo é garantir que os residentes vivam com dignidade, conforto e alegria, em um ambiente seguro e atencioso.'
     },
     {
       id: 3,
+      titulo: 'Obra Social Dona Meca',
       imgFun: obraSocialFun,
       imgSrc: obraSocial,
-      text: 'Lorem Ipsum is simply dummy textt of the printing and typesetting industry3333'
+      text: 'A Obra Social Dona Meca - ou OSDM - é uma instituição atuante há 25 anos em habilitação e reabilitação de crianças e adolescentes com deficiência, atendendo de forma gratuita, atualmente, mais de 250 crianças e jovens - Rio de janeiro(RJ)'
     },
     {
       id: 4,
+      titulo: 'Só Vamos',
       imgFun: soVamosFun,
       imgSrc: soVamos,
-      text: 'Lorem Ipsum is simply dummy textt of the printing and typesetting industry4444'
+      text: 'Só Vamos é uma iniciativa social dedicada a ajudar pessoas em situação de vulnerabilidade, fornecendo refeições nutritivas e itens de primeira necessidade. O compromisso é melhorar a qualidade de vida dessas pessoas, oferecendo apoio essencial e esperança para um futuro melhor.'
     }
   ]
 
@@ -61,13 +66,6 @@ export default function Principal() {
   useEffect(() => {
     document.getElementById('fundo').style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.7),
         rgba(0, 0, 0, 0.7)), url(${imagemFundo}`
-    // document.getElementById('fundo').style.backgroundColor = linear-gradient(rgba(0, 0, 0, 0.7),
-    //   rgba(0, 0, 0, 0.7));
-
-
-
-    /* background-image: linear-gradient(rgba(0, 0, 0, 0.7),
-        rgba(0, 0, 0, 0.7)), url('../../Imagens/background.png'); */
   }, [imagemFundo])
 
   return (
@@ -80,9 +78,9 @@ export default function Principal() {
           <Row id='principal-row'>
             <Col className='sm={6}'>
               <div className='principal-texto'>
-                <h1 className='principal-titulo' >Titulo</h1>
+                <h1 className='principal-titulo' >  {file !== -1 ? data[file].titulo : "Ajude"}</h1>
                 <p className='principal-descricao' >
-                  {file !== -1 ? data[file].text : "nfuhurshurihiuvif"}
+                  {file !== -1 ? data[file].text : "Não podemos ajudar a todos, mas podemos fazer a diferença na vida de alguém. - Ronald Reagan"}
                 </p>
               </div>
             </Col>

@@ -1,30 +1,35 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import CurrencyInput from 'react-currency-input-field';
-
-
+import { initMercadoPago, Wallet } from '@mercadopago/sdk-react'
 import axios from 'axios';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Menu from '../../menu/Menu'
 import Footer from '../../footer/Footer'
-import gerarToken from '../../pagamento/Paypal';
 import Loading from '../../loading/Loading';
 import PagamentoTela from '../../pagamento/PagamentoTela';
 import BotaoPagamento from './BotãoPagamento';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import SlideGallery from './SlideGallery';
 import './OngsDoando.css'
 
-export default function OngsDoando() {
 
+
+export default function OngsDoando() {
+    initMercadoPago('TEST-00a38ea9-801e-48c5-9c93-a252d6ac8884', {
+        locale: "pt-BR",
+    });
+    const [idCompra, setIdCompra] = useState(null)
+    const textToCopy = '5031 4332 1540 6351';
+    const [copiado, setCopiado] = useState(false)
     const { infoId } = useParams()
     const [infoDetails, setInfoDetails] = useState({})
     const [products, setProducts] = useState({})
     const [inputValue, setInputValue] = useState()
+    const [inputName, setInputName] = useState()
     const [loadingSpinner, setLoadingSpinner] = useState(false)
-    let doar = document.getElementById("doar");//.target.value
-    let botaoDoar = document.getElementById('botao-doar')
 
     useEffect(() => {
         window.scrollTo({
@@ -35,21 +40,94 @@ export default function OngsDoando() {
             .then((resp) => {
                 setInfoDetails(resp.data)
                 console.log('dados do card', resp.data, infoDetails)
-                setProducts({
-                    description: `${infoDetails.Nome}`,
-                    price: inputValue,
-                })
+                // setProducts({
+                //     description: `${infoDetails.descricaoCurta}`,
+
+                //     price: inputValue,
+                // })
                 console.log('dados do card', resp.data, infoDetails)
             })
     }, [infoId]);
 
-    const beforeSend = (valor) => {
-        const valorNovo = Number(valor.target.value)
-        setInputValue(valorNovo)
-        console.log('objeto em input ', products)
+    // var dat = {
+    //     title: infoDetails.nome,
+    //     unit_price: inputValue,
+    //     currency_id: "BRL",
+    //     description: infoDetails.descricaoCurta,
+    //     quantity: 1
+    // }
+
+    const comprar = async (dados) => {
+        try {
+
+            const response = await axios.post('http://localhost:4000/dados', {
+                title: inputName,
+                unit_price: inputValue,
+                currency_id: "BRL",
+                description: infoDetails.descricaoCurta,
+                quantity: 1
+            }).then((v) => {
+                console.log('RETORNO DA API', v)
+                // window.location.href = v.data.url
+                window.open(v.data.url, "_blank")
+            })
+            const { id } = response.data
+            return id
+
+            // window.location.href = response.data.init_point
+        } catch (error) {
+            console.log(error)
+        }
+
+
+        //     console.log(inputValue)
+        //     const response = await axios.post(
+        //         "https://localhost:4000/dados", data, {
+        //         headers: {
+        //             'Content-Type': 'application/json'
+        //         }
+        //     }
+        //     )
+        //         .then(response => {
+        //             console.log('respota API', response.init_point)
+        //             window.location.href = response.init_point
+        //         })
+        //     console.log(response.data)
+        //     // window.location.href = response.data
     }
+
+    const gerirCompra = async () => {
+        const id = await comprar()
+        if (id) {
+            setIdCompra(id);
+        }
+    };
+
+    const nomeEscrito = (nome) => {
+        const nomeNovo = nome.target.value
+        setInputName(nomeNovo)
+        // console.log(nomeNovo)
+    }
+
+    const beforeSend = (valor) => {
+        const valorNovo = Number(valor.target.value.replace(/[^0-9]/g, ''))
+        setInputValue(valorNovo)
+        console.log('objeto em input ', valorNovo)
+    }
+
+    const copyToClipboard = async () => {
+        try {
+            await navigator.clipboard.writeText(textToCopy);
+            setCopiado(true);
+            setTimeout(() => setCopiado(false), 2000); // Esconde a mensagem após 2 segundos
+        } catch (error) {
+            console.error('Falha ao copiar o texto:', error);
+        }
+    };
     return (
         <>
+
+
             <header className='cabeca'>
                 <Menu />
                 <div className='div-texto'>
@@ -78,9 +156,24 @@ export default function OngsDoando() {
                                 <div className='ongs-texto-conjunto'>
                                     <h2 className='ongs-texto-titulo'>
                                         {infoDetails.descricaoCurta}
-                                    </h2>
+                                    </h2> 
                                 </div>
-                                <p className='ongs-texto-textos'>{infoDetails.descricaoLonga}</p>
+                                <p className='ongs-texto-textos'>{infoDetails.descricaoLonga}
+                                    <span><a href={infoDetails.link} target="_blank" className='link-projeto'>Saiba mais sobre o projeto</a></span>
+                                    <br />
+                                    <br />
+                                    <span className='cartaoDados'>Dados Fictícios para realizar a doação</span>
+                                    <br />
+                                    <span className='cartaoDados'>Numero do cartão: 5031 4332 1540 6351
+                                        <button onClick={copyToClipboard}>Copiar</button>
+                                        {copiado && <span className='copy-return'>Texto copiado!</span>}
+                                    </span>
+                                    <br />
+                                    <span className='cartaoDados'>CVV:123</span>
+                                    <br />
+                                    <span className='cartaoDados'>Validade:11/25</span>
+                                </p>
+
                             </div>
                         </Col>
                         <Col>
@@ -93,7 +186,7 @@ export default function OngsDoando() {
                                         <br />
                                         <div className='input-box' >
                                             <label className='label-for'>Nome</label>
-                                            <input type='text' placeholder='digite seu Nome(Opcional)' />
+                                            <input type='text' value={inputName} onChange={nomeEscrito} placeholder='digite seu Nome' />
                                         </div>
 
                                         <div className='input-box'>
@@ -102,7 +195,7 @@ export default function OngsDoando() {
                                             // defaultValue="@gmail.com"
                                             />
                                         </div>
-                                        {/* <div className='input-box'>
+                                        <div className='input-box'>
                                             <label className='label-for'>Valor a ser Doado</label>
                                             <CurrencyInput
                                                 id="input-example"
@@ -110,22 +203,22 @@ export default function OngsDoando() {
                                                 placeholder="digite um valor"
                                                 value={inputValue}
                                                 defaultValue={0}
-                                                decimalsLimit={2}
+                                                prefix={'R$'}
+                                                onChange={beforeSend}
+                                                drecimalsLimit={8}
                                                 onValueChange={(value, name, values) => console.log(value, name, values)}
                                             />;
-                                        </div> */}
-                                        <div className='input-box'>
+                                        </div>
+                                        {/* <div className='input-box'>
                                             <label className='label-for'>Valor a ser Doado</label>
                                             <input type='text' id='doar' placeholder='Faça sua doação' value={inputValue} onChange={beforeSend} ></input>
-                                        </div>
-                                        <div className='paypal-button-container'>
-                                            <BotaoPagamento product={infoDetails} price={inputValue} doar={doar} />
-                                        </div>
-
-                                        {/* <button id='botao-doar'> Doar </button> */}
-                                        {/* onClick={(x) => tratarPagamento(x)} */}
+                                        </div> */}
                                     </form>
+                                    <div>
+                                        <button onClick={gerirCompra} className='confirma-compra' >Doar</button>
+                                        {/* {idCompra && <Wallet initialization={{ preferenceId: idCompra }} />} */}
 
+                                    </div>
                                 </div>
                             </div>
                         </Col>

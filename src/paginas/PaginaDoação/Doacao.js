@@ -11,8 +11,9 @@ import foto from '../../assets/icons/banner-blog-post-01.png'
 import Button from 'react-bootstrap/Button';
 import logo1 from '../../assets/icons/information (1).png';
 import logo2 from '../../assets/icons/search.png'
-import logo3 from '../../assets/icons/information (1).png'
-import logo4 from '../../assets/icons/list.png'
+import logo3 from '../../assets/images (1).png'
+import logo4 from '../../assets/download.png'
+import logo5 from '../../assets/14022367-icone-de-de-logotipo-de-saco-de-dinheiro-um-saco-de-dinheiro-preto-e-branco-com-cifrao-vetor-removebg-preview.png'
 
 import Footer from '../../footer/Footer'
 import Float from '../../floatButton/Float'
@@ -32,7 +33,7 @@ export default function Doacao() {
   return (
     <>
 
-      <header className='cabeca'>
+      <header className='cabecaa'>
         <Menu />
         <div className='div-texto'>
           <div >
@@ -85,7 +86,7 @@ export default function Doacao() {
                 <Col id='icons'>
                   <div className='mensagem-icons'>
                     <div className='imagem-icons'>
-                      <img src={logo1} height='95px' width='100px' alt='oie' />
+                      <img src={logo5} height='95px' width='100px' alt='oie' />
                     </div>
                     <p className='texto-icon'>Toda ajuda é importante! Você pode doar dinheiro, bens materiais, tempo ou trabalho voluntário. Escolha uma ONG confiável, pesquise a reputação e o histórico da instituição, e faça sua doação com segurança.</p>
                   </div>
@@ -104,7 +105,7 @@ export default function Doacao() {
                 <Col id='icons'>
                   <div className='mensagem-icons'>
                     <div className='imagem-icons'>
-                      <img src={logo3} height='95px' width='100px' alt='oie' />
+                      <img src={logo4} height='95px' width='100px' alt='oie' />
                     </div>
                     <p className='texto-icon'>84% dos brasileiros doam para um futuro melhor!
                       Junte-se a essa corrente do bem e faça a diferença na vida de quem mais precisa. Doar para uma ONG é investir em educação, saúde, meio ambiente e um futuro mais justo para todos.</p>
@@ -113,7 +114,7 @@ export default function Doacao() {
                 <Col id='icons'>
                   <div className='mensagem-icons'>
                     <div className='imagem-icons'>
-                      <img src={logo4} height='95px' width='100px' alt='oie' />
+                      <img src={logo3} height='95px' width='100px' alt='oie' />
                     </div>
                     <p className='texto-icon'>Escolha uma ONG confiável: pesquise a reputação e o histórico da instituição, verifique se ela possui registro no CNAS(Conselho Nacional de Assistência Social) e visite a instituição pessoalmente, se possível.</p>
                   </div>

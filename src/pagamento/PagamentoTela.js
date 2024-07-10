@@ -20,7 +20,7 @@ export default function PagamentoTela() {
         <Menu />
         <div className='div-texto'>
           <div >
-            <h4 className='div-titulo'>titulo pagina</h4>
+            <h4 className='div-titulo'>Pagamento confirmado</h4>
           </div>
           <div className='div-info'>
             <span>
@@ -42,8 +42,8 @@ export default function PagamentoTela() {
                   <div className='conte-body'>
                     <div className='conte-texto1'>Obrigado por ter doado</div>
                     <div className='conte-buttons'>
-                      <button className='conte-buttonOnly' href='/SobreMim'> SobreMim</button>
-                      <button className='conte-buttonOnly' href='/Ongs'> Voltar ao Home</button>
+                      <button className='conte-buttonOnly'><a href='/SobreMim'>SobreMim</a></button>
+                      <button className='conte-buttonOnly'> <a href='/'>Voltar ao Home</a> </button>
                     </div>
                   </div>
                 </Col>
